@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using MiniJSON;
 
 /**
  *  The methods defined below in SkillzDelegate.cs must be implemented by the game developer.
@@ -16,6 +17,7 @@ public class SkillzDelegate : MonoBehaviour {
 	public void skillzLaunchHasCompleted(string param) {
 		//TODO: Game Developers implement here
 		Debug.Log("Calling skillzLaunchHasCompleted()");
+		Debug.Log ("skillzLaunchHasCompleted " + param);
 	}
 	
 	// This block of code will be run when a player is entering a game from Skillz. It should load the level and take any
@@ -27,9 +29,9 @@ public class SkillzDelegate : MonoBehaviour {
 		Debug.Log("Game Rules: " + param);
 		Dictionary<string, string> gameRulesDictionary = parseGameRulesStringInToDictionary(param);
 
-		Debug.Log("Calling skillzTournamentWillBegin()");
+		Debug.Log("Calling skillzTournamentWillBegin()" + gameRulesDictionary);
 
-		Application.LoadLevel ("testLevel");
+		Application.LoadLevel("testLevel");
 	}
 	
 	// This block of code is run when exiting Skillz back to the main application.
@@ -55,7 +57,51 @@ public class SkillzDelegate : MonoBehaviour {
 		Debug.Log("Calling skillzWithPlayerAbort()");
 	}
 	
-	// This is a convenience method that takes in a tournament rules string that is passed to skillzTournamentWillBegin().
+	
+#region Turn-Based
+	// This code is called when a player is beginning a turn-based tournament. It should load the level and do any necessary init
+	public void skillzTurnBasedTournamentWillBegin(string param) {
+		// TODO: Game Developers implement here
+		Dictionary<string, object> turnBasedMatchInfo = deserializeJSONToDictionary (param);
+
+		Debug.Log("Calling skillzTurnBasedTournamentWillBegin");
+		Debug.Log ("skillzTurnBasedTournamentWillBegin " + turnBasedMatchInfo);
+	}
+
+	// This code is called when a player is completing their turn within a turn-based tournament
+	// It will take them back into the Skillz UI
+	public void skillzEndTurnCompletion(string param) {
+		// TODO: Game Developers implement here
+		Debug.Log("Calling skillzEndTurnCompletion");
+		Debug.Log ("skillzEndTurnCompletion " + param);
+	}
+	
+	// This code is called in order to load an uninteractive game state, allowing the player to review the game state, but not allowing them to complete a turn or manipulate a game state.
+	public void skillzReviewCurrentGameState(string param) {
+		// TODO: Game Developers implement here
+		Dictionary<string, object> turnBasedMatchInfo = deserializeJSONToDictionary (param);
+
+		Debug.Log("Calling skillzReviewCurrentGameState");
+		Debug.Log ("skillzReviewCurrentGameState " + turnBasedMatchInfo);
+	}
+	
+	// This code is called when your user has finished reviewing the current game state, use this method to return to the Skillz UI.
+	public void skillzFinishReviewingCurrentGameState (string param) {
+		// TODO: Game Developers implement here
+		Debug.Log("Calling skillzFinishReviewingCurrentGameState");
+		Debug.Log ("skillzFinishReviewingCurrentGameState " + param);
+	}
+#endregion
+
+	// This is a convenience method for turn based play that will convert the string passed to skillzReviewCurrentGameState and skillzTurnBasedTournamentWillBegin
+	// It will convert this string into a Dictionary<string, object> containing both your match rules and all information contained in SKZTurnBasedMatchInfo.h.
+	// Some values may be null, refer to SKZTurnBasedMatchInfo.h in the Skillz framework for more information.
+	private Dictionary<string, object> deserializeJSONToDictionary(string jsonString) {
+		var dict = Json.Deserialize(jsonString) as Dictionary<string,object>;
+		return dict;
+	}
+	
+	// This is a convenience method for non-turn based play that takes in a tournament rules string that is passed to skillzTournamentWillBegin().
 	// It converts that in to a Dictionary<string, string> where the keys are the rule names and the values are the rule values.
 	// If there are no rules defined, it returns an empty dictionary.
 	private Dictionary<string, string> parseGameRulesStringInToDictionary(string gameRules) {
