@@ -10,7 +10,7 @@ public class SKZInitTestApp : MonoBehaviour {
 	void Start () {
 		// General Skillz initialization
 		// Id is given to us by the devportal
-		Skillz.skillzInitForGameIdAndEnvironment("110", Skillz.SkillzEnvironment.SkillzSandbox);
+		Skillz.skillzInitForGameIdAndEnvironment("240", Skillz.SkillzEnvironment.SkillzSandbox);
 	}
 
 	void OnGUI() {
