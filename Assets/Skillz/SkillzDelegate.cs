@@ -18,6 +18,8 @@ public class SkillzDelegate : MonoBehaviour {
 		//TODO: Game Developers implement here
 		Debug.Log("Calling skillzLaunchHasCompleted()");
 		Debug.Log ("skillzLaunchHasCompleted " + param);
+
+		Application.LoadLevel("testLevel");
 	}
 	
 	// This block of code will be run when a player is entering a game from Skillz. It should load the level and take any
@@ -30,8 +32,6 @@ public class SkillzDelegate : MonoBehaviour {
 		Dictionary<string, string> gameRulesDictionary = parseGameRulesStringInToDictionary(param);
 
 		Debug.Log("Calling skillzTournamentWillBegin()" + gameRulesDictionary);
-
-		Application.LoadLevel("testLevel");
 	}
 	
 	// This block of code is run when exiting Skillz back to the main application.
@@ -40,6 +40,8 @@ public class SkillzDelegate : MonoBehaviour {
 	public void skillzWillExit(string param) {
 		//TODO: Game Developers implement here
 		Debug.Log("Calling skillzWillExit()");
+
+		Application.LoadLevel("testInitLevel");
 	}
 	
 	// This block of code is run when a player finishes a Skillz game and is reporting their score and exiting back to the Skillz portal.
