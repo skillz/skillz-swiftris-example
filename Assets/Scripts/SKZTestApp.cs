@@ -10,6 +10,13 @@ using System.Collections;
  */
 public class SKZTestApp : MonoBehaviour {
 
+	void FixedUpdate() {
+		if (Skillz.tournamentIsInProgress()) {
+			Debug.Log("Skillz Heartbeat");
+			Skillz.updatePlayersCurrentScore(5);
+		}
+	}
+
 	// GUI callback
 	void OnGUI() {
 		// Basic implementation
