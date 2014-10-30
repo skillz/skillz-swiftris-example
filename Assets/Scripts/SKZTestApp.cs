@@ -12,6 +12,8 @@ public class SKZTestApp : MonoBehaviour {
 
 	void FixedUpdate() {
 		if (Skillz.tournamentIsInProgress()) {
+			// report in progress score to Skillz
+			// for this example this is just a made up score
 			Debug.Log("Skillz Heartbeat");
 			Skillz.updatePlayersCurrentScore(5);
 		}
