@@ -54,6 +54,12 @@ public class SkillzDelegate : MonoBehaviour
     public void skillzWillExit (string param)
     {
         Debug.Log ("Calling skillzWillExit()");
+
+		if (SKZInitTestApp.Orientation == Skillz.SkillzOrientation.SkillzLandscape) {
+			Application.LoadLevel ("testInitLevelLandscape");
+		} else {
+			Application.LoadLevel ("testInitLevelPortrait");
+		}
     }
 
     /// <summary>

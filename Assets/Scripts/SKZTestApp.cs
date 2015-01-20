@@ -25,6 +25,10 @@ public class SKZTestApp : MonoBehaviour {
 			Debug.Log("Skillz Heartbeat");
 			Skillz.updatePlayersCurrentScore(5);
 		}
+
+		Screen.orientation = (SKZInitTestApp.Orientation == Skillz.SkillzOrientation.SkillzLandscape ?
+		                      	ScreenOrientation.LandscapeLeft :
+		                        ScreenOrientation.Portrait);
 	}
 
 	// GUI callback
