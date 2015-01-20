@@ -14,6 +14,7 @@ public class SKZTestApp : MonoBehaviour {
 	{
 		Normal,
 		TurnBased,
+		ReviewTurnBased,
 	}
 	public TournamentTypes MatchType = TournamentTypes.Normal;
 
@@ -41,7 +42,7 @@ public class SKZTestApp : MonoBehaviour {
 		float highScoreButtonY = 100.0f,
 			  lowScoreButtonY = 200.0f,
 			  abortButtonY = 300.0f,
-			  finishReviewingGameStateButtonY = 400.0f;
+			  finishReviewingGameStateButtonY = 150.0f;
 
 		//The "low score" and "high score" buttons change based on the type of tournament.
 		//Additionally, turn-basd tournaments need a "finish reviewing game state" button.
@@ -59,6 +60,10 @@ public class SKZTestApp : MonoBehaviour {
 					// Report a random small final score to Skillz
 					int score = Random.Range(0, 10000);
 					Skillz.displayTournamentResultsWithScore(score);
+				}
+				if (GUI.Button(new Rect(buttonXMin, abortButtonY, buttonSize.x, buttonSize.y),
+				               "Abort")) {
+					Skillz.notifyPlayerAbortWithCompletion();
 				}
 			break;
 			case TournamentTypes.TurnBased:
@@ -78,18 +83,18 @@ public class SKZTestApp : MonoBehaviour {
 				                                	Skillz.SkillzTurnBasedRoundOutcome.SkillzRoundNoOutcome,
 				                                	Skillz.SkillzTurnBasedMatchOutcome.SkillzMatchNoOutcome);
 				}
+				if (GUI.Button(new Rect(buttonXMin, abortButtonY, buttonSize.x, buttonSize.y),
+				               "Abort")) {
+					Skillz.notifyPlayerAbortWithCompletion();
+				}
+			break;
+			case TournamentTypes.ReviewTurnBased:
 				// Finish viewing the game state.
 				if (GUI.Button (new Rect(buttonXMin, finishReviewingGameStateButtonY, buttonSize.x, buttonSize.y),
 			                	"Finish reviewing game state")) {
 					Skillz.finishReviewingCurrentGameState();
 				}
 			break;
-		}
-
-		//Abort button is the same regardless of game-type.
-		if (GUI.Button(new Rect(buttonXMin, abortButtonY, buttonSize.x, buttonSize.y),
-		               "Abort")) {
-			Skillz.notifyPlayerAbortWithCompletion();
 		}
 	}
 }

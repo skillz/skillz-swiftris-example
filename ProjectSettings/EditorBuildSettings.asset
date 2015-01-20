@@ -13,3 +13,5 @@ EditorBuildSettings:
     path: Assets/Scenes/testLevelNormal.unity
   - enabled: 1
     path: Assets/Scenes/testLevelTurnBased.unity
+  - enabled: 1
+    path: Assets/Scenes/testLevelReviewTurnBased.unity

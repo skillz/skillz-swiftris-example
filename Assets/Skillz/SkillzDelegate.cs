@@ -147,6 +147,8 @@ public class SkillzDelegate : MonoBehaviour
 
         Debug.Log ("Calling skillzReviewCurrentGameState");
         Debug.Log ("skillzReviewCurrentGameState " + turnBasedMatchInfoDictionary);
+
+		Application.LoadLevel ("testLevelReviewTurnBased");
     }
 
     /// <summary>
