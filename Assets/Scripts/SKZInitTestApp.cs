@@ -7,6 +7,9 @@ using System.Collections;
  */
 public class SKZInitTestApp : MonoBehaviour {
 
+	public GUIStyle Style;
+
+
 	/// <summary>
 	/// The orientation of the device when starting Skillz.
 	/// Gets set at the start of the component's life.
@@ -35,7 +38,7 @@ public class SKZInitTestApp : MonoBehaviour {
 		if (GUI.Button (new Rect ((Screen.width / 2.0f) - (buttonSize.x / 2.0f),
 		                          (Screen.height / 2.0f) - (buttonSize.y / 2.0f),
 		                          buttonSize.x, buttonSize.y),
-		                "Launch Skillz")) {
+		                "Launch Skillz", Style)) {
 
 			Skillz.launchSkillz (Orientation);
 		}

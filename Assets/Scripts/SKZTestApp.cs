@@ -10,6 +10,9 @@ using System.Collections;
  */
 public class SKZTestApp : MonoBehaviour {
 
+	public GUIStyle Style;
+
+
 	public enum TournamentTypes
 	{
 		Normal,
@@ -51,47 +54,47 @@ public class SKZTestApp : MonoBehaviour {
 				GUI.Label(new Rect(labelPos.x, labelPos.y, Screen.width - labelPos.x, Screen.height - labelPos.y),
 			           	  "Not turn-based");
 				if (GUI.Button (new Rect(buttonXMin, highScoreButtonY, buttonSize.x, buttonSize.y),
-			                	"Score HIGH")) {
+			                	"Score HIGH", Style)) {
 					// Report a large final score to Skillz
 					Skillz.displayTournamentResultsWithScore(99999);
 				}
 				if (GUI.Button (new Rect(buttonXMin, lowScoreButtonY, buttonSize.x, buttonSize.y),
-			                	"Score LOW")) {
+			                	"Score LOW", Style)) {
 					// Report a random small final score to Skillz
 					int score = Random.Range(0, 10000);
 					Skillz.displayTournamentResultsWithScore(score);
 				}
 				if (GUI.Button(new Rect(buttonXMin, abortButtonY, buttonSize.x, buttonSize.y),
-				               "Abort")) {
+				               "Abort", Style)) {
 					Skillz.notifyPlayerAbortWithCompletion();
 				}
 			break;
 			case TournamentTypes.TurnBased:
 				GUI.Label(new Rect(labelPos.x, labelPos.y, Screen.width - labelPos.x, Screen.height - labelPos.y),
-			           	  "Turn-based");
+			           	  "Turn-based", Style);
 				// Report a large turn score to Skillz
 				if (GUI.Button (new Rect(buttonXMin, highScoreButtonY, buttonSize.x, buttonSize.y),
-			                	"Score HIGH")) {
+			                	"Score HIGH", Style)) {
 					Skillz.completeTurnWithGameData("GAMEDATASON", "99999", 99999, 0,
 				                                Skillz.SkillzTurnBasedRoundOutcome.SkillzRoundNoOutcome,
 				                                Skillz.SkillzTurnBasedMatchOutcome.SkillzMatchNoOutcome);
 				}
 				// Report a random small turn score to Skillz
 				if (GUI.Button (new Rect(buttonXMin, lowScoreButtonY, buttonSize.x, buttonSize.y),
-			                	"Score LOW")) {
+			                	"Score LOW", Style)) {
 					Skillz.completeTurnWithGameData("GAMEDATASON", "0", 0, 0,
 				                                	Skillz.SkillzTurnBasedRoundOutcome.SkillzRoundNoOutcome,
 				                                	Skillz.SkillzTurnBasedMatchOutcome.SkillzMatchNoOutcome);
 				}
 				if (GUI.Button(new Rect(buttonXMin, abortButtonY, buttonSize.x, buttonSize.y),
-				               "Abort")) {
+				               "Abort", Style)) {
 					Skillz.notifyPlayerAbortWithCompletion();
 				}
 			break;
 			case TournamentTypes.ReviewTurnBased:
 				// Finish viewing the game state.
 				if (GUI.Button (new Rect(buttonXMin, finishReviewingGameStateButtonY, buttonSize.x, buttonSize.y),
-			                	"Finish reviewing game state")) {
+			                	"Finish reviewing game state", Style)) {
 					Skillz.finishReviewingCurrentGameState();
 				}
 			break;
