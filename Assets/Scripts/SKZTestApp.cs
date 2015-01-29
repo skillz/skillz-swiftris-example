@@ -26,7 +26,6 @@ public class SKZTestApp : MonoBehaviour {
 		if (Skillz.tournamentIsInProgress()) {
 			// report in progress score to Skillz
 			// this example project doesn't have any gameplay, so just give the player a constant score.
-			Debug.Log("Skillz Heartbeat");
 			Skillz.updatePlayersCurrentScore(5);
 		}
 
@@ -71,7 +70,7 @@ public class SKZTestApp : MonoBehaviour {
 			break;
 			case TournamentTypes.TurnBased:
 				GUI.Label(new Rect(labelPos.x, labelPos.y, Screen.width - labelPos.x, Screen.height - labelPos.y),
-			           	  "Turn-based", Style);
+			           	  "Turn-based");
 				// Report a large turn score to Skillz
 				if (GUI.Button (new Rect(buttonXMin, highScoreButtonY, buttonSize.x, buttonSize.y),
 			                	"Score HIGH", Style)) {

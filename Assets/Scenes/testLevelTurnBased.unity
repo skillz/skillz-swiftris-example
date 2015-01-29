@@ -113,7 +113,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
 --- !u!1001 &309823465
 Prefab:
   m_ObjectHideFlags: 0
@@ -151,7 +151,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 409150, guid: 0d0b1f7da065945fdae5aa27dd275286, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11409150, guid: 0d0b1f7da065945fdae5aa27dd275286, type: 2}
       propertyPath: MatchType
@@ -241,14 +241,14 @@ MonoBehaviour:
   Style:
     m_Name: 
     m_Normal:
-      m_Background: {fileID: 10906, guid: 0000000000000000f000000000000000, type: 0}
-      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_Background: {fileID: 2800000, guid: e28b79edec22746b3913236d565e4939, type: 3}
+      m_TextColor: {r: 1, g: 1, b: 1, a: 1}
     m_Hover:
-      m_Background: {fileID: 0}
-      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_Background: {fileID: 2800000, guid: e28b79edec22746b3913236d565e4939, type: 3}
+      m_TextColor: {r: .757352948, g: .757352948, b: .757352948, a: 1}
     m_Active:
-      m_Background: {fileID: 0}
-      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_Background: {fileID: 2800000, guid: e28b79edec22746b3913236d565e4939, type: 3}
+      m_TextColor: {r: .463235319, g: .463235319, b: .463235319, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
@@ -280,15 +280,15 @@ MonoBehaviour:
       m_Top: 0
       m_Bottom: 0
     m_Overflow:
-      m_Left: 0
-      m_Right: 0
-      m_Top: 0
-      m_Bottom: 0
+      m_Left: 60
+      m_Right: 60
+      m_Top: 25
+      m_Bottom: 25
     m_Font: {fileID: 0}
     m_FontSize: 30
     m_FontStyle: 0
-    m_Alignment: 0
-    m_WordWrap: 0
+    m_Alignment: 4
+    m_WordWrap: 1
     m_RichText: 1
     m_TextClipping: 0
     m_ImagePosition: 0
@@ -296,7 +296,7 @@ MonoBehaviour:
     m_FixedWidth: 0
     m_FixedHeight: 0
     m_StretchWidth: 1
-    m_StretchHeight: 0
+    m_StretchHeight: 1
   MatchType: 1
 --- !u!81 &2141660625
 AudioListener:
@@ -366,4 +366,4 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
