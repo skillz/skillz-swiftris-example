@@ -10,7 +10,7 @@ using System.Collections;
  */
 public class SKZTestApp : MonoBehaviour {
 
-	public GUIStyle Style;
+	public GUIStyle Style, LabelStyle;
 
 
 	public enum TournamentTypes
@@ -51,7 +51,7 @@ public class SKZTestApp : MonoBehaviour {
 		switch (MatchType) {
 			case TournamentTypes.Normal:
 				GUI.Label(new Rect(labelPos.x, labelPos.y, Screen.width - labelPos.x, Screen.height - labelPos.y),
-			           	  "Not turn-based");
+			           	  "Not turn-based", LabelStyle);
 				if (GUI.Button (new Rect(buttonXMin, highScoreButtonY, buttonSize.x, buttonSize.y),
 			                	"Score HIGH", Style)) {
 					// Report a large final score to Skillz
@@ -70,7 +70,7 @@ public class SKZTestApp : MonoBehaviour {
 			break;
 			case TournamentTypes.TurnBased:
 				GUI.Label(new Rect(labelPos.x, labelPos.y, Screen.width - labelPos.x, Screen.height - labelPos.y),
-			           	  "Turn-based");
+			           	  "Turn-based", LabelStyle);
 				// Report a large turn score to Skillz
 				if (GUI.Button (new Rect(buttonXMin, highScoreButtonY, buttonSize.x, buttonSize.y),
 			                	"Score HIGH", Style)) {
