@@ -86,9 +86,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 109150}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b818831a14313454d86812365e9000c4, type: 3}
+  m_Script: {fileID: 11500000, guid: b49abb8966b6a4031bacb7873fd84873, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MatchType: 0
   Style:
     m_Name: 
     m_Normal:
@@ -96,10 +97,10 @@ MonoBehaviour:
       m_TextColor: {r: 1, g: 1, b: 1, a: 1}
     m_Hover:
       m_Background: {fileID: 2800000, guid: e28b79edec22746b3913236d565e4939, type: 3}
-      m_TextColor: {r: .757352948, g: .757352948, b: .757352948, a: 1}
+      m_TextColor: {r: .911764681, g: .911764681, b: .911764681, a: 1}
     m_Active:
       m_Background: {fileID: 2800000, guid: e28b79edec22746b3913236d565e4939, type: 3}
-      m_TextColor: {r: .463235319, g: .463235319, b: .463235319, a: 1}
+      m_TextColor: {r: .79411763, g: .79411763, b: .79411763, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
@@ -131,15 +132,15 @@ MonoBehaviour:
       m_Top: 0
       m_Bottom: 0
     m_Overflow:
-      m_Left: -30
-      m_Right: -30
-      m_Top: 7
-      m_Bottom: 7
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
     m_Font: {fileID: 0}
     m_FontSize: 30
     m_FontStyle: 0
     m_Alignment: 4
-    m_WordWrap: 1
+    m_WordWrap: 0
     m_RichText: 1
     m_TextClipping: 0
     m_ImagePosition: 0
@@ -147,7 +148,7 @@ MonoBehaviour:
     m_FixedWidth: 0
     m_FixedHeight: 0
     m_StretchWidth: 1
-    m_StretchHeight: 1
+    m_StretchHeight: 0
   LabelStyle:
     m_Name: 
     m_Normal:
@@ -195,7 +196,7 @@ MonoBehaviour:
       m_Top: 0
       m_Bottom: 0
     m_Font: {fileID: 0}
-    m_FontSize: 21
+    m_FontSize: 30
     m_FontStyle: 0
     m_Alignment: 0
     m_WordWrap: 0
@@ -207,7 +208,6 @@ MonoBehaviour:
     m_FixedHeight: 0
     m_StretchWidth: 1
     m_StretchHeight: 0
-  MatchType: 0
 --- !u!124 &12409150
 Behaviour:
   m_ObjectHideFlags: 1

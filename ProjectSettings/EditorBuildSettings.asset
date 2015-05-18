@@ -5,13 +5,11 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/testInitLevelLandscape.unity
   - enabled: 1
-    path: Assets/Scenes/testInitLevelPortrait.unity
+    path: Assets/Scenes/MainMenu.unity
   - enabled: 1
-    path: Assets/Scenes/testLevelNormal.unity
+    path: Assets/Scenes/NormalMatch.unity
   - enabled: 1
-    path: Assets/Scenes/testLevelTurnBased.unity
+    path: Assets/Scenes/TurnBasedMatch.unity
   - enabled: 1
-    path: Assets/Scenes/testLevelReviewTurnBased.unity
+    path: Assets/Scenes/TurnBasedReview.unity
