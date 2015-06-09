@@ -77,8 +77,8 @@ namespace SkillzSDK
 					// Now parse based on =
 					string[] ruleValues = rule.Split(innerRuleDelimiters);
 					// Put the results in the dictionary
-					string ruleKey = ruleValues [0].Trim();
-					string ruleValue = ruleValues [1].Trim();
+					string ruleKey = ruleValues[0].Trim().TrimStart('"').TrimEnd('"');
+					string ruleValue = ruleValues[1].Trim();
 					resultDictionary.Add(ruleKey, ruleValue);
 				}
 			}

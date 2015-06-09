@@ -33,12 +33,6 @@ namespace SkillzSDK
 	public struct TurnBasedMatch
 	{
 		/// <summary>
-		/// The inclusive min/max possible values for the SkillzDifficulty field.
-		/// </summary>
-		public const uint SkillzDifficultyMin = 1,
-						  SkillzDifficultyMax = 10;
-
-		/// <summary>
 		/// The player's unique Skillz ID number.
 		/// </summary>
 		public uint PlayerID;
@@ -75,12 +69,24 @@ namespace SkillzSDK
 		/// The time the tournament began, in UTC.
 		/// </summary>
 		public DateTime TimeTournamentBegan;
+
+		/// <summary>
+		/// Whether the match has already ended.
+		/// This should be false unless the player is reviewing the game state of a finished match.
+		/// </summary>
+		public bool IsMatchOver;
 		
 		/// <summary>
 		/// All the rounds so far in this game, in order.
-		/// The current round is at the end of the list.
+		/// The current round is the last element in the list.
 		/// </summary>
 		public List<TurnBasedRound> Rounds;
+
+		/// <summary>
+		/// The 1-based index of the current round.
+		/// Each round is two turns.
+		/// </summary>
+		public int CurrentTurnIndex;
 		
 		/// <summary>
 		/// Information that is only available if this isn't the first turn.
@@ -103,11 +109,14 @@ namespace SkillzSDK
 			TournamentParams = new Dictionary<string, string>();
 			SkillzDifficulty = null;
 			ContinueMatchData = null;
-			
+			IsMatchOver = false;
+			CurrentTurnIndex = 1;
+
 			string tryKey = "[null]";
 			try
 			{
-				//Any key that isn't one of these built-in parameters is a custom tournament parameter.
+				//Keep track of all the built-in parameter keys that we use.
+				//Anything left over is a custom Game Parameter.
 				List<string> keysSoFar = new List<string>();
 
 				tryKey = "playerUniqueId";
@@ -128,6 +137,9 @@ namespace SkillzSDK
 				PlayerAvatarURL = matchInfo[tryKey].ToString();
 				keysSoFar.Add(tryKey);
 				
+				tryKey = "isGameComplete";
+				IsMatchOver = !(matchInfo[tryKey].ToString() == "False");
+				keysSoFar.Add("isGameComplete");
 				
 				//The date is in the form "yyyy-mm-dd hh:mm:ss +0000".
 				tryKey = "tournamentBeganDate";
@@ -139,6 +151,10 @@ namespace SkillzSDK
 				minute = int.Parse(date.Substring(14, 2)),
 				second = int.Parse(date.Substring(17, 2));
 				TimeTournamentBegan = new DateTime(year, month, day, hour, minute, second);
+				keysSoFar.Add(tryKey);
+
+				tryKey = "currentTurnIndex";
+				CurrentTurnIndex = int.Parse(matchInfo[tryKey].ToString());
 				keysSoFar.Add(tryKey);
 				
 				

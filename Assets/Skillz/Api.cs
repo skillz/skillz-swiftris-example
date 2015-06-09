@@ -99,6 +99,13 @@ namespace SkillzSDK
         #endregion //Native iOS API
 
 
+        /// <summary>
+        /// The inclusive range of possible values for the SkillzDifficulty field.
+        /// </summary>
+        public const uint SkillzDifficultyMin = 1,
+                          SkillzDifficultyMax = 10;
+
+
         #region Properties
 
         /// <summary>
