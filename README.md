@@ -24,7 +24,7 @@ Building this project uses the standard Unity build process. When buildling to X
 **File -> Build Settings -> Set Platform to iOS (if needed) -> Build**
 This will create the XCode project for iOS.
 
-Once the Xcode project is built you will need to follow the [XCode integration steps detailed on the Developer Portal](https://skillz.com/developer/docs/install_framework_ios_unity) to include the needed Skillz files and configure the XCode project for Skillz. It is recommended that after the initial build that additional builds use the *append* mode to avoid resetting the Skillz integration in the XCode project.
+Once the Xcode project is generated, it should build without any extra work!
 
 ## Run
 Running the project through XCode as you would any other project. **Please note**: you should run this project directly on a physical device, as XCode's simulator may not work as expected with the SDK.
