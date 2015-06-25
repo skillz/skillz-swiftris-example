@@ -154,7 +154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eeacafae960164c2f9a3e8c24b90af66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GameID: 0
+  GameID: 240
   SkillzEnvironment: 0
 --- !u!4 &80342322
 Transform:
