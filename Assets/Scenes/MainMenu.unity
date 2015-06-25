@@ -137,7 +137,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 80342316}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 71decc3e0c102441981769b9e2ee3f08, type: 3}
+  m_Script: {fileID: 11500000, guid: 0a69e935bacca45d9b8d569c60814991, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   DelBase: {fileID: 80342319}
@@ -151,10 +151,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 80342316}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9be8bf78e3f3f442b9e3d76f344a02ef, type: 3}
+  m_Script: {fileID: 11500000, guid: eeacafae960164c2f9a3e8c24b90af66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GameID: 240
+  GameID: 0
   SkillzEnvironment: 0
 --- !u!4 &80342322
 Transform:
