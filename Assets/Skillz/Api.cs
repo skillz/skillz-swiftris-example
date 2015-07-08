@@ -1,7 +1,8 @@
 using UnityEngine;
+using System;
 using System.Collections;
+using System.Collections.Generic;
 using System.Runtime.InteropServices;
-
 
 namespace SkillzSDK
 {
@@ -64,10 +65,10 @@ namespace SkillzSDK
         private static extern int _tournamentIsInProgress();
 
         [DllImport ("__Internal")]
-        private static extern string _currentUserDisplayName();
+        private static extern IntPtr _player();
 
         [DllImport ("__Internal")]
-        private static extern string _SDKShortVersion();
+        private static extern IntPtr _SDKShortVersion();
 
         [DllImport ("__Internal")]
         private static extern void _showSDKVersionInfo();
@@ -120,9 +121,24 @@ namespace SkillzSDK
         /// <summary>
         /// Gets the Skillz username of the player.
         /// </summary>
+        [Obsolete("Use 'Api.Player.DisplayName' instead")]
         public static string CurrentUserDisplayName
         {
-            get { return _currentUserDisplayName(); }
+            get { return Player.DisplayName; }
+        }
+
+        /// <summary>
+        /// Gets information for the current player.
+        /// </summary>
+        public static Player Player
+        {
+            get
+            {
+                string playerJson = Marshal.PtrToStringAnsi(_player());
+                Dictionary<string, object> playerDict = DeserializeJSONToDictionary(playerJson);
+                string empty = "";
+                return new Player(ref empty, playerDict);
+            }
         }
 
         /// <summary>
@@ -130,7 +146,7 @@ namespace SkillzSDK
         /// </summary>
         public static string SDKVersionShort
         {
-            get { return _SDKShortVersion(); }
+            get { return Marshal.PtrToStringAnsi(_SDKShortVersion()); }
         }
 
         #endregion //Properties
@@ -347,6 +363,11 @@ namespace SkillzSDK
         public static void SetShouldSkillzLaunchFromURL(bool allowLaunch)
         {
             _setShouldSkillzLaunchFromURL(allowLaunch);
+        }
+
+        private static Dictionary<string, object> DeserializeJSONToDictionary(string jsonString)
+        {
+            return MiniJSON.Json.Deserialize(jsonString) as Dictionary<string,object>;
         }
     }
 }

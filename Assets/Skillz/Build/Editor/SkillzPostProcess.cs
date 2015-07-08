@@ -6,14 +6,37 @@ using System.Diagnostics;
 
 namespace SkillzInternal
 {
+	//Disable warnings about code blocks that will never be reached.
+	#pragma warning disable 162, 429
+
 	public static class SkillzPostProcessBuild
 	{
+		//The following public static fields can be modified for developers that want to automate their Unity builds.
+		//Otherwise, some dialogs will appear at the end of every new/replace build.
+
+		/// <summary>
+		/// If this is true, then this class's static fields will be used instead of prompting the developer at build time.
+		/// <summary>
+		private const bool AutoBuild_On = false;
+
+		/// <summary>
+		/// Whether this is a portrait game. Only used if "AutoBuild_Use" is true.
+		/// </summary>
+		private const bool AutoBuild_IsPortrait = false;
+		/// <summary>
+		/// The full path of the "SkillzSDK-iOS.embeddedframework" folder that came with the downloaded Skillz SDK.
+		/// Only used if "AutoBuild_Use" is true.
+		/// </summary>
+		private const string AutoBuild_SkillzPath = "/Users/myUsername/Downloads/sdk_ios_10.1.19/SkillzSDK-iOS.embeddedframework";
+
+
 		/// <summary>
 		/// A file with this name is used to track whether a build is appending or replacing.
 		/// </summary>
-		const string checkAppendFileName = ".skillzTouch";
+		private const string checkAppendFileName = ".skillzTouch";
 		
-		[UnityEditor.Callbacks.PostProcessBuild]
+
+		[UnityEditor.Callbacks.PostProcessBuild(int.MinValue)]
 		public static void OnPostProcessBuild(BuildTarget build, string path)
 		{
 			//Make sure this build is for iOS.
@@ -62,8 +85,12 @@ namespace SkillzInternal
 		{
 			//Get the orientation setting to use.
 			string desiredOrientation;
-			if (EditorUtility.DisplayDialog("Choose Orientation", "Choose which orientation your game uses for Skillz:",
-			                                "Portrait", "Landscape"))
+			if (AutoBuild_On)
+			{
+				desiredOrientation = (AutoBuild_IsPortrait ? "UIInterfaceOrientationMaskPortrait" : "UIInterfaceOrientationMaskLandscape");
+			}
+			else if (EditorUtility.DisplayDialog("Choose Orientation", "Choose which orientation your game uses for Skillz:",
+												 "Portrait", "Landscape"))
 			{
 				desiredOrientation = "UIInterfaceOrientationMaskPortrait";
 			}
@@ -151,9 +178,25 @@ namespace SkillzInternal
 
 		private static bool SetUpSDKFiles(string projPath)
 		{
-			//Ask the user for the embeddedframework path.
+			//Ask the user for the embeddedframework path if necessary.
+			bool askForPath = true;
 			string sdkPath = ".dummy";
-			while (Path.GetFileName(sdkPath) != "SkillzSDK-iOS.embeddedframework")
+			if (AutoBuild_On)
+			{
+				if (new DirectoryInfo(AutoBuild_SkillzPath).Exists)
+				{
+					askForPath = false;
+					sdkPath = AutoBuild_SkillzPath;
+				}
+				else
+				{
+					EditorUtility.DisplayDialog("Skillz auto-build failed!",
+					                            "Couldn't find the directory '" + AutoBuild_SkillzPath +
+					                            	"'; please locate it manually in the following dialog.",
+					                            "OK");
+				}
+			}
+			while (askForPath && Path.GetFileName(sdkPath) != "SkillzSDK-iOS.embeddedframework")
 			{
 				//If the user hit "cancel" on the dialog, quit out.
 				if (sdkPath == "")
@@ -226,4 +269,7 @@ namespace SkillzInternal
 			EditorUtility.DisplayDialog("Skillz SDK setup failed!", manualInstructions, "OK");
 		}
 	}
+
+	//Restore the warnings that were disabled.
+	#pragma warning restore 162, 429
 }

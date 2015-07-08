@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 
 
-using SkillzInfoDict = System.Collections.Generic.Dictionary<string, object>;
+using JSONDict = System.Collections.Generic.Dictionary<string, object>;
 
 namespace SkillzSDK
 {
@@ -24,46 +24,30 @@ namespace SkillzSDK
 		/// Stored as a double because some games submit floating-point scores.
 		/// </summary>
 		public double OpponentRoundScore, MyRoundScore;
+
+		public override string ToString()
+		{
+			return "TurnBasedRound: " +
+				" MyRoundScore: [" + MyRoundScore + "]" +
+				" OpponentRoundScore: [" + OpponentRoundScore + "]" +
+				" Outcome: [" + Outcome + "]";
+		}
 	}
 
 
 	/// <summary>
 	/// Information about any kind of turn-based match.
 	/// </summary>
-	public struct TurnBasedMatch
+	public class TurnBasedMatch : Match
 	{
 		/// <summary>
-		/// The player's unique Skillz ID number.
+		/// The prize for winning this match, assuming it's for Z.
 		/// </summary>
-		public uint PlayerID;
-		
+		public uint PrizeZ;
 		/// <summary>
-		/// The amount of virtual currency ("Z") and real cash this match is worth.
+		/// The prize for winning this match, assuming it's for real cash.
 		/// </summary>
-		public uint PrizeZ, PrizeCash;
-		
-		/// <summary>
-		/// The player's Skillz username.
-		/// </summary>
-		public string PlayerDisplayName;
-		
-		/// <summary>
-		/// A URL linking to the player's avatar image.
-		/// </summary>
-		public string PlayerAvatarURL;
-		
-		/// <summary>
-		/// If this game supports "Automatic Difficulty" (specified in the Developer Portal --
-		/// https://www.developers.skillz.com/developer), this value represents the difficulty this game
-		/// should have, from 1 to 10 (inclusive).
-		/// Note that this value will only exist in Production, not Sandbox.
-		public uint? SkillzDifficulty;
-
-		/// <summary>
-		/// Custom parameters for the tournament type being played. These parameters are defined by
-		/// the game developer in the Developer Portal (https://www.developers.skillz.com/developer).
-		/// </summary>
-		public Dictionary<string, string> TournamentParams;
+		public float PrizeCash;
 
 		/// <summary>
 		/// The time the tournament began, in UTC.
@@ -97,49 +81,30 @@ namespace SkillzSDK
 		/// <summary>
 		/// Creates a new instance based on the given information coming in from the server.
 		/// </summary>
-		public TurnBasedMatch(SkillzInfoDict matchInfo)
+		public TurnBasedMatch(JSONDict matchInfo)
+			: base(matchInfo)
 		{
+			//Note that the JSON is completely different for normal vs. turn-based matches.
+			//For that reason, this constructor doesn't call the base "Match" constructor
+			//    that takes in a similar dictionary; instead, it parses that data itself.
+
 			Rounds = new List<TurnBasedRound>();
-			PlayerID = 0;
 			PrizeZ = 0;
-			PrizeCash = 0;
-			PlayerDisplayName = "";
-			PlayerAvatarURL = "";
+			PrizeCash = 0.0f;
+			Player.ID = 0;
+			Player.DisplayName = "";
+			Player.AvatarURL = "";
+			Player.FlagURL = "";
 			TimeTournamentBegan = DateTime.Now;
-			TournamentParams = new Dictionary<string, string>();
-			SkillzDifficulty = null;
 			ContinueMatchData = null;
 			IsMatchOver = false;
 			CurrentTurnIndex = 1;
 
-			string tryKey = "[null]";
+			string tryKey = "[unknown]";
 			try
 			{
-				//Keep track of all the built-in parameter keys that we use.
-				//Anything left over is a custom Game Parameter.
-				List<string> keysSoFar = new List<string>();
-
-				tryKey = "playerUniqueId";
-				PlayerID = uint.Parse(matchInfo[tryKey].ToString());
-				keysSoFar.Add(tryKey);
-				
-				tryKey = "prizePoints";
-				PrizeZ = uint.Parse(matchInfo[tryKey].ToString());
-				keysSoFar.Add(tryKey);
-				tryKey = "prizeCash";
-				PrizeCash = uint.Parse(matchInfo[tryKey].ToString());
-				keysSoFar.Add(tryKey);
-				
-				tryKey = "playerDisplayName";
-				PlayerDisplayName = matchInfo[tryKey].ToString();
-				keysSoFar.Add(tryKey);
-				tryKey = "playerAvatarURL";
-				PlayerAvatarURL = matchInfo[tryKey].ToString();
-				keysSoFar.Add(tryKey);
-				
 				tryKey = "isGameComplete";
 				IsMatchOver = !(matchInfo[tryKey].ToString() == "False");
-				keysSoFar.Add("isGameComplete");
 				
 				//The date is in the form "yyyy-mm-dd hh:mm:ss +0000".
 				tryKey = "tournamentBeganDate";
@@ -151,19 +116,23 @@ namespace SkillzSDK
 				minute = int.Parse(date.Substring(14, 2)),
 				second = int.Parse(date.Substring(17, 2));
 				TimeTournamentBegan = new DateTime(year, month, day, hour, minute, second);
-				keysSoFar.Add(tryKey);
 
 				tryKey = "currentTurnIndex";
 				CurrentTurnIndex = int.Parse(matchInfo[tryKey].ToString());
-				keysSoFar.Add(tryKey);
 				
+				tryKey = "player";
+				Dictionary<string, object> playerInfo = null;
+				if (matchInfo.ContainsKey(tryKey))
+				{
+					playerInfo = (Dictionary<string, object>)matchInfo[tryKey];
+					Player = new Player(ref tryKey, playerInfo);
+				}
 				
 				tryKey = "roundInformation";
 				List<object> rounds = (List<object>)matchInfo[tryKey];
-				keysSoFar.Add(tryKey);
 				foreach (object roundO in rounds)
 				{
-					SkillzInfoDict roundD = (SkillzInfoDict)roundO;
+					JSONDict roundD = (JSONDict)roundO;
 					TurnBasedRound roundData = new TurnBasedRound();
 					
 					tryKey = "opponentScore";
@@ -208,30 +177,6 @@ namespace SkillzSDK
 				
 				tryKey = "[ContinuedTurnBasedMatch]";
 				ContinueMatchData = ContinuedTurnBasedMatch.TryGetInfo(matchInfo);
-				keysSoFar.Add("gameData");
-				keysSoFar.Add("opponentAvatarURL");
-				keysSoFar.Add("opponentDisplayName");
-				keysSoFar.Add("opponentUniqueId");
-				keysSoFar.Add("opponentCurrentTotalScore");
-				keysSoFar.Add("playerCurrentTotalScore");
-
-				tryKey = "skillz_difficulty";
-				if (matchInfo.ContainsKey(tryKey))
-				{
-					SkillzDifficulty = uint.Parse(matchInfo[tryKey] as string);
-				}
-				keysSoFar.Add(tryKey);
-
-				//Now that we have all the keys used for built-in params, find the custom params.
-				foreach (string key in matchInfo.Keys)
-				{
-					tryKey = key;
-					string val = matchInfo[key] as string;
-					if (val != null && !keysSoFar.Contains(key))
-					{
-						TournamentParams.Add(key, val);
-					}
-				}
 			}
 			catch (Exception e)
 			{
@@ -240,6 +185,47 @@ namespace SkillzSDK
 				               "Error message: " + e.GetType() + "; " + e.Message);
 			}
 		}
+
+		public override string ToString()
+		{
+			string paramStr = "";
+			foreach(KeyValuePair<string, string> entry in GameParams)
+			{
+				paramStr += " " + entry.Key + ": " + entry.Value;
+			}
+
+			return "TurnBasedMatch: " +
+				" ID: [" + ID + "]" +
+				" Name: [" + Name + "]" +
+				" Description: [" + Description + "]" +
+				" TemplateID: [" + TemplateID + "]" +
+				" SkillzDifficulty: [" + SkillzDifficulty + "]" +
+				" IsCash: [" + IsCash + "]" +
+				" EntryPoints: [" + EntryPoints + "]" +
+				" EntryCash: [" + EntryCash + "]" +
+				" GameParams: [" + paramStr + "]" +
+				" Player: [" + Player + "]" +
+				" PrizeZ: [" + PrizeZ + "]" +
+				" PrizeCash: [" + PrizeCash + "]" +
+				" TimeTournamentBegan: [" + TimeTournamentBegan + "]" +
+				" IsMatchOver: [" + IsMatchOver + "]" +
+				" Rounds: [" + Rounds + "]" +
+				" CurrentTurnIndex: [" + CurrentTurnIndex + "]" +
+				" ContinueMatchData: [" + ContinueMatchData + "]";
+		}
+
+		#region Deprecated fields
+
+		[Obsolete("Use 'Player.ID' instead")]
+		public uint PlayerID { get { return Player.ID; } set { Player.ID = value; } }
+		[Obsolete("Use 'Player.DisplayName' instead")]
+		public string PlayerDisplayName { get { return Player.DisplayName; } set { Player.DisplayName = value; } }
+		[Obsolete("Use 'Player.AvatarURL' instead")]
+		public string PlayerAvatarURL { get { return Player.AvatarURL; } set { Player.AvatarURL = value; } }
+		[Obsolete("Use 'GameParams' instead")]
+		public Dictionary<string, string> TournamentParams { get { return GameParams; } set { GameParams = value; } }
+
+		#endregion
 	}
 
 	/// <summary>
@@ -251,7 +237,7 @@ namespace SkillzSDK
 		/// Tries to create the continued match info with the given dictionary.
 		/// Returns "null" if the given info describes a match that's starting the first turn.
 		/// </summary>
-		public static ContinuedTurnBasedMatch? TryGetInfo(SkillzInfoDict matchInfo)
+		public static ContinuedTurnBasedMatch? TryGetInfo(JSONDict matchInfo)
 		{
 			if (!matchInfo.ContainsKey("gameData"))
 			{
@@ -262,38 +248,29 @@ namespace SkillzSDK
 		
 		
 		/// <summary>
-		/// The game data from the end of the last turn, passed in by "Skillz.completeTurnWithGameData()".
+		/// The game data from the end of the last turn, passed in by "SkillzSDK.Api.FinishTurn()".
 		/// </summary>
 		public string GameData;
-		
+
 		/// <summary>
-		/// A URL linking to the other player's avatar image.
+		/// The competing player in this match.
 		/// </summary>
-		public string OpponentAvatarURL;
-		
-		/// <summary>
-		/// The Skillz username of the other player.
-		/// </summary>
-		public string OpponentDisplayName;
-		
-		/// <summary>
-		/// The unique Skillz ID of the other player.
-		/// </summary>
-		public uint OpponentUniqueID;
-		
+		public Player Opponent;
+
 		/// <summary>
 		/// Each player's current total score.
-		/// Stored as a double because some games submit floating-point scores.
+		/// Stored as a double because some games submit large or floating-point scores.
 		/// </summary>
 		public double MyCurrentTotalScore, OpponentCurrentTotalScore;
 		
 		
-		private ContinuedTurnBasedMatch(SkillzInfoDict matchInfo)
+		private ContinuedTurnBasedMatch(JSONDict matchInfo)
 		{
 			GameData = "";
-			OpponentAvatarURL = "";
-			OpponentDisplayName = "";
-			OpponentUniqueID = 0;
+			Opponent = new Player();
+			Opponent.AvatarURL = "";
+			Opponent.DisplayName = "";
+			Opponent.ID = 0;
 			MyCurrentTotalScore = 0.0;
 			OpponentCurrentTotalScore = 0.0;
 			
@@ -303,31 +280,23 @@ namespace SkillzSDK
 				tryKey = "gameData";
 				GameData = matchInfo[tryKey].ToString();
 				
-				tryKey = "opponentAvatarURL";
+				tryKey = "opponent";
+				Dictionary<string, object> opponentInfo = null;
 				if (matchInfo.ContainsKey(tryKey))
 				{
-					OpponentAvatarURL = matchInfo[tryKey].ToString();
+					opponentInfo = (Dictionary<string, object>)matchInfo[tryKey];
+					Opponent = new Player(ref tryKey, opponentInfo);
 				}
 				
-				tryKey = "opponentDisplayName";
-				if (matchInfo.ContainsKey(tryKey))
+				tryKey = "currentTotalScore";
+				Dictionary<string, object> playerDat = (Dictionary<string, object>)matchInfo["player"];
+				if (playerDat.ContainsKey(tryKey))
 				{
-					OpponentDisplayName = matchInfo[tryKey].ToString();
+					MyCurrentTotalScore = double.Parse(playerDat[tryKey].ToString());
 				}
-				
-				tryKey = "opponentUniqueId";
-				if (matchInfo.ContainsKey(tryKey))
+				if (opponentInfo != null && opponentInfo.ContainsKey(tryKey))
 				{
-					OpponentUniqueID = uint.Parse(matchInfo[tryKey].ToString());
-				}
-				
-				tryKey = "playerCurrentTotalScore";
-				MyCurrentTotalScore = double.Parse(matchInfo[tryKey].ToString());
-
-				tryKey = "opponentCurrentTotalScore";
-				if (matchInfo.ContainsKey(tryKey))
-				{
-					OpponentCurrentTotalScore = double.Parse(matchInfo[tryKey].ToString());
+					OpponentCurrentTotalScore = double.Parse(opponentInfo[tryKey].ToString());
 				}
 			}
 			catch (Exception e)
@@ -337,5 +306,25 @@ namespace SkillzSDK
 				               "Error message: " + e.GetType() + "; " + e.Message);
 			}
 		}
+
+		public override string ToString()
+		{
+			return "ContinuedTurnBasedMatch: " +
+				" GameData: [" + GameData + "]" +
+				" MyCurrentTotalScore: [" + MyCurrentTotalScore + "]" +
+				" Opponent: [" + Opponent + "]" +
+				" OpponentCurrentTotalScore: [" + OpponentCurrentTotalScore + "]";
+		}
+
+		#region Deprecated fields
+		
+		[Obsolete("Use 'Opponent.AvatarURL' instead")]
+		public string OpponentAvatarURL { get { return Opponent.AvatarURL; } set { Opponent.AvatarURL = value; } }
+		[Obsolete("Use 'Opponent.DisplayName' instead")]
+		public string OpponentDisplayName { get { return Opponent.DisplayName; } set { Opponent.DisplayName = value; } }
+		[Obsolete("Use 'Opponent.ID' instead")]
+		public uint OpponentUniqueID { get { return Opponent.ID; } set { Opponent.ID = value; } }
+
+		#endregion
 	}
 }

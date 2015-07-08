@@ -17,11 +17,15 @@ namespace SkillzSDK
         ///  and take any other necessary initialization actions in order to start the game.
         /// </summary>
         ///
-        /// <param name="tournamentRules">
+        /// <param name="matchInfo">
         /// The custom tournament parameters you set up on the developer's portal (https://developers.skillz.com/developer)
         ///  for the type of tournament that is about to begin.
         /// </param>
-        public abstract void OnTournamentWillBegin(Dictionary<string, string> tournamentRules);
+        /// <remarks>
+        /// Replaces the previous `OnTournamentWillBegin(Dictionary<string, string> tournamentRules)` method.
+		/// `tournamentRules` (aka Game Parameters) are avaiable by using `matchInfo.GameParams`.
+        /// </remarks>
+        public abstract void OnTournamentWillBegin(Match matchInfo);
 
 
         /// <summary>
