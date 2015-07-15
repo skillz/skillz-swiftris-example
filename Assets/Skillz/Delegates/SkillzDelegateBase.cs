@@ -20,7 +20,7 @@ namespace SkillzSDK
 		
 		/// <summary>
 		/// Called when the Skillz UI is about to launch.
-		/// <summary>
+		/// </summary>
 		public virtual void OnSkillzWillLaunch() { }
 		
 		/// <summary>

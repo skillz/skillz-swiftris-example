@@ -64,6 +64,8 @@ namespace SkillzSDK
 		[DllImport ("__Internal")]
 		private static extern int _tournamentIsInProgress();
 
+		// Need to use an IntPtr instead of a string here, for more information see
+		// http://www.mono-project.com/docs/advanced/pinvoke/#strings-as-return-values
 		[DllImport ("__Internal")]
 		private static extern IntPtr _player();
 
