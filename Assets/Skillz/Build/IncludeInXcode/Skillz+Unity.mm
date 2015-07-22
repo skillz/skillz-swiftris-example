@@ -6,6 +6,7 @@
 //
 
 #import <SkillzSDK-iOS/Skillz.h>
+#include <string>
 
 #include "UnityInterface.h"
 #import "UnityAppController.h"
@@ -112,15 +113,21 @@ static SKZAppDelegate* sSKZAppDelegate;
 NSString *unitySkillzDelegateName = @"SkillzDelegate";
 
 - (void)tournamentWillBegin:(NSDictionary *)gameParameters
+              withMatchInfo:(SKZMatchInfo *)matchInfo
 {
     ResumeApp();
     
-    NSString *gameParametersString = [gameParameters description];
     // Send message to Unity object to call C# method
     // SkillzDelegate.skillzTournamentWillBegin, implemented by publisher
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wundeclared-selector"
+    NSString *json = [matchInfo performSelector:@selector(JSONStringRepresentation:)
+                                     withObject:gameParameters];
+#pragma GCC diagnostic pop
+
     [Skillz sendMessageToUnityObject:unitySkillzDelegateName
                        callingMethod:@"skillzTournamentWillBegin"
-                    withParamMessage:gameParametersString];
+                    withParamMessage:json];
 }
 
 
@@ -173,9 +180,15 @@ NSString *unitySkillzDelegateName = @"SkillzDelegate";
     
     // Send message to Unity object to call C# method
     // SkillzDelegate.skillzTurnBasedTournamentWillBegin, to be implenmented by publisher
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wundeclared-selector"
+    NSString *json = [currentGameStateInfo performSelector:@selector(JSONStringRepresentation:)
+                                                withObject:gameParameters];
+#pragma GCC diagnostic pop
+
     [Skillz sendMessageToUnityObject:unitySkillzDelegateName
                        callingMethod:@"skillzTurnBasedTournamentWillBegin"
-                    withParamMessage:[currentGameStateInfo JSONStringRepresentation:gameParameters]];
+                    withParamMessage:json];
 }
 
 - (void)turnBasedGameReviewWillBegin:(NSDictionary *)gameParameters
@@ -185,9 +198,15 @@ NSString *unitySkillzDelegateName = @"SkillzDelegate";
     
     // Send message to Unity object to call C# method
     // SkillzDelegate.skillzReviewCurrentGameState, to be implenmented by publisher
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wundeclared-selector"
+    NSString *json = [currentGameStateInfo performSelector:@selector(JSONStringRepresentation:)
+                                                withObject:gameParameters];
+#pragma GCC diagnostic pop
+
     [Skillz sendMessageToUnityObject:unitySkillzDelegateName
                        callingMethod:@"skillzReviewCurrentGameState"
-                    withParamMessage:[currentGameStateInfo JSONStringRepresentation:gameParameters]];
+                    withParamMessage:json];
 }
 
 #pragma mark User Engagement
@@ -309,10 +328,32 @@ extern "C" void _skillzInitForGameIdAndEnvironment(const char *gameId, const cha
                             withEnvironment:skillzEnvironment];
 }
 
-// C-style wrapper for exposing a user's Skillz display name to Unity in C#
-extern "C" const char *_currentUserDisplayName()
+// C-style wrapper for exposing a user's data to Unity in C#
+extern "C" const char *_player()
 {
-    return [[Skillz currentUserDisplayName] UTF8String];
+    static std::string *s;
+
+    if (!s) {
+        s = new std::string("");
+    }
+    
+    SKZPlayer *player = [Skillz player];
+
+    if (player) {
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wundeclared-selector"
+        NSString *json = [[Skillz player] performSelector:@selector(JSONStringRepresentation)];
+#pragma GCC diagnostic pop
+        
+        const char *jsonC = [json UTF8String];
+        if (jsonC) {
+            *s = jsonC;
+        }
+    } else {
+        *s = "";
+    }
+
+    return s->c_str();
 }
 
 // C-style wrapper for checking whether a tournament is in progress so that it can be accessed by Unity in C#

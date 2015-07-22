@@ -19,6 +19,8 @@ public class MainMenu : MonoBehaviour
 		                "Launch Skillz", Style))
 		{
 			SkillzSDK.Api.LaunchSkillz(MySkillzDelegateBase.GameOrientation);
+			Debug.Log(SkillzSDK.Api.SDKVersionShort);
+			Debug.Log(SkillzSDK.Api.Player);
 		}
 	}
 }

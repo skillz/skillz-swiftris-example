@@ -7,8 +7,9 @@ using System.Collections;
 /// </summary>
 public class MySkillzDelegateStandard : SkillzSDK.SkillzDelegateStandard
 {
-	public override void OnTournamentWillBegin(System.Collections.Generic.Dictionary<string, string> tournamentRules)
+	public override void OnTournamentWillBegin(SkillzSDK.Match matchInfo)
 	{
+		Debug.Log(matchInfo);
 		Application.LoadLevel("NormalMatch");
 	}
 	public override void OnTournamentCompleted()

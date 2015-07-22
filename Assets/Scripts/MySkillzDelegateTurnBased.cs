@@ -9,6 +9,7 @@ public class MySkillzDelegateTurnBased : SkillzSDK.SkillzDelegateTurnBased
 {
 	public override void OnTurnBasedTournamentWillBegin(SkillzSDK.TurnBasedMatch matchInfo)
 	{
+		Debug.Log(matchInfo);
 		Application.LoadLevel("TurnBasedMatch");
 	}
 	public override void OnTurnEnd()
