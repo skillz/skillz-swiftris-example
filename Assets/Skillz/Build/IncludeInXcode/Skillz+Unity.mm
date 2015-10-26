@@ -5,7 +5,7 @@
 //  Copyright (c) 2015 Skillz. All rights reserved.
 //
 
-#import <SkillzSDK-iOS/Skillz.h>
+#import <Skillz/Skillz.h>
 #include <string>
 
 #include "UnityInterface.h"

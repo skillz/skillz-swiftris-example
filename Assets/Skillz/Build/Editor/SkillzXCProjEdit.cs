@@ -28,7 +28,7 @@ namespace SkillzInternal
 				edit.FilePath = Path.Combine(projPath, projFilePath);
 
 				reader = new StreamReader(edit.FilePath);
-				
+
 				string line = reader.ReadLine();
 				while (line != null)
 				{
@@ -135,6 +135,8 @@ namespace SkillzInternal
 				"                    \"-lz\",",
 				"                    \"-lsqlite3\",",
 				"                    \"-lxml2\",",
+				"                    \"-weak_framework PassKit\",",
+				"                    \"-framework Skillz\",",
 			};
 			//Start from the end so that inserting lines won't move other found lines.
 			for (int i = lines.Count - 1; i >= 0; --i)
@@ -154,7 +156,7 @@ namespace SkillzInternal
 		public bool AddRunScript()
 		{
 			string guid = GenerateGUID();
-			
+
 			//Search the file for the list of build phases, and insert the run phase.
 			string searchFor = "buildConfigurationList = ";
 			List<int> lines = FindLines(searchFor);
@@ -175,7 +177,7 @@ namespace SkillzInternal
 					{
 						return false;
 					}
-					
+
 					lineToUse = counter;
 					break;
 				}
@@ -185,10 +187,10 @@ namespace SkillzInternal
 				return false;
 			}
 			LinesOfFile.Insert(lineToUse, "\t\t\t\t" + guid + " /* ShellScript */,");
-			
-			
+
+
 			//Now add the actual run script definition.
-			
+
 			string[] newLines = {
 				"\t\t" + guid + " /* ShellScript */ = {",
 				"\t\t\tisa = PBXShellScriptBuildPhase;",
@@ -198,10 +200,10 @@ namespace SkillzInternal
 				"\t\t\toutputPaths = ();",
 				"\t\t\trunOnlyForDeploymentProcessing = 0;",
 				"\t\t\tshellPath = /bin/sh;",
-				"\t\t\tshellScript = \"if [ -e \\\"${BUILT_PRODUCTS_DIR}/${FULL_PRODUCT_NAME}/SkillzSDK.bundle/postprocess.sh\\\" ]; then\\n    /bin/sh \\\"${BUILT_PRODUCTS_DIR}/${FULL_PRODUCT_NAME}/SkillzSDK.bundle/postprocess.sh\\\"\\nfi\";",
+				"\t\t\tshellScript = \"if [ -e \\\"${BUILT_PRODUCTS_DIR}/${FULL_PRODUCT_NAME}/Skillz.bundle/postprocess.sh\\\" ]; then\\n    /bin/sh \\\"${BUILT_PRODUCTS_DIR}/${FULL_PRODUCT_NAME}/Skillz.bundle/postprocess.sh\\\"\\nfi\";",
 				"\t\t};"
 			};
-			
+
 			//Find the list of build phase definitions and insert our build phase into it.
 			int firstBuildPhaseElement = FindLineWith("isa = PBXShellScriptBuildPhase");
 			if (!Assert(firstBuildPhaseElement != LinesOfFile.Count,
@@ -213,35 +215,72 @@ namespace SkillzInternal
 			}
 			const int buildPhaseElementOffset = -1;
 			LinesOfFile.InsertRange(firstBuildPhaseElement + buildPhaseElementOffset, newLines);
-			
+
+			return true;
+		}
+
+		public bool AddEmbedFrameworks(string frameworkBuildGuid)
+		{
+			//Search the file for the list of build phases, and insert the run phase.
+			string searchFor = "buildConfigurationList = ";
+			List<int> lines = FindLines(searchFor);
+			int lineToUse = -1;
+			foreach (int line in lines)
+			{
+				//Find the run configuration for the game project, not the tests project.
+				if (LinesOfFile[FindLineWith("name = ", 1, line)].Contains("\"Unity-iPhone\";"))
+				{
+					//Find the end of the build phase list so that we can insert our run script there.
+					int counter = FindLineWith("buildPhases = (", 1, line);
+					if (!Assert(counter < LinesOfFile.Count, "Couldn't find build phase list for a PBXNativeTarget"))
+					{
+						return false;
+					}
+					counter = FindLineWith(");", 1, counter);
+					if (!Assert(counter < LinesOfFile.Count, "Couldn't find end of build phase list for PBXNativeTarget"))
+					{
+						return false;
+					}
+
+					lineToUse = counter;
+					break;
+				}
+			}
+			if (!Assert(lineToUse != -1, "No build configuration list for 'Unity-iPhone' was found!"))
+			{
+				return false;
+			}
+			LinesOfFile.Insert(lineToUse, "\t\t\t\t" + frameworkBuildGuid + " /* Embed Frameworks */,");
+
 			return true;
 		}
 
 		/// <summary>
 		/// Adds all Skillz files to the XCode project (wrapper files and the framework itself).
-		/// Assumes the "SkillzSDK-iOS.embeddedframework" folder is stored in the XCode project's root.
+		/// Assumes the "Skillz.framework" folder is stored in the XCode project's root.
 		/// </summary>
 		public bool AddSkillzFiles()
 		{
 			const string wrapperFile = "Skillz+Unity.mm";
-			const string embeddedFrameworkFolder = "SkillzSDK-iOS.embeddedframework";
-			const string frameworkFile = "SkillzSDK-iOS.framework";
-			const string bundleFile = "SkillzSDK.bundle";
+			const string frameworkFile = "Skillz.framework";
 
 			string wrapperBuildFileGuid = GenerateGUID(),
 				   wrapperFileRefGuid = GenerateGUID();
-			string frameworkBuildFileGuid = GenerateGUID(),
-				   frameworkFileRefGuid = GenerateGUID();
-			string bundleBuildFileGuid = GenerateGUID(),
-				   bundleFileRefGuid = GenerateGUID();
-			string embeddedFrameworkGuid = GenerateGUID();
+
+			string frameworkBuildFileGuid = GenerateGUID ();
+			string frameworkBuildFileSecondGuid = GenerateGUID ();
+
+			string frameworkFileRefGuid = GenerateGUID();
+			string embedFrameworkFileRefGuid = GenerateGUID();
+			string embedFrameworkBuildFileRefGuid = GenerateGUID();
+			string embedFrameworkCopyPhaseGUID = GenerateGUID();
 
 			string wrapperFolderPath = Path.Combine(UnityEngine.Application.dataPath,
 													"Skillz/Build/IncludeInXcode/");
-			
+
 			//Annoyingly, Unity changed how its auto-integration support works in Unity 5.
 			bool usingUnity4 = (UnityEngine.Application.unityVersion[0] == '4');
-			
+
 			//Add the "build file" entries.
 			int buildFileBlockStart = FindLineWith("PBXBuildFile");
 			if (!Assert(buildFileBlockStart < LinesOfFile.Count, "Can't find 'PBXBuildFile' anywhere"))
@@ -250,12 +289,13 @@ namespace SkillzInternal
 			}
 			if (usingUnity4)
 			{
-				AddBuildFile(buildFileBlockStart, wrapperBuildFileGuid, wrapperFileRefGuid, wrapperFile, "Sources");
+				AddFrameworkBuildFile(buildFileBlockStart, wrapperBuildFileGuid, wrapperFileRefGuid, wrapperFile, "Sources");
 			}
+
+			AddFrameworkBuildFile(buildFileBlockStart, embedFrameworkBuildFileRefGuid, embedFrameworkFileRefGuid, frameworkFile, "Frameworks");
 			AddBuildFile(buildFileBlockStart, frameworkBuildFileGuid, frameworkFileRefGuid, frameworkFile, "Frameworks");
-			AddBuildFile(buildFileBlockStart, bundleBuildFileGuid, bundleFileRefGuid, bundleFile, "Resources");
-			
-			
+			AddBuildFile(buildFileBlockStart, frameworkBuildFileSecondGuid, embedFrameworkFileRefGuid, frameworkFile, "Frameworks");
+
 			//Add the "file reference" entries.
 			int fileRefBlockStart = FindLineWith("PBXFileReference");
 			if (!Assert(fileRefBlockStart < LinesOfFile.Count, "Can't find 'PBXFileReference' anywhere"))
@@ -267,8 +307,7 @@ namespace SkillzInternal
 				AddFileRef(fileRefBlockStart, wrapperFileRefGuid, wrapperFile, "sourcecode.cpp.objcpp", wrapperFile, wrapperFolderPath);
 			}
 			AddFileRef(fileRefBlockStart, frameworkFileRefGuid, frameworkFile, "wrapper.framework");
-			AddFileRef(fileRefBlockStart, bundleFileRefGuid, bundleFile, "wrapper.plug-in");
-
+			AddFileRef(fileRefBlockStart, embedFrameworkFileRefGuid, frameworkFile, "wrapper.framework");
 
 			//Add the framework build phase entry.
 			int frameworkBuildPhase = FindLineWith("isa = PBXFrameworksBuildPhase"),
@@ -282,61 +321,11 @@ namespace SkillzInternal
 			const int frameworkBuildPhaseFilesOffset = 1;
 			LinesOfFile.Insert(frameworkBuildPhaseFiles + frameworkBuildPhaseFilesOffset,
 			                   "\t\t\t\t" + frameworkBuildFileGuid + " /* " + frameworkFile + " in Frameworks */,");
+	  		LinesOfFile.Insert(frameworkBuildPhaseFiles + frameworkBuildPhaseFilesOffset,
+ 											 "\t\t\t\t" + embedFrameworkBuildFileRefGuid + " /* " + frameworkFile + " in Embed Frameworks */,");
 
 
-			//Add the bundle's build phase entry.
-			int bundleBuildPhase = FindLineWith("isa = PBXResourcesBuildPhase"),
-				bundleBuildPhaseFiles = FindLineWith("files = (", 1, bundleBuildPhase);
-			if (!Assert(bundleBuildPhase < LinesOfFile.Count, "Can't find PBXResourcesBuildPhase item anywhere") ||
-			    !Assert(bundleBuildPhaseFiles < LinesOfFile.Count, "Can't find 'files' block of PBXResourcesBuildPhase") ||
-			    !Assert(!LinesOfFile[bundleBuildPhaseFiles].Contains(")"), "PBXResourcesBuildPhase has no files"))
-			{
-				return false;
-			}
-			const int bundleBuildPhaseFilesOffset = 1;
-			LinesOfFile.Insert(bundleBuildPhaseFiles + bundleBuildPhaseFilesOffset,
-			                   "\t\t\t\t" + bundleBuildFileGuid + " /* " + bundleFile + " in Resources */,");
-
-			
-			//Add the "file group" entries for the project.
-			int fileGroupBlockStart = FindLineWith("name = CustomTemplate;");
-			if (!Assert(fileGroupBlockStart < LinesOfFile.Count, "Can't find 'name = CustomTemplate' anywhere"))
-			{
-				return false;
-			}
-			const int fileGroupOffset = -3;
-			string fileGroupEntry = "";
-			if (usingUnity4)
-			{
-				fileGroupEntry = "\t\t\t\t" + wrapperFileRefGuid +
-								 " /* " + wrapperFile + " */,";
-				LinesOfFile.Insert(fileGroupBlockStart + fileGroupOffset, fileGroupEntry);
-			}
-			fileGroupEntry = "\t\t\t\t" + embeddedFrameworkGuid + " /* " + embeddedFrameworkFolder + " */,";
-			LinesOfFile.Insert(fileGroupBlockStart + fileGroupOffset, fileGroupEntry);
-
-
-			//Add the "embeddedframework" group entry.
-			int fileGroupElementStart = FindLineWith("isa = PBXGroup;") - 1;
-			if (!Assert(fileGroupBlockStart < LinesOfFile.Count - 1, "Can't find 'isa = PBXGroup' anywhere"))
-			{
-				return false;
-			}
-			string[] embeddedFrameworkGroupEntry = new string[] {
-				"\t\t" + embeddedFrameworkGuid + " /* " + embeddedFrameworkFolder + " */ = {",
-				"\t\t\tisa = PBXGroup;",
-				"\t\t\tchildren = (",
-				"\t\t\t\t" + frameworkFileRefGuid + " /* " + frameworkFile + " */,",
-				"\t\t\t\t" + bundleFileRefGuid + " /* " + bundleFile + " */,",
-				"\t\t\t);",
-				"\t\t\tpath = \"" + embeddedFrameworkFolder + "\";",
-				"\t\t\tsourceTree = SOURCE_ROOT;",
-				"\t\t};",
-			};
-			LinesOfFile.InsertRange(fileGroupElementStart, embeddedFrameworkGroupEntry);
-			
-			
-			//Add the unity wrapper file to the "source build" phase for "Unity-iPhone".
+			// Add the unity wrapper file to the "source build" phase for "Unity-iPhone".
 			if (usingUnity4)
 			{
 				int sourceBuildPhaseDecl = FindLineWith("isa = PBXSourcesBuildPhase");
@@ -360,7 +349,7 @@ namespace SkillzInternal
 			string[] frameworkSearchPaths = new string[] {
 				"\t\t\t\tFRAMEWORK_SEARCH_PATHS = (",
 				"\t\t\t\t\t\"$(inherited)\",",
-				"\t\t\t\t\t\"$(PROJECT_DIR)/" + embeddedFrameworkFolder + "\",",
+				"\t\t\t\t\t\"$(PROJECT_DIR)/" + "\",",
 				"\t\t\t\t);",
 			};
 
@@ -397,12 +386,66 @@ namespace SkillzInternal
 				}
 			}
 
-			
+			int whereToInsert = FindLineWith("PBXFileReference section");
+			if (!Assert(whereToInsert < LinesOfFile.Count,
+			            "Couldn't find 'PBXFileReference section "))
+			{
+				return false;
+			}
+			string[] embeddedFrameworkCopyPhase = new string[] {
+				"/* Begin PBXCopyFilesBuildPhase section */",
+				"\t\t" + embedFrameworkCopyPhaseGUID + " /* Embed Frameworks */ = {",
+				"\t\t\tisa = PBXCopyFilesBuildPhase;",
+				"\t\t\tbuildActionMask = 2147483647;",
+				"\t\t\tdstPath = \"\";",
+				"\t\t\tdstSubfolderSpec = 10;",
+				"\t\t\tfiles = (",
+				"\t\t\t\t" + embedFrameworkBuildFileRefGuid + " /* Skillz.framework in Embed Frameworks */,",
+				"\t\t\t);",
+				"\t\t\tname = \"Embed Frameworks\";",
+				"\t\t\trunOnlyForDeploymentPostprocessing = 0;",
+				"\t\t\t};",
+				"/* End PBXCopyFilesBuildPhase section */",
+				"",
+			};
+			LinesOfFile.InsertRange(whereToInsert, embeddedFrameworkCopyPhase);
+
+			AddEmbedFrameworks(embedFrameworkCopyPhaseGUID);
+
+			int firstLineOfFrameworksGroup = 0;
+			string frameworkGroupGuid = GenerateGUID();
+
+			while (true) {
+				 firstLineOfFrameworksGroup = FindLineWith("/* Frameworks */ = {", 1, firstLineOfFrameworksGroup);
+
+				 if (!Assert(firstLineOfFrameworksGroup < LinesOfFile.Count,  "Couldn't find 'Frameworks' group "))
+				{
+					return false;
+				}
+
+				int nextLine =  FindLineWith("isa = PBXGroup;", 1, firstLineOfFrameworksGroup);
+		  	if (nextLine != firstLineOfFrameworksGroup+1) {
+					 ++firstLineOfFrameworksGroup;
+					 continue;
+				 }
+
+				 string frameworkEntry = "\t\t\t\t" + embedFrameworkFileRefGuid + " /* Skillz.framework */,";
+
+				 LinesOfFile.Insert(firstLineOfFrameworksGroup+3, frameworkEntry);
+				 break;
+			}
 			return true;
 		}
 
 		//Helper functions for "AddSkillzFiles":
+		private void AddFrameworkBuildFile(int buildFileBlockStart, string buildFileGuid, string fileRefGuid,
+		                          string fileName, string fileGroupName)
+		{
+			string entry = "\t\t" + buildFileGuid + " /* Skillz.framework in Embed Frameworks */ = { isa = PBXBuildFile; fileRef = " + fileRefGuid + " /* Skillz.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };";
 
+			const int buildFileBlockOffset = 1;
+			LinesOfFile.Insert(buildFileBlockStart + buildFileBlockOffset, entry);
+		}
 		private void AddBuildFile(int buildFileBlockStart, string buildFileGuid, string fileRefGuid,
 								  string fileName, string fileGroupName)
 		{
@@ -422,7 +465,7 @@ namespace SkillzInternal
 			{
 				entry += "name = \"" + name + "\"; ";
 			}
-			entry += "path = \"" + Path.Combine(filePath, fileName) + "\"; sourceTree = \"<group>\"; };";
+			entry += "path = " + Path.Combine(filePath, fileName) + "; sourceTree = \"<group>\"; };";
 
 			const int fileRefBlockOffset = 1;
 			LinesOfFile.Insert(fileRefBlockStart + fileRefBlockOffset, entry);
@@ -447,11 +490,11 @@ namespace SkillzInternal
 		/// </summary>
 		/// Optionally takes in which line to find, instead of the first one.
 		/// Also optionally takes in which line to start the search at.
-		/// <param name="whichLine">Which line with the given text to return (first, second, third, etc.).</param> 
+		/// <param name="whichLine">Which line with the given text to return (first, second, third, etc.).</param>
 		/// <param name="firstLineToSearch">The starting line of the search.</param>
 		/// <param name="stopSearchingAt">
 		/// If not 'null', a line containing this string will cause the search to exit without finding anything.
-		/// </param> 
+		/// </param>
 		private int FindLineWith(string text, int whichLine = 1, int firstLineToSearch = 0, string stopSearchingAt = null)
 		{
 			int nMatches = 0;
