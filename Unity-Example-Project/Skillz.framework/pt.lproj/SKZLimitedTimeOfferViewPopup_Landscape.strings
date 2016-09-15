@@ -1,0 +1,9 @@
+/* Class = "UILabel"; text = "Limited Time Offer!"; ObjectID = "6cD-dz-AL1"; */
+"6cD-dz-AL1.text" = "Oferta por tempo limitado!";
+
+/* Class = "UILabel"; text = "Ends in"; ObjectID = "Qzy-sP-EJF"; */
+"Qzy-sP-EJF.text" = "Termina em";
+
+/* Class = "UIButton"; normalTitle = "CLAIM NOW"; ObjectID = "XE7-ZQ-eMf"; */
+"XE7-ZQ-eMf.normalTitle" = "SOLICITAR AGORA";
+

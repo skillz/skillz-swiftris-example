@@ -1,0 +1,33 @@
+/* Class = "UILabel"; text = "YOUR SCORE"; ObjectID = "8pn-zX-Ujl"; */
+"8pn-zX-Ujl.text" = "你的得分";
+
+/* Class = "UILabel"; text = "Finalizing Results"; ObjectID = "AaK-5G-eFF"; */
+"AaK-5G-eFF.text" = "最终结果";
+
+/* Class = "UIButton"; normalTitle = "WATCH REPLAY"; ObjectID = "CX0-KE-b3G"; */
+"CX0-KE-b3G.normalTitle" = "观看回放";
+
+/* Class = "UIButton"; normalTitle = "PLAY AGAIN"; ObjectID = "L4R-kl-8Ts"; */
+"L4R-kl-8Ts.normalTitle" = "再玩一次";
+
+/* Class = "UILabel"; text = "YOUR SCORE:"; ObjectID = "RLj-dH-ldy"; */
+"RLj-dH-ldy.text" = "你的得分：";
+
+/* Class = "UIButton"; normalTitle = "SPECTATE"; ObjectID = "Rk9-P4-mXs"; */
+"Rk9-P4-mXs.normalTitle" = "观看";
+
+/* Class = "UIButton"; normalTitle = "NEXT"; ObjectID = "ecJ-BI-cK7"; */
+"ecJ-BI-cK7.normalTitle" = "下一个";
+
+/* Class = "UIButton"; normalTitle = "SHARE"; ObjectID = "eyF-ac-xgs"; */
+"eyF-ac-xgs.normalTitle" = "分享";
+
+/* Class = "UILabel"; text = "BEST SCORE:"; ObjectID = "jmL-g8-l90"; */
+"jmL-g8-l90.text" = "最高分：";
+
+/* Class = "UILabel"; text = "Last Entry:"; ObjectID = "xCN-El-4Bt"; */
+"xCN-El-4Bt.text" = "最后一次入场：";
+
+/* Class = "UILabel"; text = "ENTRIES:"; ObjectID = "yxt-mc-CH3"; */
+"yxt-mc-CH3.text" = "入场券：";
+

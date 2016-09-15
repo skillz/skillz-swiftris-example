@@ -1,0 +1,9 @@
+/* Class = "UILabel"; text = "Limited Time Offer!"; ObjectID = "6cD-dz-AL1"; */
+"6cD-dz-AL1.text" = "期間限定！";
+
+/* Class = "UILabel"; text = "Ends in"; ObjectID = "Qzy-sP-EJF"; */
+"Qzy-sP-EJF.text" = "残り時間";
+
+/* Class = "UIButton"; normalTitle = "CLAIM NOW"; ObjectID = "XE7-ZQ-eMf"; */
+"XE7-ZQ-eMf.normalTitle" = "今すぐ要求";
+

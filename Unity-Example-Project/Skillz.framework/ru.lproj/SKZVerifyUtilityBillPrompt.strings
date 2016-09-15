@@ -1,0 +1,9 @@
+/* Class = "UIButton"; normalTitle = "ADD PHOTO"; ObjectID = "7Ay-te-gvY"; */
+"7Ay-te-gvY.normalTitle" = "Добавить фото";
+
+/* Class = "UILabel"; text = "Photo of a recent phone or utility bill with name & address visible."; ObjectID = "fVH-g5-FuL"; */
+"fVH-g5-FuL.text" = "Фото недавнем телефона или счета за коммунальные услуги с именем и адресом видимой.";
+
+/* Class = "UIButton"; normalTitle = "SUBMIT"; ObjectID = "mp6-hN-Dvb"; */
+"mp6-hN-Dvb.normalTitle" = "ОТПРАВИТЬ";
+

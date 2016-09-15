@@ -1,0 +1,12 @@
+/* Class = "UILabel"; text = "Medals"; ObjectID = "gpH-TX-6Zx"; */
+"gpH-TX-6Zx.text" = "Medaglie";
+
+/* Class = "UILabel"; text = "Players"; ObjectID = "l4r-ua-21w"; */
+"l4r-ua-21w.text" = "Giocatori";
+
+/* Class = "UILabel"; text = "Prize"; ObjectID = "p28-2M-Uw1"; */
+"p28-2M-Uw1.text" = "Premio";
+
+/* Class = "UILabel"; text = "Place"; ObjectID = "qTf-RJ-kMQ"; */
+"qTf-RJ-kMQ.text" = "Posizione";
+

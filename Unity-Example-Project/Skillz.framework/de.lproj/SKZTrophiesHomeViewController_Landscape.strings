@@ -1,0 +1,18 @@
+/* Class = "UIButton"; normalTitle = "COMPLETED"; ObjectID = "1WS-9h-1bA"; */
+"1WS-9h-1bA.normalTitle" = "BEENDET";
+
+/* Class = "UIButton"; normalTitle = "UPCOMING"; ObjectID = "CJd-Vg-gge"; */
+"CJd-Vg-gge.normalTitle" = "BEVORSTEHENDE";
+
+/* Class = "UILabel"; text = "EnourmousClock"; ObjectID = "RbO-Bs-Ciq"; */
+"RbO-Bs-Ciq.text" = "Riesige Uhr";
+
+/* Class = "UILabel"; text = "CONGRATULATIONS!"; ObjectID = "cP7-UI-29Q"; */
+"cP7-UI-29Q.text" = "HERZLICHEN GLÜCKWUNSCH!";
+
+/* Class = "UILabel"; text = "Tap the present above to claim your trophy and scroll through the list of trophies to see what else you can earn!"; ObjectID = "nNX-zx-iCK"; */
+"nNX-zx-iCK.text" = "Tippe auf das obere Geschenk, um deine Trophäe einzufordern und scrolle durch die Liste der Trophäen, um nachzusehen, was du noch verdienen kannst!";
+
+/* Class = "UILabel"; text = "EARNED"; ObjectID = "yCN-d0-kGQ"; */
+"yCN-d0-kGQ.text" = "VERDIENT";
+

@@ -1,0 +1,9 @@
+/* Class = "UILabel"; text = "WELCOME TO LEAGUES"; ObjectID = "aSA-kj-1n7"; */
+"aSA-kj-1n7.text" = "BIENVENUE DANS LES LIGUES";
+
+/* Class = "UILabel"; text = "Leaderboards are unavailable at this time. Try again soon."; ObjectID = "la1-qu-TYq"; */
+"la1-qu-TYq.text" = "Les meilleurs scores ne sont pas disponibles pour le moment.\nRéessayez bientôt.";
+
+/* Class = "UIButton"; normalTitle = "NEXT"; ObjectID = "xER-m2-LYO"; */
+"xER-m2-LYO.normalTitle" = "SUIVANT";
+

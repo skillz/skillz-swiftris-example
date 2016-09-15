@@ -1,0 +1,18 @@
+/* Class = "UIButton"; normalTitle = "SUBMIT"; ObjectID = "1Qr-fz-b8K"; */
+"1Qr-fz-b8K.normalTitle" = "ENVIAR";
+
+/* Class = "UIButton"; normalTitle = "Birthdate"; ObjectID = "6gc-Ov-eq4"; */
+"6gc-Ov-eq4.normalTitle" = "Data De Nascimento";
+
+/* Class = "UILabel"; text = "I agree to the Terms of Service"; ObjectID = "CSQ-Wq-h0h"; */
+"CSQ-Wq-h0h.text" = "Eu concordo com os Termos de Serviço";
+
+/* Class = "UILabel"; text = "PLAY FOR CASH"; ObjectID = "jII-f7-yIY"; */
+"jII-f7-yIY.text" = "JOGAR POR DINHEIRO";
+
+/* Class = "UILabel"; text = "GO PRO!"; ObjectID = "sBH-x3-xe9"; */
+"sBH-x3-xe9.text" = "VIRE PROFISSIONAL!";
+
+/* Class = "UILabel"; text = "Enter your birthday to play for cash"; ObjectID = "tGf-pc-x4C"; */
+"tGf-pc-x4C.text" = "Insira sua data de nascimento para jogar com dinheiro";
+

@@ -1,0 +1,9 @@
+/* Class = "UILabel"; text = "WELCOME TO LEAGUES"; ObjectID = "aSA-kj-1n7"; */
+"aSA-kj-1n7.text" = "リーグへようこそ！";
+
+/* Class = "UILabel"; text = "Leaderboards are unavailable at this time. Try again soon."; ObjectID = "la1-qu-TYq"; */
+"la1-qu-TYq.text" = "リーダーボードは、現時点では利用できません。\n再度お試しください。";
+
+/* Class = "UIButton"; normalTitle = "NEXT"; ObjectID = "xER-m2-LYO"; */
+"xER-m2-LYO.normalTitle" = "次へ";
+

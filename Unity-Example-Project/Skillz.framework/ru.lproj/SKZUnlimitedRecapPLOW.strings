@@ -1,0 +1,36 @@
+/* Class = "UIButton"; normalTitle = "WATCH REPLAY"; ObjectID = "6W8-Pd-nop"; */
+"6W8-Pd-nop.normalTitle" = "СМОТРЕТЬ ПОВТОР";
+
+/* Class = "UILabel"; text = "Finalizing Results"; ObjectID = "AaK-5G-eFF"; */
+"AaK-5G-eFF.text" = "Подведение итогов";
+
+/* Class = "UIButton"; normalTitle = "PLAY AGAIN"; ObjectID = "L4R-kl-8Ts"; */
+"L4R-kl-8Ts.normalTitle" = "ИГРАТЬ ЕЩЕ РАЗ";
+
+/* Class = "UILabel"; text = "Drunken Duel"; ObjectID = "NHB-th-P7h"; */
+"NHB-th-P7h.text" = "Drunken Duel";
+
+/* Class = "UILabel"; text = "ENTRIES:"; ObjectID = "NR2-cd-cLU"; */
+"NR2-cd-cLU.text" = "БИЛЕТЫ:";
+
+/* Class = "UIButton"; normalTitle = "SPECTATE"; ObjectID = "Qfh-p1-7Ui"; */
+"Qfh-p1-7Ui.normalTitle" = "НАБЛЮДАТЬ";
+
+/* Class = "UILabel"; text = "YOUR SCORE:"; ObjectID = "RLj-dH-ldy"; */
+"RLj-dH-ldy.text" = "ВАШ СЧЕТ:";
+
+/* Class = "UILabel"; text = "YOUR SCORE"; ObjectID = "SfJ-c4-Bcb"; */
+"SfJ-c4-Bcb.text" = "ВАШ СЧЕТ";
+
+/* Class = "UIButton"; normalTitle = "SHARE"; ObjectID = "bEb-Ry-9wS"; */
+"bEb-Ry-9wS.normalTitle" = "ПОДЕЛИТЬСЯ";
+
+/* Class = "UIButton"; normalTitle = "NEXT"; ObjectID = "ecJ-BI-cK7"; */
+"ecJ-BI-cK7.normalTitle" = "ДАЛЕЕ";
+
+/* Class = "UILabel"; text = "BEST SCORE:"; ObjectID = "jmL-g8-l90"; */
+"jmL-g8-l90.text" = "ЛУЧШИЙ СЧЕТ:";
+
+/* Class = "UILabel"; text = "Last Entry:"; ObjectID = "xCN-El-4Bt"; */
+"xCN-El-4Bt.text" = "Последняя запись:";
+

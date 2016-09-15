@@ -1,0 +1,42 @@
+/* Class = "UIButton"; normalTitle = "Country"; ObjectID = "7Yf-Or-SCd"; */
+"7Yf-Or-SCd.normalTitle" = "Paese";
+
+/* Class = "UITextField"; placeholder = "State/Province"; ObjectID = "9rr-BU-P3Z"; */
+"9rr-BU-P3Z.placeholder" = "Regione/Provincia";
+
+/* Class = "UITextField"; placeholder = "Last Name"; ObjectID = "ApV-8E-zJc"; */
+"ApV-8E-zJc.placeholder" = "Cognome";
+
+/* Class = "UITextField"; placeholder = "City"; ObjectID = "BnM-RV-2f0"; */
+"BnM-RV-2f0.placeholder" = "Città";
+
+/* Class = "UIButton"; normalTitle = "UPDATE"; ObjectID = "D1L-H2-gTV"; */
+"D1L-H2-gTV.normalTitle" = "AGGIORNA";
+
+/* Class = "UILabel"; text = "Withdraw Information"; ObjectID = "EyO-rC-6aK"; */
+"EyO-rC-6aK.text" = "Informazioni prelievo";
+
+/* Class = "UITextField"; placeholder = "First Name"; ObjectID = "KVR-Ga-YjV"; */
+"KVR-Ga-YjV.placeholder" = "Nome";
+
+/* Class = "UILabel"; text = "Personal Information"; ObjectID = "LBi-aI-Ivk"; */
+"LBi-aI-Ivk.text" = "Informazioni personali";
+
+/* Class = "UITextField"; placeholder = "Email"; ObjectID = "TdC-lR-FLp"; */
+"TdC-lR-FLp.placeholder" = "E-mail";
+
+/* Class = "UIButton"; normalTitle = "Done"; ObjectID = "fkh-6U-zG2"; */
+"fkh-6U-zG2.normalTitle" = "Fatto";
+
+/* Class = "UITextField"; placeholder = "Apt, Unit, Bldg"; ObjectID = "nA8-eP-AVI"; */
+"nA8-eP-AVI.placeholder" = "Numero appartamento/edificio";
+
+/* Class = "UITextField"; placeholder = "Phone"; ObjectID = "nb1-xg-b8G"; */
+"nb1-xg-b8G.placeholder" = "Telefono";
+
+/* Class = "UITextField"; placeholder = "Postal Code"; ObjectID = "uUO-AY-etD"; */
+"uUO-AY-etD.placeholder" = "Codice postale";
+
+/* Class = "UITextField"; placeholder = "Street Address"; ObjectID = "zxC-n0-WhI"; */
+"zxC-n0-WhI.placeholder" = "Indirizzo";
+

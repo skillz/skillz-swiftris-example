@@ -1,0 +1,9 @@
+/* Class = "UIButton"; normalTitle = "RETRY"; ObjectID = "Jec-BE-HWZ"; */
+"Jec-BE-HWZ.normalTitle" = "TENTAR NOVAMENTE";
+
+/* Class = "UILabel"; text = "There was a slight error with your data. Don't panic!"; ObjectID = "bV1-X5-mmJ"; */
+"bV1-X5-mmJ.text" = "Houve um pequeno erro nos seus dados. Não se assuste!";
+
+/* Class = "UIButton"; normalTitle = "CANCEL"; ObjectID = "zFB-If-RPc"; */
+"zFB-If-RPc.normalTitle" = "CANCELAR";
+

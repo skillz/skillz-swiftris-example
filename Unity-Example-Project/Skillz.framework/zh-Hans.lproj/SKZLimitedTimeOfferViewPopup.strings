@@ -1,0 +1,9 @@
+/* Class = "UIButton"; normalTitle = "CLAIM NOW"; ObjectID = "Fqu-KD-ib8"; */
+"Fqu-KD-ib8.normalTitle" = "立即领取";
+
+/* Class = "UILabel"; text = "Ends in"; ObjectID = "ULE-1c-mId"; */
+"ULE-1c-mId.text" = "距结束还有";
+
+/* Class = "UILabel"; text = "Limited Time Offer!"; ObjectID = "Zjk-Yv-vLu"; */
+"Zjk-Yv-vLu.text" = "限时优惠！";
+

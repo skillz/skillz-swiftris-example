@@ -1,0 +1,9 @@
+/* Class = "UIButton"; normalTitle = "SUBMIT"; ObjectID = "2lq-pg-QaO"; */
+"2lq-pg-QaO.normalTitle" = "INVIA";
+
+/* Class = "UITextField"; placeholder = "# Phone Number"; ObjectID = "BKs-oX-vkV"; */
+"BKs-oX-vkV.placeholder" = "# Numero Di Telefono";
+
+/* Class = "UILabel"; text = "(You will receive a verification code via SMS message.)"; ObjectID = "YaJ-Zh-C7b"; */
+"YaJ-Zh-C7b.text" = "(Riceverai un codice di verifica via SMS.)";
+

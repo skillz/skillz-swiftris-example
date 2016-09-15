@@ -1,0 +1,21 @@
+/* Class = "UIButton"; normalTitle = "SIGN IN"; ObjectID = "120"; */
+"120.normalTitle" = "ВХОД";
+
+/* Class = "UIButton"; normalTitle = "NEXT"; ObjectID = "128"; */
+"128.normalTitle" = "ДАЛЕЕ";
+
+/* Class = "UILabel"; text = "Multiplayer Competitions"; ObjectID = "Ry7-lW-Vm2"; */
+"Ry7-lW-Vm2.text" = "Многопользовательские соревнования";
+
+/* Class = "UILabel"; text = "Play for fun or real money"; ObjectID = "d10-fv-vKu"; */
+"d10-fv-vKu.text" = "Играть для забавы или на реальные деньги";
+
+/* Class = "UILabel"; text = "with players from around the world"; ObjectID = "fLD-kI-w28"; */
+"fLD-kI-w28.text" = "с игроками со всего мира";
+
+/* Class = "UILabel"; text = "Already a member?"; ObjectID = "fcY-2h-a5i"; */
+"fcY-2h-a5i.text" = "Уже являетесь участником?";
+
+/* Class = "UILabel"; text = "Diamond Strike"; ObjectID = "tMk-qh-Ksw"; */
+"tMk-qh-Ksw.text" = "Diamond Strike";
+

@@ -1,0 +1,30 @@
+/* (No Commment) */
+"BdM-Zh-JNh.text" = "LE VAINQUEUR GAGNERA";
+
+/* (No Commment) */
+"C8v-v2-QUa.normalTitle" = "PARTAGER";
+
+/* Class = "UIButton"; normalTitle = "NEXT"; ObjectID = "L4R-kl-8Ts"; */
+"L4R-kl-8Ts.normalTitle" = "SUIVANT";
+
+/* (No Commment) */
+"Mxk-eM-9Mf.text" = "400";
+
+/* Class = "UIButton"; normalTitle = "PLAY AGAIN"; ObjectID = "NW8-de-dVd"; */
+"NW8-de-dVd.normalTitle" = "REJOUER";
+
+/* (No Commment) */
+"Sl0-Q6-RXu.text" = "400";
+
+/* Class = "UIButton"; normalTitle = "WATCH REPLAY"; ObjectID = "gHB-hC-hJF"; */
+"gHB-hC-hJF.normalTitle" = "REGARDER LE REPLAY";
+
+/* Class = "UILabel"; text = "YOU PLACED"; ObjectID = "oGj-Ms-jwf"; */
+"oGj-Ms-jwf.text" = "VOUS ÊTES ARRIVÉ";
+
+/* Class = "UIButton"; normalTitle = "SHARE"; ObjectID = "whe-PW-91a"; */
+"whe-PW-91a.normalTitle" = "PARTAGER";
+
+/* (No Commment) */
+"xq3-wN-e5C.text" = "+$10.00";
+

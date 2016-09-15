@@ -1,0 +1,9 @@
+/* Class = "UIButton"; normalTitle = "NEXT"; ObjectID = "L4R-kl-8Ts"; */
+"L4R-kl-8Ts.normalTitle" = "WEITER";
+
+/* Class = "UILabel"; text = "WELCOME TO LEAGUES"; ObjectID = "uB1-sG-Wbh"; */
+"uB1-sG-Wbh.text" = "WILLKOMMEN BEI DEN LIGEN";
+
+/* Class = "UILabel"; text = "Medals determine your rank in the league"; ObjectID = "xWR-mv-5O4"; */
+"xWR-mv-5O4.text" = "Medaillen bestimmen deinen Rang in der Liga";
+

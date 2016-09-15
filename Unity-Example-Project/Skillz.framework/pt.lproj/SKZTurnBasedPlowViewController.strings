@@ -1,0 +1,12 @@
+/* Class = "UIButton"; normalTitle = "PLAY"; ObjectID = "3U5-Ox-5dC"; */
+"3U5-Ox-5dC.normalTitle" = "JOGAR";
+
+/* Class = "UIButton"; normalTitle = "NEXT"; ObjectID = "hL5-Wa-kn4"; */
+"hL5-Wa-kn4.normalTitle" = "AVANÇAR";
+
+/* Class = "UILabel"; text = "WINNER GETS"; ObjectID = "ksN-kw-9sd"; */
+"ksN-kw-9sd.text" = "O VENCEDOR GANHA";
+
+/* Class = "UILabel"; text = "SCORE"; ObjectID = "ouQ-uE-Gwj"; */
+"ouQ-uE-Gwj.text" = "PONTUAÇÃO";
+

@@ -1,0 +1,18 @@
+/* Class = "UILabel"; text = "Unfortunately you cannot make a deposit at this time because you have a withdraw pending."; ObjectID = "8mq-g6-C6v"; */
+"8mq-g6-C6v.text" = "Malheureusement, vous ne pouvez pas faire de dépôt pour le moment car un retrait est actuellement en attente.";
+
+/* Class = "UIButton"; normalTitle = "CANCEL WITHDRAWAL & MAKE DEPOSIT"; ObjectID = "Kup-jZ-hqe"; */
+"Kup-jZ-hqe.normalTitle" = "ANNULER LE RETRAIT ET FAIRE UN DÉPÔT";
+
+/* Class = "UILabel"; text = "Please cancel the withdrawal in order to make a deposit."; ObjectID = "fNg-1Q-9ua"; */
+"fNg-1Q-9ua.text" = "Veuillez annuler votre retrait pour pouvoir effectuer un retrait.";
+
+/* Class = "UIButton"; normalTitle = "RETURN TO STORE"; ObjectID = "mEm-lX-oxe"; */
+"mEm-lX-oxe.normalTitle" = "RETOURNER À LA BOUTIQUE";
+
+/* Class = "UILabel"; text = "or"; ObjectID = "o3O-iW-bF1"; */
+"o3O-iW-bF1.text" = "ou";
+
+/* Class = "UILabel"; text = "Withdraw Pending"; ObjectID = "rma-Sq-pWt"; */
+"rma-Sq-pWt.text" = "Retrait en attente";
+

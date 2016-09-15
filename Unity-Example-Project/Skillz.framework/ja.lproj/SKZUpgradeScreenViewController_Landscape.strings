@@ -1,0 +1,18 @@
+/* Class = "UILabel"; text = "PLAY FOR CASH"; ObjectID = "EXJ-RA-GXT"; */
+"EXJ-RA-GXT.text" = "永久にプレイする！";
+
+/* Class = "UIButton"; normalTitle = "SUBMIT"; ObjectID = "IfC-2y-e1p"; */
+"IfC-2y-e1p.normalTitle" = "送信";
+
+/* Class = "UILabel"; text = "I agree to the Terms of Service"; ObjectID = "LPe-Xw-VnX"; */
+"LPe-Xw-VnX.text" = "利用条件に同意します。";
+
+/* Class = "UIButton"; normalTitle = "Birthdate"; ObjectID = "mgf-kn-1VL"; */
+"mgf-kn-1VL.normalTitle" = "生年月日";
+
+/* Class = "UILabel"; text = "Enter your birthday to play for cash"; ObjectID = "pxa-JG-A05"; */
+"pxa-JG-A05.text" = "キャッシュプレイするには、生年月日を入力してください";
+
+/* Class = "UILabel"; text = "GO PRO!"; ObjectID = "xBo-JM-nie"; */
+"xBo-JM-nie.text" = "プロへ！";
+

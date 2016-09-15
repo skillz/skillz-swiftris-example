@@ -1,0 +1,30 @@
+/* Class = "UILabel"; text = "NEW BALANCE:"; ObjectID = "7tQ-L1-nc1"; */
+"7tQ-L1-nc1.text" = "NEUER KONTOSTAND:";
+
+/* Class = "UILabel"; text = "Entries Purchased:"; ObjectID = "GMI-Hj-lFT"; */
+"GMI-Hj-lFT.text" = "Erworbene Tickets:";
+
+/* Class = "UILabel"; text = "Previous Balance:"; ObjectID = "HLe-po-hRp"; */
+"HLe-po-hRp.text" = "Alter Kontostand:";
+
+/* Class = "UIButton"; normalTitle = "OK, I'M READY TO WIN"; ObjectID = "SVz-hA-PNA"; */
+"SVz-hA-PNA.normalTitle" = "OK, ICH BIN BEREIT ZU GEWINNEN";
+
+/* Class = "UILabel"; text = "Deposit Amount:"; ObjectID = "SpO-3y-7Fp"; */
+"SpO-3y-7Fp.text" = "Einzahlungsbetrag:";
+
+/* Class = "UILabel"; text = "Purchase Amount:"; ObjectID = "b29-iS-F0f"; */
+"b29-iS-F0f.text" = "Einkaufsbetrag:";
+
+/* Class = "UILabel"; text = "Deposit Received!"; ObjectID = "gOb-rn-FE0"; */
+"gOb-rn-FE0.text" = "Einzahlung Erhalten!";
+
+/* Class = "UILabel"; text = "Deposit Bonus:"; ObjectID = "hpN-oB-ShK"; */
+"hpN-oB-ShK.text" = "Einzahlungsbonus:";
+
+/* Class = "UILabel"; text = "Success!"; ObjectID = "uEr-02-GIw"; */
+"uEr-02-GIw.text" = "Erfolg!";
+
+/* Class = "UILabel"; text = "TOTAL ENTRIES:"; ObjectID = "xw5-E8-t0d"; */
+"xw5-E8-t0d.text" = "GESAMTZAHL TICKETS:";
+

@@ -1,0 +1,30 @@
+/* Class = "UILabel"; text = "Deposit Bonus:"; ObjectID = "EPg-Qk-QFV"; */
+"EPg-Qk-QFV.text" = "存款额外奖励：";
+
+/* Class = "UILabel"; text = "Deposit Amount:"; ObjectID = "Hia-Lt-JZG"; */
+"Hia-Lt-JZG.text" = "存款金额：";
+
+/* Class = "UILabel"; text = "Success!"; ObjectID = "Lfk-TL-FXS"; */
+"Lfk-TL-FXS.text" = "成功！";
+
+/* Class = "UILabel"; text = "Purchase Amount:"; ObjectID = "NpK-jr-M1c"; */
+"NpK-jr-M1c.text" = "购买金额：";
+
+/* Class = "UIButton"; normalTitle = "OK, I'M READY TO WIN"; ObjectID = "SVz-hA-PNA"; */
+"SVz-hA-PNA.normalTitle" = "好，我做好赢钱的准备了";
+
+/* Class = "UILabel"; text = "NEW BALANCE:"; ObjectID = "Ukd-3q-aF9"; */
+"Ukd-3q-aF9.text" = "新余额：";
+
+/* Class = "UILabel"; text = "Entries Purchased:"; ObjectID = "Yfk-8I-OeG"; */
+"Yfk-8I-OeG.text" = "已购买入场券：";
+
+/* Class = "UILabel"; text = "Previous Balance:"; ObjectID = "ehW-Xa-Dbe"; */
+"ehW-Xa-Dbe.text" = "之前的余额：";
+
+/* Class = "UILabel"; text = "Deposit Received!"; ObjectID = "gGn-RC-7bV"; */
+"gGn-RC-7bV.text" = "存款已收到！";
+
+/* Class = "UILabel"; text = "TOTAL ENTRIES:"; ObjectID = "iEY-xa-59p"; */
+"iEY-xa-59p.text" = "入场券总数：";
+

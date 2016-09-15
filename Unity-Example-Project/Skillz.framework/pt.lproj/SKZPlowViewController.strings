@@ -1,0 +1,18 @@
+/* Class = "UIButton"; normalTitle = "PLAY AGAIN"; ObjectID = "L4R-kl-8Ts"; */
+"L4R-kl-8Ts.normalTitle" = "JOGAR DE NOVO";
+
+/* Class = "UIButton"; normalTitle = "SHARE"; ObjectID = "Svw-ea-wv2"; */
+"Svw-ea-wv2.normalTitle" = "COMPARTILHAR";
+
+/* (No Commment) */
+"dQr-Te-Nt0.normalTitle" = "COMPARTILHAR";
+
+/* Class = "UIButton"; normalTitle = "WATCH REPLAY"; ObjectID = "eQy-4i-Ige"; */
+"eQy-4i-Ige.normalTitle" = "ASSISTIR REPRODUÇÃO";
+
+/* Class = "UIButton"; normalTitle = "NEXT"; ObjectID = "ecJ-BI-cK7"; */
+"ecJ-BI-cK7.normalTitle" = "AVANÇAR";
+
+/* Class = "UILabel"; text = "YOU PLACED"; ObjectID = "oGj-Ms-jwf"; */
+"oGj-Ms-jwf.text" = "SUA CLASSIFICAÇÃO";
+

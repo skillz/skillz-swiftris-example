@@ -1,0 +1,12 @@
+/* Class = "UILabel"; text = "Blah"; ObjectID = "4O4-7h-mzc"; */
+"4O4-7h-mzc.text" = "Blah";
+
+/* Class = "UIButton"; normalTitle = "Send me a notification for every match"; ObjectID = "5lR-gh-RSy"; */
+"5lR-gh-RSy.normalTitle" = "Отправлять мне уведомления обо всех матчах";
+
+/* Class = "UIButton"; normalTitle = "Do not send me match notifications"; ObjectID = "RiD-KW-P2p"; */
+"RiD-KW-P2p.normalTitle" = "Не отправлять мне уведомления о матчах";
+
+/* Class = "UIButton"; normalTitle = "Automatic based on my activity"; ObjectID = "uLd-oN-mGa"; */
+"uLd-oN-mGa.normalTitle" = "Автоматически в соответствии с моей активностью";
+

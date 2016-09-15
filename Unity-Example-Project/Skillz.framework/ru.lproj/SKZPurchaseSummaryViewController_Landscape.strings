@@ -1,0 +1,30 @@
+/* Class = "UILabel"; text = "Deposit Bonus:"; ObjectID = "EPg-Qk-QFV"; */
+"EPg-Qk-QFV.text" = "Бонусный взнос:";
+
+/* Class = "UILabel"; text = "Deposit Amount:"; ObjectID = "Hia-Lt-JZG"; */
+"Hia-Lt-JZG.text" = "Сумма взноса:";
+
+/* Class = "UILabel"; text = "Success!"; ObjectID = "Lfk-TL-FXS"; */
+"Lfk-TL-FXS.text" = "Успешно!";
+
+/* Class = "UILabel"; text = "Purchase Amount:"; ObjectID = "NpK-jr-M1c"; */
+"NpK-jr-M1c.text" = "Сумма покупки:";
+
+/* Class = "UIButton"; normalTitle = "OK, I'M READY TO WIN"; ObjectID = "SVz-hA-PNA"; */
+"SVz-hA-PNA.normalTitle" = "ДА, Я ГОТОВ ВЫИГРЫВАТЬ";
+
+/* Class = "UILabel"; text = "NEW BALANCE:"; ObjectID = "Ukd-3q-aF9"; */
+"Ukd-3q-aF9.text" = "НОВЫЙ БАЛАНС:";
+
+/* Class = "UILabel"; text = "Entries Purchased:"; ObjectID = "Yfk-8I-OeG"; */
+"Yfk-8I-OeG.text" = "Купленные билеты:";
+
+/* Class = "UILabel"; text = "Previous Balance:"; ObjectID = "ehW-Xa-Dbe"; */
+"ehW-Xa-Dbe.text" = "Предыдущий баланс:";
+
+/* Class = "UILabel"; text = "Deposit Received!"; ObjectID = "gGn-RC-7bV"; */
+"gGn-RC-7bV.text" = "Платеж Получен!";
+
+/* Class = "UILabel"; text = "TOTAL ENTRIES:"; ObjectID = "iEY-xa-59p"; */
+"iEY-xa-59p.text" = "ВСЕГО БИЛЕТОВ:";
+

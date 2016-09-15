@@ -1,0 +1,42 @@
+/* Class = "UITextField"; placeholder = "Last Name"; ObjectID = "ApV-8E-zJc"; */
+"ApV-8E-zJc.placeholder" = "姓";
+
+/* Class = "UITextField"; placeholder = "Postal Code"; ObjectID = "BnM-RV-2f0"; */
+"BnM-RV-2f0.placeholder" = "郵便番号";
+
+/* Class = "UIButton"; normalTitle = "UPDATE"; ObjectID = "D1L-H2-gTV"; */
+"D1L-H2-gTV.normalTitle" = "更新";
+
+/* Class = "UILabel"; text = "Withdraw Information"; ObjectID = "EyO-rC-6aK"; */
+"EyO-rC-6aK.text" = "引き出し情報";
+
+/* Class = "UITextField"; placeholder = "First Name"; ObjectID = "KVR-Ga-YjV"; */
+"KVR-Ga-YjV.placeholder" = "名前";
+
+/* Class = "UILabel"; text = "Personal Information"; ObjectID = "LBi-aI-Ivk"; */
+"LBi-aI-Ivk.text" = "個人情報";
+
+/* Class = "UIButton"; normalTitle = "Country"; ObjectID = "S1d-Zw-hPu"; */
+"S1d-Zw-hPu.normalTitle" = "カントリー";
+
+/* Class = "UITextField"; placeholder = "Email"; ObjectID = "TdC-lR-FLp"; */
+"TdC-lR-FLp.placeholder" = "Eメール";
+
+/* Class = "UITextField"; placeholder = "State/Province"; ObjectID = "X5h-jV-agF"; */
+"X5h-jV-agF.placeholder" = "州/郡";
+
+/* Class = "UITextField"; placeholder = "Apt, Unit, Bldg"; ObjectID = "XkF-eR-dvg"; */
+"XkF-eR-dvg.placeholder" = "アパート、ユニット、ビル";
+
+/* Class = "UITextField"; placeholder = "Phone"; ObjectID = "pxb-PB-E4X"; */
+"pxb-PB-E4X.placeholder" = "電話";
+
+/* Class = "UITextField"; placeholder = "City"; ObjectID = "ucy-79-HfW"; */
+"ucy-79-HfW.placeholder" = "都市";
+
+/* Class = "UIButton"; normalTitle = "Done"; ObjectID = "zga-E7-0Kt"; */
+"zga-E7-0Kt.normalTitle" = "完了";
+
+/* Class = "UITextField"; placeholder = "Street Address"; ObjectID = "zxC-n0-WhI"; */
+"zxC-n0-WhI.placeholder" = "住所";
+

@@ -1,0 +1,30 @@
+/* Class = "UILabel"; text = "$20.00"; ObjectID = "4zM-dM-7Jz"; */
+"4zM-dM-7Jz.text" = "$20,00";
+
+/* Class = "UILabel"; text = "Withdrawal Code (Optional)"; ObjectID = "6vd-SZ-o8i"; */
+"6vd-SZ-o8i.text" = "Codice ritiro (facoltativo)";
+
+/* Class = "UITextField"; placeholder = "$0.00"; ObjectID = "AVj-l5-TYC"; */
+"AVj-l5-TYC.placeholder" = "$0,00";
+
+/* Class = "UIButton"; normalTitle = "CANCEL"; ObjectID = "D6L-QL-vZS"; */
+"D6L-QL-vZS.normalTitle" = "ANNULLA";
+
+/* Class = "UILabel"; text = "$2.00"; ObjectID = "E5c-Zc-WNz"; */
+"E5c-Zc-WNz.text" = "$2,00";
+
+/* Class = "UILabel"; text = "Withdraw Amount:"; ObjectID = "I7X-Yk-CEU"; */
+"I7X-Yk-CEU.text" = "Importo prelievo:";
+
+/* Class = "UILabel"; text = "Account Balance:"; ObjectID = "Lu1-pO-9Nn"; */
+"Lu1-pO-9Nn.text" = "Saldo account:";
+
+/* Class = "UILabel"; text = "Available Withdraw:"; ObjectID = "iuA-8i-IJO"; */
+"iuA-8i-IJO.text" = "Prelievo disponibile:";
+
+/* Class = "UILabel"; text = "Cash Out Your Winnings"; ObjectID = "ncv-h7-LaG"; */
+"ncv-h7-LaG.text" = "Incassa le tue vincite";
+
+/* Class = "UIButton"; normalTitle = "NEXT"; ObjectID = "vhJ-gN-SD9"; */
+"vhJ-gN-SD9.normalTitle" = "SUCC.";
+

@@ -1,0 +1,36 @@
+/* Class = "UIButton"; normalTitle = "WATCH REPLAY"; ObjectID = "6W8-Pd-nop"; */
+"6W8-Pd-nop.normalTitle" = "ウォッチリプレイ";
+
+/* Class = "UILabel"; text = "Finalizing Results"; ObjectID = "AaK-5G-eFF"; */
+"AaK-5G-eFF.text" = "最終結果";
+
+/* Class = "UIButton"; normalTitle = "PLAY AGAIN"; ObjectID = "L4R-kl-8Ts"; */
+"L4R-kl-8Ts.normalTitle" = "もう一度プレイ";
+
+/* Class = "UILabel"; text = "Drunken Duel"; ObjectID = "NHB-th-P7h"; */
+"NHB-th-P7h.text" = "ドランクンデュエル";
+
+/* Class = "UILabel"; text = "ENTRIES:"; ObjectID = "NR2-cd-cLU"; */
+"NR2-cd-cLU.text" = "エントリー：";
+
+/* Class = "UIButton"; normalTitle = "SPECTATE"; ObjectID = "Qfh-p1-7Ui"; */
+"Qfh-p1-7Ui.normalTitle" = "観覧";
+
+/* Class = "UILabel"; text = "YOUR SCORE:"; ObjectID = "RLj-dH-ldy"; */
+"RLj-dH-ldy.text" = "あなたのスコア：";
+
+/* Class = "UILabel"; text = "YOUR SCORE"; ObjectID = "SfJ-c4-Bcb"; */
+"SfJ-c4-Bcb.text" = "あなたのスコア";
+
+/* Class = "UIButton"; normalTitle = "SHARE"; ObjectID = "bEb-Ry-9wS"; */
+"bEb-Ry-9wS.normalTitle" = "共有";
+
+/* Class = "UIButton"; normalTitle = "NEXT"; ObjectID = "ecJ-BI-cK7"; */
+"ecJ-BI-cK7.normalTitle" = "次へ";
+
+/* Class = "UILabel"; text = "BEST SCORE:"; ObjectID = "jmL-g8-l90"; */
+"jmL-g8-l90.text" = "ベストスコア：";
+
+/* Class = "UILabel"; text = "Last Entry:"; ObjectID = "xCN-El-4Bt"; */
+"xCN-El-4Bt.text" = "最終エントリー：";
+

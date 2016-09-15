@@ -1,0 +1,30 @@
+/* Class = "UILabel"; text = "Already a member?"; ObjectID = "8gn-d1-Qc3"; */
+"8gn-d1-Qc3.text" = "Уже являетесь участником?";
+
+/* Class = "UILabel"; text = "Your Username"; ObjectID = "DcV-MS-FcQ"; */
+"DcV-MS-FcQ.text" = "Имя пользователя";
+
+/* Class = "UIButton"; normalTitle = "SUBMIT"; ObjectID = "G6U-H0-ngQ"; */
+"G6U-H0-ngQ.normalTitle" = "ОТПРАВИТЬ";
+
+/* Class = "UILabel"; text = "(You can always change it later)"; ObjectID = "Jp1-sT-mzQ"; */
+"Jp1-sT-mzQ.text" = "(Вы можете внести изменения позже)";
+
+/* Class = "UILabel"; text = "Your Avatar"; ObjectID = "Uq3-ZE-NZb"; */
+"Uq3-ZE-NZb.text" = "Основное изображение";
+
+/* Class = "UILabel"; text = "SIGN IN"; ObjectID = "cW5-fV-pYP"; */
+"cW5-fV-pYP.text" = "ВХОД";
+
+/* Class = "UILabel"; text = "(You may only change it once)"; ObjectID = "hSX-WV-Syb"; */
+"hSX-WV-Syb.text" = "(Выберите имя и основное изображение)";
+
+/* Class = "UILabel"; text = "Pick A Name & An Avatar"; ObjectID = "r73-gN-Upr"; */
+"r73-gN-Upr.text" = "Выберите имя и основное изображение";
+
+/* Class = "UIButton"; normalTitle = "SELECT FROM LIBRARY"; ObjectID = "tgY-15-Oqb"; */
+"tgY-15-Oqb.normalTitle" = "ВЫБРАТЬ ИЗ БИБЛИОТЕКИ";
+
+/* Class = "UIButton"; normalTitle = "NEXT"; ObjectID = "w0r-Xz-aLE"; */
+"w0r-Xz-aLE.normalTitle" = "ДАЛЕЕ";
+

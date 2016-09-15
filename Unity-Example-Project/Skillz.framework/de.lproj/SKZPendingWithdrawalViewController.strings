@@ -1,0 +1,18 @@
+/* Class = "UILabel"; text = "Unfortunately you cannot make a deposit at this time because you have a withdraw pending."; ObjectID = "8mq-g6-C6v"; */
+"8mq-g6-C6v.text" = "Leider kannst du derzeit keine Einzahlung tätigen, da du eine ausstehende Abhebung hast.";
+
+/* Class = "UIButton"; normalTitle = "CANCEL WITHDRAWAL & MAKE DEPOSIT"; ObjectID = "Kup-jZ-hqe"; */
+"Kup-jZ-hqe.normalTitle" = "ABHEBUNG ABBRECHEN & EINZAHLUNG TÄTIGEN";
+
+/* Class = "UILabel"; text = "Please cancel the withdrawal in order to make a deposit."; ObjectID = "fNg-1Q-9ua"; */
+"fNg-1Q-9ua.text" = "Du musst die Abhebung abbrechen, um eine Einzahlung zu tätigen.";
+
+/* Class = "UIButton"; normalTitle = "RETURN TO STORE"; ObjectID = "mEm-lX-oxe"; */
+"mEm-lX-oxe.normalTitle" = "ZURÜCK ZUM SHOP";
+
+/* Class = "UILabel"; text = "or"; ObjectID = "o3O-iW-bF1"; */
+"o3O-iW-bF1.text" = "oder";
+
+/* Class = "UILabel"; text = "Withdraw Pending"; ObjectID = "rma-Sq-pWt"; */
+"rma-Sq-pWt.text" = "Abhebung ausstehend";
+

@@ -1,0 +1,9 @@
+/* Class = "UILabel"; text = "You don't have enough funds to enter this match."; ObjectID = "98a-uS-ws0"; */
+"98a-uS-ws0.text" = "Vous n’avez pas suffisamment de fonds pour participer à ce match.";
+
+/* Class = "UIButton"; normalTitle = "ADD FUNDS"; ObjectID = "iYX-HB-lZL"; */
+"iYX-HB-lZL.normalTitle" = "AJOUTER DES FONDS";
+
+/* Class = "UILabel"; text = "Out of Funds"; ObjectID = "j9y-yL-rqi"; */
+"j9y-yL-rqi.text" = "À court de fonds";
+

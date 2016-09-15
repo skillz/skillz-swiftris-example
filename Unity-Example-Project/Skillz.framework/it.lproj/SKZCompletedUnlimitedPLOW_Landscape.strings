@@ -1,0 +1,27 @@
+/* Class = "UILabel"; text = "Player"; ObjectID = "4xR-ww-Eaz"; */
+"4xR-ww-Eaz.text" = "Giocatore";
+
+/* Class = "UILabel"; text = "Score"; ObjectID = "RN2-Wf-oW2"; */
+"RN2-Wf-oW2.text" = "Punteggio";
+
+/* Class = "UIButton"; normalTitle = "NEXT"; ObjectID = "ULK-Jg-cfP"; */
+"ULK-Jg-cfP.normalTitle" = "SUCC.";
+
+/* (No Commment) */
+"Umn-bZ-8jp.text" = "RIPETI";
+
+/* Class = "UIButton"; normalTitle = "SHARE"; ObjectID = "W0l-eI-X68"; */
+"W0l-eI-X68.normalTitle" = "CONDIVIDI";
+
+/* (No Commment) */
+"iWv-0R-zMH.text" = "GUARDA";
+
+/* Class = "UIButton"; normalTitle = "WATCH REPLAY"; ObjectID = "j1b-6k-D1z"; */
+"j1b-6k-D1z.normalTitle" = "GUARDA REPLAY";
+
+/* Class = "UILabel"; text = "Place"; ObjectID = "l9v-Qy-WfH"; */
+"l9v-Qy-WfH.text" = "Posizione";
+
+/* Class = "UILabel"; text = "FINAL RESULTS"; ObjectID = "tSF-jj-PSG"; */
+"tSF-jj-PSG.text" = "RISULTATI FINALI";
+

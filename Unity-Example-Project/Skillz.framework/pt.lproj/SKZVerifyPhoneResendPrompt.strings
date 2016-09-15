@@ -1,0 +1,15 @@
+/* Class = "UITextField"; placeholder = "# Phone Number"; ObjectID = "3Vc-nL-1pS"; */
+"3Vc-nL-1pS.placeholder" = "# Número De Telefone";
+
+/* Class = "UIButton"; normalTitle = "RE-SEND SMS"; ObjectID = "k4p-FM-jJg"; */
+"k4p-FM-jJg.normalTitle" = "RE-ENVIAR SMS";
+
+/* Class = "UIButton"; normalTitle = "SUBMIT"; ObjectID = "o1e-A1-SvK"; */
+"o1e-A1-SvK.normalTitle" = "ENVIE";
+
+/* Class = "UITextField"; placeholder = "Enter Verification Code"; ObjectID = "seC-XE-M6s"; */
+"seC-XE-M6s.placeholder" = "Digite o Código de Verificação";
+
+/* Class = "UILabel"; text = "(Enter the code you received via sms)"; ObjectID = "ypb-cO-X1h"; */
+"ypb-cO-X1h.text" = "(Digite o código que você recebeu via sms)";
+

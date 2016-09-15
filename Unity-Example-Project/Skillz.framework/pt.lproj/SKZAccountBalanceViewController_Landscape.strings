@@ -1,0 +1,21 @@
+/* Class = "UILabel"; text = "Bal"; ObjectID = "A7c-Nv-LiJ"; */
+"A7c-Nv-LiJ.text" = "Saldo";
+
+/* Class = "UIButton"; normalTitle = "All Transactions"; ObjectID = "LGv-P4-sZ0"; */
+"LGv-P4-sZ0.normalTitle" = "Todas as transações";
+
+/* Class = "UILabel"; text = "Event"; ObjectID = "XBT-hA-ktO"; */
+"XBT-hA-ktO.text" = "Evento";
+
+/* Class = "UILabel"; text = "+/-"; ObjectID = "Yyc-0I-k7a"; */
+"Yyc-0I-k7a.text" = "+/-";
+
+/* Class = "UILabel"; text = "Date&Time"; ObjectID = "ciP-ve-TpJ"; */
+"ciP-ve-TpJ.text" = "Data e hora";
+
+/* Class = "UILabel"; text = "Game"; ObjectID = "ddv-su-SjO"; */
+"ddv-su-SjO.text" = "Jogo";
+
+/* Class = "UIButton"; normalTitle = "Done"; ObjectID = "dxF-Ge-ZDM"; */
+"dxF-Ge-ZDM.normalTitle" = "Pronto";
+

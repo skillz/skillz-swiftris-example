@@ -1,0 +1,24 @@
+/* Class = "UIButton"; normalTitle = "SHARE"; ObjectID = "6UD-T0-Brp"; */
+"6UD-T0-Brp.normalTitle" = "CONDIVIDI";
+
+/* Class = "UILabel"; text = "Pro League Results"; ObjectID = "IzX-Ej-JdC"; */
+"IzX-Ej-JdC.text" = "Risultati campionato professionisti";
+
+/* Class = "UILabel"; text = "PRIZE"; ObjectID = "KoC-pJ-VXk"; */
+"KoC-pJ-VXk.text" = "PREMIO";
+
+/* Class = "UILabel"; text = "USER"; ObjectID = "Sy1-Hu-xZD"; */
+"Sy1-Hu-xZD.text" = "UTENTE";
+
+/* Class = "UILabel"; text = "Leaderboard Ended July 12th, 2014"; ObjectID = "Wy5-nM-h9Z"; */
+"Wy5-nM-h9Z.text" = "Classifica chiusa il 12 luglio 2014";
+
+/* Class = "UILabel"; text = "PLACE"; ObjectID = "axy-f8-FX6"; */
+"axy-f8-FX6.text" = "POSIZIONE";
+
+/* Class = "UILabel"; text = "SCORE"; ObjectID = "g4c-56-uRZ"; */
+"g4c-56-uRZ.text" = "PUNTEGGIO";
+
+/* Class = "UIButton"; normalTitle = "NEXT"; ObjectID = "znR-hz-2bt"; */
+"znR-hz-2bt.normalTitle" = "SUCC.";
+

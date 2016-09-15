@@ -1,0 +1,27 @@
+/* Class = "UILabel"; text = "Tap here to enter tournaments. There are many ways to play."; ObjectID = "ATV-Dx-4Ss"; */
+"ATV-Dx-4Ss.text" = "Tippe hier, um an Wettkämpfen teilzunehmen; es gibt die verschiedensten Spiele!";
+
+/* Class = "UILabel"; text = "See your rankings and compete for cash and prizes"; ObjectID = "EYb-fz-gP9"; */
+"EYb-fz-gP9.text" = "Ranglisten einsehen und um Cash und Preise spielen";
+
+/* Class = "UILabel"; text = "Redeem Ticketz for prizes"; ObjectID = "Sff-ga-Plt"; */
+"Sff-ga-Plt.text" = "Löse Ticketz gegen Preise ein";
+
+/* Class = "UILabel"; text = "Visit the store to add cash or earn our Z currency so you can play more games"; ObjectID = "U25-eP-2QY"; */
+"U25-eP-2QY.text" = "Shop besuchen, um Cash hinzuzufügen oder %@-Währung zu gewinnen und an weiteren Spielen teilzunehmen";
+
+/* Class = "UIButton"; normalTitle = "NEXT"; ObjectID = "g8H-p7-MT7"; */
+"g8H-p7-MT7.normalTitle" = "WEITER";
+
+/* Class = "UILabel"; text = "View your current and completed matches from the home screen"; ObjectID = "oiN-gK-qMF"; */
+"oiN-gK-qMF.text" = "Anzeigen deiner aktuellen und beendet Matches vom Startbildschirm aus";
+
+/* Class = "UILabel"; text = "Use cash to play for money"; ObjectID = "v6q-Vb-1sU"; */
+"v6q-Vb-1sU.text" = "Cash zum Spielen um Geld benutzen";
+
+/* Class = "UILabel"; text = "Use %@ to practice"; ObjectID = "xRz-aO-7er"; */
+"xRz-aO-7er.text" = "%@ zum Üben benutzen";
+
+/* Class = "UILabel"; text = "$"; ObjectID = "z7h-gY-UNN"; */
+"z7h-gY-UNN.text" = "$";
+

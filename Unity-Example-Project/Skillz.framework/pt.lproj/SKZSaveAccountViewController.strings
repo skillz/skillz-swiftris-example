@@ -1,0 +1,33 @@
+/* Class = "UILabel"; text = "Congratulations!"; ObjectID = "75D-QS-RCs"; */
+"75D-QS-RCs.text" = "Parabéns!";
+
+/* Class = "UILabel"; text = "You have completed your first deposit!"; ObjectID = "G4V-sE-Bkr"; */
+"G4V-sE-Bkr.text" = "Você concluiu seu primeiro depósito!";
+
+/* Class = "UITextField"; placeholder = "Re-enter Your Password"; ObjectID = "Lhe-Ej-BGJ"; */
+"Lhe-Ej-BGJ.placeholder" = "Insira novamente sua Senha";
+
+/* Class = "UILabel"; text = "Earn extra rewards"; ObjectID = "PMx-eA-DJO"; */
+"PMx-eA-DJO.text" = "Ganhar recompensas extra";
+
+/* Class = "UILabel"; text = "Log in on any device"; ObjectID = "Rd5-OC-imD"; */
+"Rd5-OC-imD.text" = "Fazer login em qualquer dispositivo";
+
+/* Class = "UILabel"; text = "Play other Skillz games"; ObjectID = "UDe-Z3-W3q"; */
+"UDe-Z3-W3q.text" = "Jogar outros games Skillz";
+
+/* Class = "UITextField"; placeholder = "Enter Your Password"; ObjectID = "WP7-2N-hNo"; */
+"WP7-2N-hNo.placeholder" = "Insira sua Senha";
+
+/* Class = "UITextField"; placeholder = "Enter Your Email"; ObjectID = "bS4-bS-fCb"; */
+"bS4-bS-fCb.placeholder" = "Insira o seu e-mail";
+
+/* Class = "UILabel"; text = "Enter your email address and a password to save your account."; ObjectID = "eFN-P1-cKp"; */
+"eFN-P1-cKp.text" = "Digite seu endereço de e-mail e senha para salvar sua conta.";
+
+/* Class = "UILabel"; text = "Yes, sign me up for news and updates from Skillz"; ObjectID = "gh8-O9-zOz"; */
+"gh8-O9-zOz.text" = "Sim, inclua-me para receber notícias e atualizações da Skillz";
+
+/* Class = "UIButton"; normalTitle = "SUBMIT"; ObjectID = "roy-DJ-bZ4"; */
+"roy-DJ-bZ4.normalTitle" = "ENVIAR";
+

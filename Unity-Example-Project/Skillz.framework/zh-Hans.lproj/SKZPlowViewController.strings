@@ -1,0 +1,18 @@
+/* Class = "UIButton"; normalTitle = "PLAY AGAIN"; ObjectID = "L4R-kl-8Ts"; */
+"L4R-kl-8Ts.normalTitle" = "再玩一次";
+
+/* Class = "UIButton"; normalTitle = "SHARE"; ObjectID = "Svw-ea-wv2"; */
+"Svw-ea-wv2.normalTitle" = "分享";
+
+/* (No Commment) */
+"dQr-Te-Nt0.normalTitle" = "分享";
+
+/* Class = "UIButton"; normalTitle = "WATCH REPLAY"; ObjectID = "eQy-4i-Ige"; */
+"eQy-4i-Ige.normalTitle" = "观看回放";
+
+/* Class = "UIButton"; normalTitle = "NEXT"; ObjectID = "ecJ-BI-cK7"; */
+"ecJ-BI-cK7.normalTitle" = "下一个";
+
+/* Class = "UILabel"; text = "YOU PLACED"; ObjectID = "oGj-Ms-jwf"; */
+"oGj-Ms-jwf.text" = "你排在了";
+

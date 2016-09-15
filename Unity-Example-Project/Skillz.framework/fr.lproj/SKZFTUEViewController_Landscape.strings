@@ -1,0 +1,18 @@
+/* Class = "UIButton"; normalTitle = "NEXT"; ObjectID = "128"; */
+"128.normalTitle" = "SUIVANT";
+
+/* Class = "UILabel"; text = "Already a member?"; ObjectID = "EH4-Aj-Yog"; */
+"EH4-Aj-Yog.text" = "Vous êtes déjà membre ?";
+
+/* Class = "UILabel"; text = "Play for fun or real money"; ObjectID = "Erh-MX-bQB"; */
+"Erh-MX-bQB.text" = "Jouer pour le plaisir ou en argent réel";
+
+/* Class = "UILabel"; text = "SIGN IN"; ObjectID = "Lat-yy-aPr"; */
+"Lat-yy-aPr.text" = "SE CONNECTER";
+
+/* Class = "UILabel"; text = "Multiplayer Competitions"; ObjectID = "SQ7-nI-k9s"; */
+"SQ7-nI-k9s.text" = "Compétitions multijoueur";
+
+/* Class = "UILabel"; text = "with players from around the world"; ObjectID = "gMC-X9-UIQ"; */
+"gMC-X9-UIQ.text" = "avec des joueurs sur toute la planète";
+

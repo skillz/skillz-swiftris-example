@@ -1,0 +1,18 @@
+/* Class = "UIButton"; normalTitle = "SUBMIT"; ObjectID = "1Qr-fz-b8K"; */
+"1Qr-fz-b8K.normalTitle" = "提交";
+
+/* Class = "UIButton"; normalTitle = "Birthdate"; ObjectID = "6gc-Ov-eq4"; */
+"6gc-Ov-eq4.normalTitle" = "出生日期";
+
+/* Class = "UILabel"; text = "I agree to the Terms of Service"; ObjectID = "CSQ-Wq-h0h"; */
+"CSQ-Wq-h0h.text" = "同意服务条款";
+
+/* Class = "UILabel"; text = "PLAY FOR CASH"; ObjectID = "jII-f7-yIY"; */
+"jII-f7-yIY.text" = "玩现金游戏";
+
+/* Class = "UILabel"; text = "GO PRO!"; ObjectID = "sBH-x3-xe9"; */
+"sBH-x3-xe9.text" = "玩专业的！";
+
+/* Class = "UILabel"; text = "Enter your birthday to play for cash"; ObjectID = "tGf-pc-x4C"; */
+"tGf-pc-x4C.text" = "请输入你的生日来玩现金游戏";
+

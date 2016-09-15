@@ -1,0 +1,21 @@
+/* Class = "UIButton"; normalTitle = "SIGN IN"; ObjectID = "120"; */
+"120.normalTitle" = "INICIAR SESIÓN";
+
+/* Class = "UIButton"; normalTitle = "NEXT"; ObjectID = "128"; */
+"128.normalTitle" = "SIGUIENTE";
+
+/* Class = "UILabel"; text = "Multiplayer Competitions"; ObjectID = "Ry7-lW-Vm2"; */
+"Ry7-lW-Vm2.text" = "Competencias de varios jugadores";
+
+/* Class = "UILabel"; text = "Play for fun or real money"; ObjectID = "d10-fv-vKu"; */
+"d10-fv-vKu.text" = "Juega por diversión o por dinero real";
+
+/* Class = "UILabel"; text = "with players from around the world"; ObjectID = "fLD-kI-w28"; */
+"fLD-kI-w28.text" = "con jugadores de todo el mundo";
+
+/* Class = "UILabel"; text = "Already a member?"; ObjectID = "fcY-2h-a5i"; */
+"fcY-2h-a5i.text" = "¿Ya estás afiliado?";
+
+/* Class = "UILabel"; text = "Diamond Strike"; ObjectID = "tMk-qh-Ksw"; */
+"tMk-qh-Ksw.text" = "Diamond Strike";
+

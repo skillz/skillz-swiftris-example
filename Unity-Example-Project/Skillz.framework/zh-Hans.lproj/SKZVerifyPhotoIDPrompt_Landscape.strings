@@ -1,0 +1,18 @@
+/* Class = "UIButton"; normalTitle = "ADD PHOTO"; ObjectID = "1Z2-ED-GH0"; */
+"1Z2-ED-GH0.normalTitle" = "添加照片";
+
+/* Class = "UILabel"; text = "Photo of ID (Front)"; ObjectID = "6Bk-6z-trh"; */
+"6Bk-6z-trh.text" = "ID照片（正面）";
+
+/* Class = "UIButton"; normalTitle = "ADD PHOTO"; ObjectID = "17O-HX-WUi"; */
+"17O-HX-WUi.normalTitle" = "添加照片";
+
+/* Class = "UILabel"; text = "Photo of ID (Back)"; ObjectID = "A4n-44-Cjg"; */
+"A4n-44-Cjg.text" = "ID照片（背面）";
+
+/* Class = "UIButton"; normalTitle = "SUBMIT"; ObjectID = "Gt5-Nw-ysJ"; */
+"Gt5-Nw-ysJ.normalTitle" = "提交";
+
+/* Class = "UILabel"; text = "Please take a clear, well-lit photo"; ObjectID = "aoc-B7-MuG"; */
+"aoc-B7-MuG.text" = "请拍摄出清晰，明亮的照片";
+
