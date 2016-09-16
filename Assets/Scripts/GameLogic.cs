@@ -24,13 +24,18 @@ public class GameLogic : MonoBehaviour
 
 	public GUIStyle Style, LabelStyle;
 
+	// Instantiating variables to be used to show an example on how to integrate Skillz Random Number Generation
+	public int szkRandomNumber = 0;
+	public int timer = 0;
+
 
 	void FixedUpdate()
 	{
 		Screen.orientation = (MySkillzDelegateBase.GameOrientation == SkillzSDK.Orientation.Landscape ?
-			ScreenOrientation.LandscapeLeft :
+			ScreenOrientation.LandscapeRight :
 			ScreenOrientation.Portrait);
 	}
+
 
 	// GUI callback
 	void OnGUI()
@@ -49,60 +54,40 @@ public class GameLogic : MonoBehaviour
 		switch (MatchType)
 		{
 		case TournamentTypes.Normal:
-			GUI.Label(new Rect(labelPos.x, labelPos.y, Screen.width - labelPos.x, Screen.height - labelPos.y),
+			GUI.Label (new Rect (labelPos.x, labelPos.y, Screen.width - labelPos.x, Screen.height - labelPos.y),
 				"Not turn-based", LabelStyle);
+			
+			// Example of how to Implement Skillz Random Generation for fairness. Random Number is added to score at the end just for this example.
+			if (SkillzSDK.Api.IsTournamentInProgress) 
+			{
+				timer += 1;
+				if (timer > 60) {
+					timer = 0;
+					szkRandomNumber += SkillzSDK.Api.GetRandomNumber (1, 10);
+				}
+				GUI.Label (new Rect (labelPos.x, 50.0f, Screen.width - labelPos.x, Screen.height - labelPos.y),
+					"Skillz Random Number: " + szkRandomNumber.ToString (), LabelStyle);
+				GUI.Label (new Rect (labelPos.x, 100.0f, Screen.width - labelPos.x, Screen.height - labelPos.y),
+					"Timer: " + timer.ToString (), LabelStyle);	
+			}
+
 			if (GUI.Button (new Rect(buttonXMin, highScoreButtonY, buttonSize.x, buttonSize.y),
 				"Score HIGH", Style))
 			{
 				// Report a large final score to Skillz
-				SkillzSDK.Api.FinishTournament(99999);
+				SkillzSDK.Api.FinishTournament(9999 + szkRandomNumber);
 			}
 			if (GUI.Button (new Rect(buttonXMin, lowScoreButtonY, buttonSize.x, buttonSize.y),
 				"Score LOW", Style))
 			{
 				// Report a random small final score to Skillz
-				int score = Random.Range(0, 10000);
-				SkillzSDK.Api.FinishTournament(score);
+				int score = Random.Range(0, 50);
+				SkillzSDK.Api.FinishTournament(score + szkRandomNumber);
 			}
 			if (GUI.Button(new Rect(buttonXMin, abortButtonY, buttonSize.x, buttonSize.y),
 				"Abort", Style))
 			{
 				SkillzSDK.Api.AbortGame();
-			}
-			break;
-
-		case TournamentTypes.TurnBased:
-			GUI.Label(new Rect(labelPos.x, labelPos.y, Screen.width - labelPos.x, Screen.height - labelPos.y),
-				"Turn-based", LabelStyle);
-			// Report a large turn score to Skillz
-			if (GUI.Button (new Rect(buttonXMin, highScoreButtonY, buttonSize.x, buttonSize.y),
-				"Score HIGH", Style))
-			{
-				SkillzSDK.Api.FinishTurn("", SkillzSDK.TurnBasedRoundOutcome.NoOutcome,
-					SkillzSDK.TurnBasedMatchOutcome.NoOutcome,
-					"99999", 99999, 0);
-			}
-			// Report a random small turn score to Skillz
-			if (GUI.Button (new Rect(buttonXMin, lowScoreButtonY, buttonSize.x, buttonSize.y),
-				"Score LOW", Style))
-			{
-				SkillzSDK.Api.FinishTurn("", SkillzSDK.TurnBasedRoundOutcome.NoOutcome,
-					SkillzSDK.TurnBasedMatchOutcome.NoOutcome,
-					"0", 0, 0);
-			}
-			if (GUI.Button(new Rect(buttonXMin, abortButtonY, buttonSize.x, buttonSize.y),
-				"Abort", Style))
-			{
-				SkillzSDK.Api.AbortGame();
-			}
-			break;
-
-		case TournamentTypes.ReviewTurnBased:
-			// Finish viewing the game state.
-			if (GUI.Button (new Rect(buttonXMin, finishReviewingGameStateButtonY, buttonSize.x, buttonSize.y),
-				"Finish reviewing game state", Style))
-			{
-				SkillzSDK.Api.FinishReviewingTurn();
 			}
 			break;
 		}
