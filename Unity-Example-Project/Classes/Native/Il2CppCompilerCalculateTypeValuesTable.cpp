@@ -855,6 +855,7 @@
 #include "UnityEngine_UnityEngine_SocialPlatforms_GameCenter3481375915.h"
 #include "UnityEngine_UnityEngine_SocialPlatforms_GameCenter2181296590.h"
 #include "UnityEngine_UnityEngine_CameraClearFlags2093155523.h"
+#include "UnityEngine_UnityEngine_ScreenOrientation1849668026.h"
 #include "UnityEngine_UnityEngine_TextureFormat4189619560.h"
 #include "UnityEngine_UnityEngine_SocialPlatforms_Impl_Local1307362368.h"
 #include "UnityEngine_UnityEngine_SocialPlatforms_Impl_UserP2280656072.h"
@@ -882,8 +883,10 @@
 #include "UnityEngine_UnityEngine_Serialization_FormerlySeri2216353654.h"
 #include "UnityEngine_UnityEngineInternal_TypeInferenceRules2889237774.h"
 #include "UnityEngine_UnityEngineInternal_TypeInferenceRuleA1657757719.h"
+#include "AssemblyU2DCSharp_GameLogic2987424364.h"
 #include "AssemblyU2DCSharp_GameLogic_TournamentTypes4265569869.h"
 #include "AssemblyU2DCSharp_MainMenu55996120.h"
+#include "AssemblyU2DCSharp_MySkillzDelegateBase2932156363.h"
 #include "AssemblyU2DCSharp_Spin2583650.h"
 #include "AssemblyU2DCSharp_SkillzSDK_Orientation734328798.h"
 #include "AssemblyU2DCSharp_SkillzSDK_Environment2087924769.h"
@@ -1263,7 +1266,8 @@
 #include "UnityEngine_UnityEngine_Scripting_RequiredByNative3165457172.h"
 #include "UnityEngine_UnityEngineInternal_GenericStack931085639.h"
 #include "AssemblyU2DCSharp_U3CModuleU3E86524790.h"
-#include "AssemblyU2DCSharp_GameLogic2987424364.h"
+#include "AssemblyU2DCSharp_MySkillzDelegateStandard2852598455.h"
+#include "AssemblyU2DCSharp_MySkillzDelegateTurnBased342856828.h"
 #include "AssemblyU2DCSharp_SkillzSDK_Api_Random315690389.h"
 #include "AssemblyU2DCSharp_SkillzSDK_SkillzDelegateBase3573513351.h"
 #include "AssemblyU2DCSharp_SkillzSDK_SkillzDelegateStandard855934707.h"
@@ -1279,7 +1283,7 @@
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-extern const int32_t g_FieldOffsetTable[5567] = 
+extern const int32_t g_FieldOffsetTable[5583] = 
 {
 	0,
 	0,
@@ -6633,6 +6637,14 @@ extern const int32_t g_FieldOffsetTable[5567] =
 	0,
 	0,
 	0,
+	ScreenOrientation_t1849668026::get_offset_of_value___1() + static_cast<int32_t>(sizeof(Il2CppObject)),
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
 	TextureFormat_t4189619560::get_offset_of_value___1() + static_cast<int32_t>(sizeof(Il2CppObject)),
 	0,
 	0,
@@ -6773,8 +6785,16 @@ extern const int32_t g_FieldOffsetTable[5567] =
 	0,
 	0,
 	TypeInferenceRuleAttribute_t1657757719::get_offset_of__rule_0(),
+	GameLogic_t2987424364::get_offset_of_MatchType_2(),
+	GameLogic_t2987424364::get_offset_of_Style_3(),
+	GameLogic_t2987424364::get_offset_of_LabelStyle_4(),
 	TournamentTypes_t4265569869::get_offset_of_value___1() + static_cast<int32_t>(sizeof(Il2CppObject)),
+	0,
+	0,
+	0,
 	MainMenu_t55996120::get_offset_of_Style_2(),
+	MySkillzDelegateBase_t2932156363_StaticFields::get_offset_of_GameOrientation_2(),
+	MySkillzDelegateBase_t2932156363::get_offset_of_OrientationToUse_3(),
 	Spin_t2583650::get_offset_of_Axis_2(),
 	Spin_t2583650::get_offset_of_AnglePerSecond_3(),
 	Spin_t2583650::get_offset_of_tr_4(),
@@ -6852,7 +6872,7 @@ extern const int32_t g_FieldOffsetTable[5567] =
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-extern const Il2CppTypeDefinitionSizes g_Il2CppTypeDefinitionSizesTable[1419] = 
+extern const Il2CppTypeDefinitionSizes g_Il2CppTypeDefinitionSizesTable[1423] = 
 {
 	sizeof (U3CModuleU3E_t86524790), -1, 0, 0,
 	sizeof (Il2CppObject), -1, 0, 0,
@@ -8197,6 +8217,7 @@ extern const Il2CppTypeDefinitionSizes g_Il2CppTypeDefinitionSizesTable[1419] =
 	sizeof (GcAchievementData_t3481375915)+ sizeof (Il2CppObject), sizeof(GcAchievementData_t3481375915_marshaled_pinvoke), 0, 0,
 	sizeof (GcScoreData_t2181296590)+ sizeof (Il2CppObject), sizeof(GcScoreData_t2181296590_marshaled_pinvoke), 0, 0,
 	sizeof (CameraClearFlags_t2093155523)+ sizeof (Il2CppObject), sizeof(int32_t), 0, 0,
+	sizeof (ScreenOrientation_t1849668026)+ sizeof (Il2CppObject), sizeof(int32_t), 0, 0,
 	sizeof (TextureFormat_t4189619560)+ sizeof (Il2CppObject), sizeof(int32_t), 0, 0,
 	sizeof (LocalUser_t1307362368), -1, 0, 0,
 	sizeof (UserProfile_t2280656072), -1, 0, 0,
@@ -8250,6 +8271,9 @@ extern const Il2CppTypeDefinitionSizes g_Il2CppTypeDefinitionSizesTable[1419] =
 	sizeof (GameLogic_t2987424364), -1, 0, 0,
 	sizeof (TournamentTypes_t4265569869)+ sizeof (Il2CppObject), sizeof(int32_t), 0, 0,
 	sizeof (MainMenu_t55996120), -1, 0, 0,
+	sizeof (MySkillzDelegateBase_t2932156363), -1, sizeof(MySkillzDelegateBase_t2932156363_StaticFields), 0,
+	sizeof (MySkillzDelegateStandard_t2852598455), -1, 0, 0,
+	sizeof (MySkillzDelegateTurnBased_t342856828), -1, 0, 0,
 	sizeof (Spin_t2583650), -1, 0, 0,
 	sizeof (Orientation_t734328798)+ sizeof (Il2CppObject), sizeof(int32_t), 0, 0,
 	sizeof (Environment_t2087924769)+ sizeof (Il2CppObject), sizeof(int32_t), 0, 0,

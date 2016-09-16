@@ -17,14 +17,22 @@
 struct GameLogic_t2987424364;
 // MainMenu
 struct MainMenu_t55996120;
+// MySkillzDelegateBase
+struct MySkillzDelegateBase_t2932156363;
+// MySkillzDelegateStandard
+struct MySkillzDelegateStandard_t2852598455;
+// SkillzSDK.Match
+struct Match_t1498692115;
+// MySkillzDelegateTurnBased
+struct MySkillzDelegateTurnBased_t342856828;
+// SkillzSDK.TurnBasedMatch
+struct TurnBasedMatch_t1066559575;
 // System.String
 struct String_t;
 // System.Collections.Generic.Dictionary`2<System.String,System.Object>
 struct Dictionary_2_t696267445;
 // System.Object
 struct Il2CppObject;
-// SkillzSDK.Match
-struct Match_t1498692115;
 // SkillzSDK.MiniJSON.Json/Parser
 struct Parser_t4021816404;
 // System.Collections.Generic.List`1<System.Object>
@@ -43,8 +51,6 @@ struct SkillzDelegateInit_t3573734086;
 struct SkillzDelegateStandard_t855934707;
 // SkillzSDK.SkillzDelegateTurnBased
 struct SkillzDelegateTurnBased_t374563190;
-// SkillzSDK.TurnBasedMatch
-struct TurnBasedMatch_t1066559575;
 // SkillzSDK.SkillzMessageReceiver
 struct SkillzMessageReceiver_t3704573403;
 // System.Collections.Generic.Dictionary`2<System.String,System.String>
@@ -61,40 +67,58 @@ struct Spin_t2583650;
 #include "AssemblyU2DCSharp_GameLogic2987424364MethodDeclarations.h"
 #include "mscorlib_System_Void2863195528.h"
 #include "UnityEngine_UnityEngine_MonoBehaviour667441552MethodDeclarations.h"
+#include "UnityEngine_UnityEngine_Screen3187157168MethodDeclarations.h"
+#include "AssemblyU2DCSharp_MySkillzDelegateBase2932156363.h"
+#include "AssemblyU2DCSharp_MySkillzDelegateBase2932156363MethodDeclarations.h"
+#include "AssemblyU2DCSharp_SkillzSDK_Orientation734328798.h"
+#include "UnityEngine_UnityEngine_ScreenOrientation1849668026.h"
+#include "UnityEngine_UnityEngine_Vector24282066565MethodDeclarations.h"
+#include "UnityEngine_UnityEngine_GUI3134605553MethodDeclarations.h"
+#include "AssemblyU2DCSharp_SkillzSDK_Api1586343720MethodDeclarations.h"
+#include "UnityEngine_UnityEngine_Random3156561159MethodDeclarations.h"
+#include "UnityEngine_UnityEngine_Vector24282066565.h"
+#include "mscorlib_System_Single4291918972.h"
+#include "mscorlib_System_Int321153838500.h"
 #include "AssemblyU2DCSharp_GameLogic_TournamentTypes4265569869.h"
+#include "UnityEngine_UnityEngine_Rect4241904616.h"
+#include "UnityEngine_UnityEngine_Rect4241904616MethodDeclarations.h"
+#include "mscorlib_System_String7231557.h"
+#include "UnityEngine_UnityEngine_GUIStyle2990928826.h"
+#include "mscorlib_System_Boolean476798718.h"
+#include "mscorlib_System_String7231557MethodDeclarations.h"
+#include "AssemblyU2DCSharp_SkillzSDK_TurnBasedRoundOutcome1849591944.h"
+#include "AssemblyU2DCSharp_SkillzSDK_TurnBasedMatchOutcome1871643761.h"
 #include "AssemblyU2DCSharp_GameLogic_TournamentTypes4265569869MethodDeclarations.h"
 #include "AssemblyU2DCSharp_MainMenu55996120.h"
 #include "AssemblyU2DCSharp_MainMenu55996120MethodDeclarations.h"
-#include "AssemblyU2DCSharp_SkillzSDK_Api1586343720.h"
-#include "AssemblyU2DCSharp_SkillzSDK_Api1586343720MethodDeclarations.h"
-#include "mscorlib_System_String7231557.h"
-#include "mscorlib_System_Boolean476798718.h"
-#include "mscorlib_System_Int321153838500.h"
-#include "mscorlib_System_IntPtr4010401971.h"
-#include "mscorlib_System_Single4291918972.h"
-#include "UnityEngine_UnityEngine_Application2856536070MethodDeclarations.h"
-#include "UnityEngine_UnityEngine_RuntimePlatform3050318497.h"
+#include "UnityEngine_UnityEngine_Debug4195163081MethodDeclarations.h"
+#include "mscorlib_System_Object4170816371.h"
 #include "AssemblyU2DCSharp_SkillzSDK_Player1109057033.h"
+#include "AssemblyU2DCSharp_SkillzSDK_SkillzDelegateBase3573513351MethodDeclarations.h"
+#include "UnityEngine_UnityEngine_Application2856536070MethodDeclarations.h"
+#include "AssemblyU2DCSharp_MySkillzDelegateStandard2852598455.h"
+#include "AssemblyU2DCSharp_MySkillzDelegateStandard2852598455MethodDeclarations.h"
+#include "AssemblyU2DCSharp_SkillzSDK_SkillzDelegateStandard855934707MethodDeclarations.h"
+#include "AssemblyU2DCSharp_SkillzSDK_Match1498692115.h"
+#include "AssemblyU2DCSharp_MySkillzDelegateTurnBased342856828.h"
+#include "AssemblyU2DCSharp_MySkillzDelegateTurnBased342856828MethodDeclarations.h"
+#include "AssemblyU2DCSharp_SkillzSDK_SkillzDelegateTurnBased374563190MethodDeclarations.h"
+#include "AssemblyU2DCSharp_SkillzSDK_TurnBasedMatch1066559575.h"
+#include "AssemblyU2DCSharp_SkillzSDK_Api1586343720.h"
+#include "mscorlib_System_IntPtr4010401971.h"
+#include "UnityEngine_UnityEngine_RuntimePlatform3050318497.h"
 #include "mscorlib_System_Runtime_InteropServices_Marshal87536056MethodDeclarations.h"
 #include "mscorlib_System_Collections_Generic_Dictionary_2_ge696267445.h"
 #include "AssemblyU2DCSharp_SkillzSDK_Player1109057033MethodDeclarations.h"
 #include "AssemblyU2DCSharp_SkillzSDK_Environment2087924769.h"
-#include "UnityEngine_UnityEngine_Debug4195163081MethodDeclarations.h"
-#include "mscorlib_System_Object4170816371.h"
-#include "AssemblyU2DCSharp_SkillzSDK_Orientation734328798.h"
-#include "AssemblyU2DCSharp_SkillzSDK_TurnBasedRoundOutcome1849591944.h"
-#include "AssemblyU2DCSharp_SkillzSDK_TurnBasedMatchOutcome1871643761.h"
-#include "mscorlib_System_String7231557MethodDeclarations.h"
 #include "mscorlib_System_Enum2862688501MethodDeclarations.h"
 #include "mscorlib_System_Enum2862688501.h"
 #include "AssemblyU2DCSharp_SkillzSDK_MiniJSON_Json2003762062MethodDeclarations.h"
 #include "AssemblyU2DCSharp_SkillzSDK_Api_Random315690389.h"
 #include "AssemblyU2DCSharp_SkillzSDK_Api_Random315690389MethodDeclarations.h"
-#include "UnityEngine_UnityEngine_Random3156561159MethodDeclarations.h"
 #include "UnityEngine_UnityEngine_Vector34282066566.h"
 #include "UnityEngine_UnityEngine_Mathf4203372500MethodDeclarations.h"
 #include "UnityEngine_UnityEngine_Vector34282066566MethodDeclarations.h"
-#include "UnityEngine_UnityEngine_Vector24282066565.h"
 #include "UnityEngine_UnityEngine_Quaternion1553702882.h"
 #include "UnityEngine_UnityEngine_Quaternion1553702882MethodDeclarations.h"
 #include "AssemblyU2DCSharp_SkillzSDK_ContinuedTurnBasedMatc2912208314.h"
@@ -129,7 +153,6 @@ struct Spin_t2583650;
 #include "mscorlib_System_Int321153838500MethodDeclarations.h"
 #include "mscorlib_System_Nullable_1_gen1237965023MethodDeclarations.h"
 #include "mscorlib_System_UInt3224667981MethodDeclarations.h"
-#include "AssemblyU2DCSharp_SkillzSDK_Match1498692115.h"
 #include "AssemblyU2DCSharp_SkillzSDK_Match1498692115MethodDeclarations.h"
 #include "mscorlib_System_Collections_Generic_Dictionary_2_ge827649927MethodDeclarations.h"
 #include "mscorlib_System_Collections_Generic_Dictionary_2_E2013590837MethodDeclarations.h"
@@ -177,7 +200,6 @@ struct Spin_t2583650;
 #include "mscorlib_System_Decimal1954350631.h"
 #include "AssemblyU2DCSharp_SkillzSDK_Orientation734328798MethodDeclarations.h"
 #include "AssemblyU2DCSharp_SkillzSDK_SkillzDelegateBase3573513351.h"
-#include "AssemblyU2DCSharp_SkillzSDK_SkillzDelegateBase3573513351MethodDeclarations.h"
 #include "AssemblyU2DCSharp_SkillzSDK_SkillzDelegateInit3573734086.h"
 #include "AssemblyU2DCSharp_SkillzSDK_SkillzDelegateInit3573734086MethodDeclarations.h"
 #include "UnityEngine_UnityEngine_Component3501516275MethodDeclarations.h"
@@ -185,10 +207,7 @@ struct Spin_t2583650;
 #include "UnityEngine_UnityEngine_GameObject3674682005.h"
 #include "UnityEngine_UnityEngine_Object3071478659.h"
 #include "AssemblyU2DCSharp_SkillzSDK_SkillzDelegateStandard855934707.h"
-#include "AssemblyU2DCSharp_SkillzSDK_SkillzDelegateStandard855934707MethodDeclarations.h"
 #include "AssemblyU2DCSharp_SkillzSDK_SkillzDelegateTurnBased374563190.h"
-#include "AssemblyU2DCSharp_SkillzSDK_SkillzDelegateTurnBased374563190MethodDeclarations.h"
-#include "AssemblyU2DCSharp_SkillzSDK_TurnBasedMatch1066559575.h"
 #include "AssemblyU2DCSharp_SkillzSDK_SkillzMessageReceiver3704573403.h"
 #include "AssemblyU2DCSharp_SkillzSDK_SkillzMessageReceiver3704573403MethodDeclarations.h"
 #include "AssemblyU2DCSharp_SkillzSDK_TurnBasedMatch1066559575MethodDeclarations.h"
@@ -224,15 +243,293 @@ extern "C"  void GameLogic__ctor_m737121407 (GameLogic_t2987424364 * __this, con
 	}
 }
 // System.Void GameLogic::FixedUpdate()
+extern Il2CppClass* MySkillzDelegateBase_t2932156363_il2cpp_TypeInfo_var;
+extern const uint32_t GameLogic_FixedUpdate_m1798428346_MetadataUsageId;
 extern "C"  void GameLogic_FixedUpdate_m1798428346 (GameLogic_t2987424364 * __this, const MethodInfo* method)
 {
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
 	{
+		il2cpp_codegen_initialize_method (GameLogic_FixedUpdate_m1798428346_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	int32_t G_B3_0 = 0;
+	{
+		int32_t L_0 = ((MySkillzDelegateBase_t2932156363_StaticFields*)MySkillzDelegateBase_t2932156363_il2cpp_TypeInfo_var->static_fields)->get_GameOrientation_2();
+		if (L_0)
+		{
+			goto IL_0010;
+		}
+	}
+	{
+		G_B3_0 = 3;
+		goto IL_0011;
+	}
+
+IL_0010:
+	{
+		G_B3_0 = 1;
+	}
+
+IL_0011:
+	{
+		Screen_set_orientation_m931760051(NULL /*static, unused*/, G_B3_0, /*hidden argument*/NULL);
 		return;
 	}
 }
 // System.Void GameLogic::OnGUI()
+extern Il2CppClass* GUI_t3134605553_il2cpp_TypeInfo_var;
+extern Il2CppClass* String_t_il2cpp_TypeInfo_var;
+extern Il2CppCodeGenString* _stringLiteral429317616;
+extern Il2CppCodeGenString* _stringLiteral3517820560;
+extern Il2CppCodeGenString* _stringLiteral4131354758;
+extern Il2CppCodeGenString* _stringLiteral63058704;
+extern Il2CppCodeGenString* _stringLiteral988820099;
+extern Il2CppCodeGenString* _stringLiteral54395385;
+extern Il2CppCodeGenString* _stringLiteral48;
+extern Il2CppCodeGenString* _stringLiteral2278963334;
+extern const uint32_t GameLogic_OnGUI_m232520057_MetadataUsageId;
 extern "C"  void GameLogic_OnGUI_m232520057 (GameLogic_t2987424364 * __this, const MethodInfo* method)
 {
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (GameLogic_OnGUI_m232520057_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	Vector2_t4282066565  V_0;
+	memset(&V_0, 0, sizeof(V_0));
+	Vector2_t4282066565  V_1;
+	memset(&V_1, 0, sizeof(V_1));
+	float V_2 = 0.0f;
+	float V_3 = 0.0f;
+	float V_4 = 0.0f;
+	float V_5 = 0.0f;
+	float V_6 = 0.0f;
+	int32_t V_7 = 0;
+	int32_t V_8 = 0;
+	{
+		Vector2__ctor_m1517109030((&V_0), (20.0f), (20.0f), /*hidden argument*/NULL);
+		Vector2__ctor_m1517109030((&V_1), (250.0f), (50.0f), /*hidden argument*/NULL);
+		int32_t L_0 = Screen_get_width_m3080333084(NULL /*static, unused*/, /*hidden argument*/NULL);
+		float L_1 = (&V_1)->get_x_0();
+		V_2 = ((float)((float)((float)((float)(((float)((float)L_0)))/(float)(2.0f)))-(float)((float)((float)L_1/(float)(2.0f)))));
+		V_3 = (100.0f);
+		V_4 = (200.0f);
+		V_5 = (300.0f);
+		V_6 = (150.0f);
+		int32_t L_2 = __this->get_MatchType_2();
+		V_8 = L_2;
+		int32_t L_3 = V_8;
+		if (L_3 == 0)
+		{
+			goto IL_0078;
+		}
+		if (L_3 == 1)
+		{
+			goto IL_015f;
+		}
+		if (L_3 == 2)
+		{
+			goto IL_025e;
+		}
+	}
+	{
+		goto IL_0293;
+	}
+
+IL_0078:
+	{
+		float L_4 = (&V_0)->get_x_0();
+		float L_5 = (&V_0)->get_y_1();
+		int32_t L_6 = Screen_get_width_m3080333084(NULL /*static, unused*/, /*hidden argument*/NULL);
+		float L_7 = (&V_0)->get_x_0();
+		int32_t L_8 = Screen_get_height_m1504859443(NULL /*static, unused*/, /*hidden argument*/NULL);
+		float L_9 = (&V_0)->get_y_1();
+		Rect_t4241904616  L_10;
+		memset(&L_10, 0, sizeof(L_10));
+		Rect__ctor_m3291325233(&L_10, L_4, L_5, ((float)((float)(((float)((float)L_6)))-(float)L_7)), ((float)((float)(((float)((float)L_8)))-(float)L_9)), /*hidden argument*/NULL);
+		GUIStyle_t2990928826 * L_11 = __this->get_LabelStyle_4();
+		IL2CPP_RUNTIME_CLASS_INIT(GUI_t3134605553_il2cpp_TypeInfo_var);
+		GUI_Label_m4283747336(NULL /*static, unused*/, L_10, _stringLiteral429317616, L_11, /*hidden argument*/NULL);
+		float L_12 = V_2;
+		float L_13 = V_3;
+		float L_14 = (&V_1)->get_x_0();
+		float L_15 = (&V_1)->get_y_1();
+		Rect_t4241904616  L_16;
+		memset(&L_16, 0, sizeof(L_16));
+		Rect__ctor_m3291325233(&L_16, L_12, L_13, L_14, L_15, /*hidden argument*/NULL);
+		GUIStyle_t2990928826 * L_17 = __this->get_Style_3();
+		bool L_18 = GUI_Button_m3388191238(NULL /*static, unused*/, L_16, _stringLiteral3517820560, L_17, /*hidden argument*/NULL);
+		if (!L_18)
+		{
+			goto IL_00eb;
+		}
+	}
+	{
+		Api_FinishTournament_m3003568579(NULL /*static, unused*/, ((int32_t)99999), /*hidden argument*/NULL);
+	}
+
+IL_00eb:
+	{
+		float L_19 = V_2;
+		float L_20 = V_4;
+		float L_21 = (&V_1)->get_x_0();
+		float L_22 = (&V_1)->get_y_1();
+		Rect_t4241904616  L_23;
+		memset(&L_23, 0, sizeof(L_23));
+		Rect__ctor_m3291325233(&L_23, L_19, L_20, L_21, L_22, /*hidden argument*/NULL);
+		GUIStyle_t2990928826 * L_24 = __this->get_Style_3();
+		IL2CPP_RUNTIME_CLASS_INIT(GUI_t3134605553_il2cpp_TypeInfo_var);
+		bool L_25 = GUI_Button_m3388191238(NULL /*static, unused*/, L_23, _stringLiteral4131354758, L_24, /*hidden argument*/NULL);
+		if (!L_25)
+		{
+			goto IL_012a;
+		}
+	}
+	{
+		int32_t L_26 = Random_Range_m75452833(NULL /*static, unused*/, 0, ((int32_t)10000), /*hidden argument*/NULL);
+		V_7 = L_26;
+		int32_t L_27 = V_7;
+		Api_FinishTournament_m3003568579(NULL /*static, unused*/, L_27, /*hidden argument*/NULL);
+	}
+
+IL_012a:
+	{
+		float L_28 = V_2;
+		float L_29 = V_5;
+		float L_30 = (&V_1)->get_x_0();
+		float L_31 = (&V_1)->get_y_1();
+		Rect_t4241904616  L_32;
+		memset(&L_32, 0, sizeof(L_32));
+		Rect__ctor_m3291325233(&L_32, L_28, L_29, L_30, L_31, /*hidden argument*/NULL);
+		GUIStyle_t2990928826 * L_33 = __this->get_Style_3();
+		IL2CPP_RUNTIME_CLASS_INIT(GUI_t3134605553_il2cpp_TypeInfo_var);
+		bool L_34 = GUI_Button_m3388191238(NULL /*static, unused*/, L_32, _stringLiteral63058704, L_33, /*hidden argument*/NULL);
+		if (!L_34)
+		{
+			goto IL_015a;
+		}
+	}
+	{
+		Api_AbortGame_m2986410702(NULL /*static, unused*/, /*hidden argument*/NULL);
+	}
+
+IL_015a:
+	{
+		goto IL_0293;
+	}
+
+IL_015f:
+	{
+		float L_35 = (&V_0)->get_x_0();
+		float L_36 = (&V_0)->get_y_1();
+		int32_t L_37 = Screen_get_width_m3080333084(NULL /*static, unused*/, /*hidden argument*/NULL);
+		float L_38 = (&V_0)->get_x_0();
+		int32_t L_39 = Screen_get_height_m1504859443(NULL /*static, unused*/, /*hidden argument*/NULL);
+		float L_40 = (&V_0)->get_y_1();
+		Rect_t4241904616  L_41;
+		memset(&L_41, 0, sizeof(L_41));
+		Rect__ctor_m3291325233(&L_41, L_35, L_36, ((float)((float)(((float)((float)L_37)))-(float)L_38)), ((float)((float)(((float)((float)L_39)))-(float)L_40)), /*hidden argument*/NULL);
+		GUIStyle_t2990928826 * L_42 = __this->get_LabelStyle_4();
+		IL2CPP_RUNTIME_CLASS_INIT(GUI_t3134605553_il2cpp_TypeInfo_var);
+		GUI_Label_m4283747336(NULL /*static, unused*/, L_41, _stringLiteral988820099, L_42, /*hidden argument*/NULL);
+		float L_43 = V_2;
+		float L_44 = V_3;
+		float L_45 = (&V_1)->get_x_0();
+		float L_46 = (&V_1)->get_y_1();
+		Rect_t4241904616  L_47;
+		memset(&L_47, 0, sizeof(L_47));
+		Rect__ctor_m3291325233(&L_47, L_43, L_44, L_45, L_46, /*hidden argument*/NULL);
+		GUIStyle_t2990928826 * L_48 = __this->get_Style_3();
+		bool L_49 = GUI_Button_m3388191238(NULL /*static, unused*/, L_47, _stringLiteral3517820560, L_48, /*hidden argument*/NULL);
+		if (!L_49)
+		{
+			goto IL_01e3;
+		}
+	}
+	{
+		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
+		String_t* L_50 = ((String_t_StaticFields*)String_t_il2cpp_TypeInfo_var->static_fields)->get_Empty_2();
+		Api_FinishTurn_m3848802967(NULL /*static, unused*/, L_50, 3, 3, _stringLiteral54395385, (99999.0f), (0.0f), /*hidden argument*/NULL);
+	}
+
+IL_01e3:
+	{
+		float L_51 = V_2;
+		float L_52 = V_4;
+		float L_53 = (&V_1)->get_x_0();
+		float L_54 = (&V_1)->get_y_1();
+		Rect_t4241904616  L_55;
+		memset(&L_55, 0, sizeof(L_55));
+		Rect__ctor_m3291325233(&L_55, L_51, L_52, L_53, L_54, /*hidden argument*/NULL);
+		GUIStyle_t2990928826 * L_56 = __this->get_Style_3();
+		IL2CPP_RUNTIME_CLASS_INIT(GUI_t3134605553_il2cpp_TypeInfo_var);
+		bool L_57 = GUI_Button_m3388191238(NULL /*static, unused*/, L_55, _stringLiteral4131354758, L_56, /*hidden argument*/NULL);
+		if (!L_57)
+		{
+			goto IL_0229;
+		}
+	}
+	{
+		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
+		String_t* L_58 = ((String_t_StaticFields*)String_t_il2cpp_TypeInfo_var->static_fields)->get_Empty_2();
+		Api_FinishTurn_m3848802967(NULL /*static, unused*/, L_58, 3, 3, _stringLiteral48, (0.0f), (0.0f), /*hidden argument*/NULL);
+	}
+
+IL_0229:
+	{
+		float L_59 = V_2;
+		float L_60 = V_5;
+		float L_61 = (&V_1)->get_x_0();
+		float L_62 = (&V_1)->get_y_1();
+		Rect_t4241904616  L_63;
+		memset(&L_63, 0, sizeof(L_63));
+		Rect__ctor_m3291325233(&L_63, L_59, L_60, L_61, L_62, /*hidden argument*/NULL);
+		GUIStyle_t2990928826 * L_64 = __this->get_Style_3();
+		IL2CPP_RUNTIME_CLASS_INIT(GUI_t3134605553_il2cpp_TypeInfo_var);
+		bool L_65 = GUI_Button_m3388191238(NULL /*static, unused*/, L_63, _stringLiteral63058704, L_64, /*hidden argument*/NULL);
+		if (!L_65)
+		{
+			goto IL_0259;
+		}
+	}
+	{
+		Api_AbortGame_m2986410702(NULL /*static, unused*/, /*hidden argument*/NULL);
+	}
+
+IL_0259:
+	{
+		goto IL_0293;
+	}
+
+IL_025e:
+	{
+		float L_66 = V_2;
+		float L_67 = V_6;
+		float L_68 = (&V_1)->get_x_0();
+		float L_69 = (&V_1)->get_y_1();
+		Rect_t4241904616  L_70;
+		memset(&L_70, 0, sizeof(L_70));
+		Rect__ctor_m3291325233(&L_70, L_66, L_67, L_68, L_69, /*hidden argument*/NULL);
+		GUIStyle_t2990928826 * L_71 = __this->get_Style_3();
+		IL2CPP_RUNTIME_CLASS_INIT(GUI_t3134605553_il2cpp_TypeInfo_var);
+		bool L_72 = GUI_Button_m3388191238(NULL /*static, unused*/, L_70, _stringLiteral2278963334, L_71, /*hidden argument*/NULL);
+		if (!L_72)
+		{
+			goto IL_028e;
+		}
+	}
+	{
+		Api_FinishReviewingTurn_m1545909408(NULL /*static, unused*/, /*hidden argument*/NULL);
+	}
+
+IL_028e:
+	{
+		goto IL_0293;
+	}
+
+IL_0293:
 	{
 		return;
 	}
@@ -246,9 +543,223 @@ extern "C"  void MainMenu__ctor_m310215363 (MainMenu_t55996120 * __this, const M
 	}
 }
 // System.Void MainMenu::OnGUI()
+extern Il2CppClass* GUI_t3134605553_il2cpp_TypeInfo_var;
+extern Il2CppClass* MySkillzDelegateBase_t2932156363_il2cpp_TypeInfo_var;
+extern Il2CppClass* Debug_t4195163081_il2cpp_TypeInfo_var;
+extern Il2CppClass* Player_t1109057033_il2cpp_TypeInfo_var;
+extern Il2CppCodeGenString* _stringLiteral2008670550;
+extern const uint32_t MainMenu_OnGUI_m4100581309_MetadataUsageId;
 extern "C"  void MainMenu_OnGUI_m4100581309 (MainMenu_t55996120 * __this, const MethodInfo* method)
 {
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
 	{
+		il2cpp_codegen_initialize_method (MainMenu_OnGUI_m4100581309_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	Vector2_t4282066565  V_0;
+	memset(&V_0, 0, sizeof(V_0));
+	{
+		Vector2__ctor_m1517109030((&V_0), (300.0f), (200.0f), /*hidden argument*/NULL);
+		int32_t L_0 = Screen_get_width_m3080333084(NULL /*static, unused*/, /*hidden argument*/NULL);
+		float L_1 = (&V_0)->get_x_0();
+		int32_t L_2 = Screen_get_height_m1504859443(NULL /*static, unused*/, /*hidden argument*/NULL);
+		float L_3 = (&V_0)->get_y_1();
+		float L_4 = (&V_0)->get_x_0();
+		float L_5 = (&V_0)->get_y_1();
+		Rect_t4241904616  L_6;
+		memset(&L_6, 0, sizeof(L_6));
+		Rect__ctor_m3291325233(&L_6, ((float)((float)((float)((float)(((float)((float)L_0)))/(float)(2.0f)))-(float)((float)((float)L_1/(float)(2.0f))))), ((float)((float)((float)((float)(((float)((float)L_2)))/(float)(2.0f)))-(float)((float)((float)L_3/(float)(2.0f))))), L_4, L_5, /*hidden argument*/NULL);
+		GUIStyle_t2990928826 * L_7 = __this->get_Style_2();
+		IL2CPP_RUNTIME_CLASS_INIT(GUI_t3134605553_il2cpp_TypeInfo_var);
+		bool L_8 = GUI_Button_m3388191238(NULL /*static, unused*/, L_6, _stringLiteral2008670550, L_7, /*hidden argument*/NULL);
+		if (!L_8)
+		{
+			goto IL_0090;
+		}
+	}
+	{
+		int32_t L_9 = ((MySkillzDelegateBase_t2932156363_StaticFields*)MySkillzDelegateBase_t2932156363_il2cpp_TypeInfo_var->static_fields)->get_GameOrientation_2();
+		Api_LaunchSkillz_m2902368013(NULL /*static, unused*/, L_9, /*hidden argument*/NULL);
+		String_t* L_10 = Api_get_SDKVersionShort_m4266186404(NULL /*static, unused*/, /*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(Debug_t4195163081_il2cpp_TypeInfo_var);
+		Debug_Log_m1731103628(NULL /*static, unused*/, L_10, /*hidden argument*/NULL);
+		Player_t1109057033  L_11 = Api_get_Player_m4094283361(NULL /*static, unused*/, /*hidden argument*/NULL);
+		Player_t1109057033  L_12 = L_11;
+		Il2CppObject * L_13 = Box(Player_t1109057033_il2cpp_TypeInfo_var, &L_12);
+		Debug_Log_m1731103628(NULL /*static, unused*/, L_13, /*hidden argument*/NULL);
+	}
+
+IL_0090:
+	{
+		return;
+	}
+}
+// System.Void MySkillzDelegateBase::.ctor()
+extern "C"  void MySkillzDelegateBase__ctor_m477873968 (MySkillzDelegateBase_t2932156363 * __this, const MethodInfo* method)
+{
+	{
+		SkillzDelegateBase__ctor_m445843231(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void MySkillzDelegateBase::OnSkillzWillExit()
+extern "C"  void MySkillzDelegateBase_OnSkillzWillExit_m2358191308 (MySkillzDelegateBase_t2932156363 * __this, const MethodInfo* method)
+{
+	{
+		return;
+	}
+}
+// System.Void MySkillzDelegateBase::OnTournamentAborted()
+extern Il2CppCodeGenString* _stringLiteral55996120;
+extern const uint32_t MySkillzDelegateBase_OnTournamentAborted_m3365503317_MetadataUsageId;
+extern "C"  void MySkillzDelegateBase_OnTournamentAborted_m3365503317 (MySkillzDelegateBase_t2932156363 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (MySkillzDelegateBase_OnTournamentAborted_m3365503317_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	{
+		Application_LoadLevel_m2722573885(NULL /*static, unused*/, _stringLiteral55996120, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void MySkillzDelegateBase::Start()
+extern Il2CppClass* MySkillzDelegateBase_t2932156363_il2cpp_TypeInfo_var;
+extern const uint32_t MySkillzDelegateBase_Start_m3719979056_MetadataUsageId;
+extern "C"  void MySkillzDelegateBase_Start_m3719979056 (MySkillzDelegateBase_t2932156363 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (MySkillzDelegateBase_Start_m3719979056_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	{
+		int32_t L_0 = __this->get_OrientationToUse_3();
+		((MySkillzDelegateBase_t2932156363_StaticFields*)MySkillzDelegateBase_t2932156363_il2cpp_TypeInfo_var->static_fields)->set_GameOrientation_2(L_0);
+		return;
+	}
+}
+// System.Void MySkillzDelegateStandard::.ctor()
+extern "C"  void MySkillzDelegateStandard__ctor_m666008004 (MySkillzDelegateStandard_t2852598455 * __this, const MethodInfo* method)
+{
+	{
+		SkillzDelegateStandard__ctor_m3342477875(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void MySkillzDelegateStandard::OnTournamentWillBegin(SkillzSDK.Match)
+extern Il2CppClass* Debug_t4195163081_il2cpp_TypeInfo_var;
+extern Il2CppCodeGenString* _stringLiteral1389546750;
+extern const uint32_t MySkillzDelegateStandard_OnTournamentWillBegin_m90974969_MetadataUsageId;
+extern "C"  void MySkillzDelegateStandard_OnTournamentWillBegin_m90974969 (MySkillzDelegateStandard_t2852598455 * __this, Match_t1498692115 * ___matchInfo0, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (MySkillzDelegateStandard_OnTournamentWillBegin_m90974969_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	{
+		Match_t1498692115 * L_0 = ___matchInfo0;
+		IL2CPP_RUNTIME_CLASS_INIT(Debug_t4195163081_il2cpp_TypeInfo_var);
+		Debug_Log_m1731103628(NULL /*static, unused*/, L_0, /*hidden argument*/NULL);
+		Application_LoadLevel_m2722573885(NULL /*static, unused*/, _stringLiteral1389546750, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void MySkillzDelegateStandard::OnTournamentCompleted()
+extern Il2CppCodeGenString* _stringLiteral55996120;
+extern const uint32_t MySkillzDelegateStandard_OnTournamentCompleted_m2567615013_MetadataUsageId;
+extern "C"  void MySkillzDelegateStandard_OnTournamentCompleted_m2567615013 (MySkillzDelegateStandard_t2852598455 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (MySkillzDelegateStandard_OnTournamentCompleted_m2567615013_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	{
+		Application_LoadLevel_m2722573885(NULL /*static, unused*/, _stringLiteral55996120, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void MySkillzDelegateTurnBased::.ctor()
+extern "C"  void MySkillzDelegateTurnBased__ctor_m1574829167 (MySkillzDelegateTurnBased_t342856828 * __this, const MethodInfo* method)
+{
+	{
+		SkillzDelegateTurnBased__ctor_m2941016544(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void MySkillzDelegateTurnBased::OnTurnBasedTournamentWillBegin(SkillzSDK.TurnBasedMatch)
+extern Il2CppClass* Debug_t4195163081_il2cpp_TypeInfo_var;
+extern Il2CppCodeGenString* _stringLiteral3874610767;
+extern const uint32_t MySkillzDelegateTurnBased_OnTurnBasedTournamentWillBegin_m2467628640_MetadataUsageId;
+extern "C"  void MySkillzDelegateTurnBased_OnTurnBasedTournamentWillBegin_m2467628640 (MySkillzDelegateTurnBased_t342856828 * __this, TurnBasedMatch_t1066559575 * ___matchInfo0, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (MySkillzDelegateTurnBased_OnTurnBasedTournamentWillBegin_m2467628640_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	{
+		TurnBasedMatch_t1066559575 * L_0 = ___matchInfo0;
+		IL2CPP_RUNTIME_CLASS_INIT(Debug_t4195163081_il2cpp_TypeInfo_var);
+		Debug_Log_m1731103628(NULL /*static, unused*/, L_0, /*hidden argument*/NULL);
+		Application_LoadLevel_m2722573885(NULL /*static, unused*/, _stringLiteral3874610767, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void MySkillzDelegateTurnBased::OnTurnEnd()
+extern Il2CppCodeGenString* _stringLiteral55996120;
+extern const uint32_t MySkillzDelegateTurnBased_OnTurnEnd_m489262092_MetadataUsageId;
+extern "C"  void MySkillzDelegateTurnBased_OnTurnEnd_m489262092 (MySkillzDelegateTurnBased_t342856828 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (MySkillzDelegateTurnBased_OnTurnEnd_m489262092_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	{
+		Application_LoadLevel_m2722573885(NULL /*static, unused*/, _stringLiteral55996120, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void MySkillzDelegateTurnBased::OnTurnBasedReviewWillBegin(SkillzSDK.TurnBasedMatch)
+extern Il2CppCodeGenString* _stringLiteral754702;
+extern const uint32_t MySkillzDelegateTurnBased_OnTurnBasedReviewWillBegin_m3638251793_MetadataUsageId;
+extern "C"  void MySkillzDelegateTurnBased_OnTurnBasedReviewWillBegin_m3638251793 (MySkillzDelegateTurnBased_t342856828 * __this, TurnBasedMatch_t1066559575 * ___matchInfo0, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (MySkillzDelegateTurnBased_OnTurnBasedReviewWillBegin_m3638251793_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	{
+		Application_LoadLevel_m2722573885(NULL /*static, unused*/, _stringLiteral754702, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void MySkillzDelegateTurnBased::OnReviewEnd()
+extern Il2CppCodeGenString* _stringLiteral55996120;
+extern const uint32_t MySkillzDelegateTurnBased_OnReviewEnd_m4275109585_MetadataUsageId;
+extern "C"  void MySkillzDelegateTurnBased_OnReviewEnd_m4275109585 (MySkillzDelegateTurnBased_t342856828 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (MySkillzDelegateTurnBased_OnReviewEnd_m4275109585_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	{
+		Application_LoadLevel_m2722573885(NULL /*static, unused*/, _stringLiteral55996120, /*hidden argument*/NULL);
 		return;
 	}
 }

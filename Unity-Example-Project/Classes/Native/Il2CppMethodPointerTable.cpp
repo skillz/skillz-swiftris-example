@@ -7341,6 +7341,7 @@ extern "C" void AnimationCurve_Finalize_m2382224032 ();
 extern "C" void AnimationCurve_Init_m4012213483 ();
 extern "C" void Application_get_platform_m2918632856 ();
 extern "C" void Application_CallLogCallback_m419361836 ();
+extern "C" void Application_LoadLevel_m2722573885 ();
 extern "C" void LogCallback__ctor_m286543475 ();
 extern "C" void LogCallback_Invoke_m1886455446 ();
 extern "C" void LogCallback_BeginInvoke_m1640350401 ();
@@ -7604,8 +7605,15 @@ extern "C" void GUI_set_nextScrollStepTime_m3820512796 ();
 extern "C" void GUI_set_skin_m1213959601 ();
 extern "C" void GUI_get_skin_m4001454842 ();
 extern "C" void GUI_DoSetSkin_m800823745 ();
+extern "C" void GUI_Label_m4283747336 ();
+extern "C" void GUI_Label_m2293702269 ();
+extern "C" void GUI_Button_m3388191238 ();
 extern "C" void GUI_CallWindowDelegate_m2260338804 ();
 extern "C" void GUI_set_changed_m727947722 ();
+extern "C" void GUI_DoLabel_m2990009013 ();
+extern "C" void GUI_INTERNAL_CALL_DoLabel_m2707679966 ();
+extern "C" void GUI_DoButton_m2194494269 ();
+extern "C" void GUI_INTERNAL_CALL_DoButton_m1954108340 ();
 extern "C" void ScrollViewState__ctor_m739544590 ();
 extern "C" void WindowFunction__ctor_m732638321 ();
 extern "C" void WindowFunction_Invoke_m2798584028 ();
@@ -8288,11 +8296,14 @@ extern "C" void RPC__ctor_m281827604 ();
 extern "C" void Scene_get_handle_m2277248521_AdjustorThunk ();
 extern "C" void Scene_GetHashCode_m2000109307_AdjustorThunk ();
 extern "C" void Scene_Equals_m93578403_AdjustorThunk ();
+extern "C" void SceneManager_LoadScene_m3907168970 ();
+extern "C" void SceneManager_LoadSceneAsyncNameIndexInternal_m3775081569 ();
 extern "C" void SceneManager_Internal_SceneLoaded_m1398790415 ();
 extern "C" void SceneManager_Internal_SceneUnloaded_m3773648285 ();
 extern "C" void SceneManager_Internal_ActiveSceneChanged_m3583151927 ();
 extern "C" void Screen_get_width_m3080333084 ();
 extern "C" void Screen_get_height_m1504859443 ();
+extern "C" void Screen_set_orientation_m931760051 ();
 extern "C" void ScriptableObject__ctor_m1827087273 ();
 extern "C" void ScriptableObject_Internal_CreateScriptableObject_m2334361070 ();
 extern "C" void ScriptableObject_CreateInstance_m750914562 ();
@@ -8554,6 +8565,18 @@ extern "C" void GameLogic_FixedUpdate_m1798428346 ();
 extern "C" void GameLogic_OnGUI_m232520057 ();
 extern "C" void MainMenu__ctor_m310215363 ();
 extern "C" void MainMenu_OnGUI_m4100581309 ();
+extern "C" void MySkillzDelegateBase__ctor_m477873968 ();
+extern "C" void MySkillzDelegateBase_OnSkillzWillExit_m2358191308 ();
+extern "C" void MySkillzDelegateBase_OnTournamentAborted_m3365503317 ();
+extern "C" void MySkillzDelegateBase_Start_m3719979056 ();
+extern "C" void MySkillzDelegateStandard__ctor_m666008004 ();
+extern "C" void MySkillzDelegateStandard_OnTournamentWillBegin_m90974969 ();
+extern "C" void MySkillzDelegateStandard_OnTournamentCompleted_m2567615013 ();
+extern "C" void MySkillzDelegateTurnBased__ctor_m1574829167 ();
+extern "C" void MySkillzDelegateTurnBased_OnTurnBasedTournamentWillBegin_m2467628640 ();
+extern "C" void MySkillzDelegateTurnBased_OnTurnEnd_m489262092 ();
+extern "C" void MySkillzDelegateTurnBased_OnTurnBasedReviewWillBegin_m3638251793 ();
+extern "C" void MySkillzDelegateTurnBased_OnReviewEnd_m4275109585 ();
 extern "C" void Api__addMetadataForMatchInProgress_m3250407120 ();
 extern "C" void Api__getRandomNumber_m1685941387 ();
 extern "C" void Api__getRandomNumberWithMinAndMax_m4127705846 ();
@@ -8681,7 +8704,7 @@ extern "C" void TurnBasedRound_ToString_m2663606893_AdjustorThunk ();
 extern "C" void Spin__ctor_m3104763001 ();
 extern "C" void Spin_Awake_m3342368220 ();
 extern "C" void Spin_FixedUpdate_m1275710260 ();
-extern const Il2CppMethodPointer g_MethodPointers[8670] = 
+extern const Il2CppMethodPointer g_MethodPointers[8693] = 
 {
 	Locale_GetText_m2389348044,
 	Locale_GetText_m2218462520,
@@ -16013,6 +16036,7 @@ extern const Il2CppMethodPointer g_MethodPointers[8670] =
 	AnimationCurve_Init_m4012213483,
 	Application_get_platform_m2918632856,
 	Application_CallLogCallback_m419361836,
+	Application_LoadLevel_m2722573885,
 	LogCallback__ctor_m286543475,
 	LogCallback_Invoke_m1886455446,
 	LogCallback_BeginInvoke_m1640350401,
@@ -16276,8 +16300,15 @@ extern const Il2CppMethodPointer g_MethodPointers[8670] =
 	GUI_set_skin_m1213959601,
 	GUI_get_skin_m4001454842,
 	GUI_DoSetSkin_m800823745,
+	GUI_Label_m4283747336,
+	GUI_Label_m2293702269,
+	GUI_Button_m3388191238,
 	GUI_CallWindowDelegate_m2260338804,
 	GUI_set_changed_m727947722,
+	GUI_DoLabel_m2990009013,
+	GUI_INTERNAL_CALL_DoLabel_m2707679966,
+	GUI_DoButton_m2194494269,
+	GUI_INTERNAL_CALL_DoButton_m1954108340,
 	ScrollViewState__ctor_m739544590,
 	WindowFunction__ctor_m732638321,
 	WindowFunction_Invoke_m2798584028,
@@ -16960,11 +16991,14 @@ extern const Il2CppMethodPointer g_MethodPointers[8670] =
 	Scene_get_handle_m2277248521_AdjustorThunk,
 	Scene_GetHashCode_m2000109307_AdjustorThunk,
 	Scene_Equals_m93578403_AdjustorThunk,
+	SceneManager_LoadScene_m3907168970,
+	SceneManager_LoadSceneAsyncNameIndexInternal_m3775081569,
 	SceneManager_Internal_SceneLoaded_m1398790415,
 	SceneManager_Internal_SceneUnloaded_m3773648285,
 	SceneManager_Internal_ActiveSceneChanged_m3583151927,
 	Screen_get_width_m3080333084,
 	Screen_get_height_m1504859443,
+	Screen_set_orientation_m931760051,
 	ScriptableObject__ctor_m1827087273,
 	ScriptableObject_Internal_CreateScriptableObject_m2334361070,
 	ScriptableObject_CreateInstance_m750914562,
@@ -17226,6 +17260,18 @@ extern const Il2CppMethodPointer g_MethodPointers[8670] =
 	GameLogic_OnGUI_m232520057,
 	MainMenu__ctor_m310215363,
 	MainMenu_OnGUI_m4100581309,
+	MySkillzDelegateBase__ctor_m477873968,
+	MySkillzDelegateBase_OnSkillzWillExit_m2358191308,
+	MySkillzDelegateBase_OnTournamentAborted_m3365503317,
+	MySkillzDelegateBase_Start_m3719979056,
+	MySkillzDelegateStandard__ctor_m666008004,
+	MySkillzDelegateStandard_OnTournamentWillBegin_m90974969,
+	MySkillzDelegateStandard_OnTournamentCompleted_m2567615013,
+	MySkillzDelegateTurnBased__ctor_m1574829167,
+	MySkillzDelegateTurnBased_OnTurnBasedTournamentWillBegin_m2467628640,
+	MySkillzDelegateTurnBased_OnTurnEnd_m489262092,
+	MySkillzDelegateTurnBased_OnTurnBasedReviewWillBegin_m3638251793,
+	MySkillzDelegateTurnBased_OnReviewEnd_m4275109585,
 	Api__addMetadataForMatchInProgress_m3250407120,
 	Api__getRandomNumber_m1685941387,
 	Api__getRandomNumberWithMinAndMax_m4127705846,

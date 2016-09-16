@@ -12,7 +12,7 @@
 
 
 #include "mscorlib_System_Enum2862688501.h"
-#include "AssemblyU2DCSharp_GameLogic_TournamentTypes4265569869.h"
+#include "UnityEngine_UnityEngine_ScreenOrientation1849668026.h"
 
 #ifdef __clang__
 #pragma clang diagnostic push
@@ -20,15 +20,15 @@
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 
-// GameLogic/TournamentTypes
-struct  TournamentTypes_t4265569869 
+// UnityEngine.ScreenOrientation
+struct  ScreenOrientation_t1849668026 
 {
 public:
-	// System.Int32 GameLogic/TournamentTypes::value__
+	// System.Int32 UnityEngine.ScreenOrientation::value__
 	int32_t ___value___1;
 
 public:
-	inline static int32_t get_offset_of_value___1() { return static_cast<int32_t>(offsetof(TournamentTypes_t4265569869, ___value___1)); }
+	inline static int32_t get_offset_of_value___1() { return static_cast<int32_t>(offsetof(ScreenOrientation_t1849668026, ___value___1)); }
 	inline int32_t get_value___1() const { return ___value___1; }
 	inline int32_t* get_address_of_value___1() { return &___value___1; }
 	inline void set_value___1(int32_t value)

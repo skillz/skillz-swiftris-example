@@ -1,4 +1,4 @@
-//Generated on : 9/15/2016 4:34:23 PM
+//Generated on : 9/15/2016 4:53:58 PM
 void RegisterAllStrippedInternalCalls()
 {
 	//Start Registrations for type : UnityEngine.AnimationCurve
@@ -366,6 +366,14 @@ void RegisterAllStrippedInternalCalls()
 	//End Registrations for type : UnityEngine.Gradient
 
 	//Start Registrations for type : UnityEngine.GUI
+
+		//System.Boolean UnityEngine.GUI::INTERNAL_CALL_DoButton(UnityEngine.Rect&,UnityEngine.GUIContent,System.IntPtr)
+		void Register_UnityEngine_GUI_INTERNAL_CALL_DoButton();
+		Register_UnityEngine_GUI_INTERNAL_CALL_DoButton();
+
+		//System.Void UnityEngine.GUI::INTERNAL_CALL_DoLabel(UnityEngine.Rect&,UnityEngine.GUIContent,System.IntPtr)
+		void Register_UnityEngine_GUI_INTERNAL_CALL_DoLabel();
+		Register_UnityEngine_GUI_INTERNAL_CALL_DoLabel();
 
 		//System.Void UnityEngine.GUI::set_changed(System.Boolean)
 		void Register_UnityEngine_GUI_set_changed();
@@ -1321,6 +1329,14 @@ void RegisterAllStrippedInternalCalls()
 
 	//End Registrations for type : UnityEngine.Resources
 
+	//Start Registrations for type : UnityEngine.SceneManagement.SceneManager
+
+		//UnityEngine.AsyncOperation UnityEngine.SceneManagement.SceneManager::LoadSceneAsyncNameIndexInternal(System.String,System.Int32,System.Boolean,System.Boolean)
+		void Register_UnityEngine_SceneManagement_SceneManager_LoadSceneAsyncNameIndexInternal();
+		Register_UnityEngine_SceneManagement_SceneManager_LoadSceneAsyncNameIndexInternal();
+
+	//End Registrations for type : UnityEngine.SceneManagement.SceneManager
+
 	//Start Registrations for type : UnityEngine.Screen
 
 		//System.Int32 UnityEngine.Screen::get_height()
@@ -1330,6 +1346,10 @@ void RegisterAllStrippedInternalCalls()
 		//System.Int32 UnityEngine.Screen::get_width()
 		void Register_UnityEngine_Screen_get_width();
 		Register_UnityEngine_Screen_get_width();
+
+		//System.Void UnityEngine.Screen::set_orientation(UnityEngine.ScreenOrientation)
+		void Register_UnityEngine_Screen_set_orientation();
+		Register_UnityEngine_Screen_set_orientation();
 
 	//End Registrations for type : UnityEngine.Screen
 

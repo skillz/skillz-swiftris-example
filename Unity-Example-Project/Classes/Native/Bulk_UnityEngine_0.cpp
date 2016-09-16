@@ -137,14 +137,14 @@ struct Il2CppArray;
 struct Gradient_t3661184436;
 // UnityEngine.GUISkin
 struct GUISkin_t3371348110;
-// UnityEngine.GUI/WindowFunction
-struct WindowFunction_t2749288659;
 // UnityEngine.GUIStyle
 struct GUIStyle_t2990928826;
-// UnityEngine.GUI/ScrollViewState
-struct ScrollViewState_t2687015188;
 // UnityEngine.GUIContent
 struct GUIContent_t2094828418;
+// UnityEngine.GUI/WindowFunction
+struct WindowFunction_t2749288659;
+// UnityEngine.GUI/ScrollViewState
+struct ScrollViewState_t2687015188;
 // UnityEngine.Texture
 struct Texture_t2526458961;
 // UnityEngine.GUILayer
@@ -220,6 +220,8 @@ struct ADInterstitialAd_t3393793052;
 #include "mscorlib_System_Boolean476798718.h"
 #include "UnityEngine_UnityEngine_Application_LogCallback2984951347MethodDeclarations.h"
 #include "UnityEngine_UnityEngine_Application_LogCallback2984951347.h"
+#include "UnityEngine_UnityEngine_SceneManagement_SceneManag2940962239MethodDeclarations.h"
+#include "UnityEngine_UnityEngine_SceneManagement_LoadSceneM3067001883.h"
 #include "mscorlib_System_IntPtr4010401971.h"
 #include "mscorlib_System_AsyncCallback1369114871.h"
 #include "UnityEngine_UnityEngine_AssemblyIsEditorAssembly1696890055.h"
@@ -400,8 +402,10 @@ struct ADInterstitialAd_t3393793052;
 #include "UnityEngine_UnityEngine_GUISkin3371348110.h"
 #include "UnityEngine_UnityEngine_GUIUtility1028319349MethodDeclarations.h"
 #include "UnityEngine_UnityEngine_GUISkin3371348110MethodDeclarations.h"
-#include "UnityEngine_UnityEngine_GUI_WindowFunction2749288659.h"
 #include "UnityEngine_UnityEngine_GUIStyle2990928826.h"
+#include "UnityEngine_UnityEngine_GUIContent2094828418MethodDeclarations.h"
+#include "UnityEngine_UnityEngine_GUIContent2094828418.h"
+#include "UnityEngine_UnityEngine_GUI_WindowFunction2749288659.h"
 #include "UnityEngine_UnityEngine_GUILayoutUtility87000299MethodDeclarations.h"
 #include "UnityEngine_UnityEngine_GUILayout3864601915MethodDeclarations.h"
 #include "UnityEngine_UnityEngine_GUI_WindowFunction2749288659MethodDeclarations.h"
@@ -409,8 +413,6 @@ struct ADInterstitialAd_t3393793052;
 #include "UnityEngine_UnityEngine_GUILayoutUtility_LayoutCach879908455.h"
 #include "UnityEngine_UnityEngine_GUI_ScrollViewState2687015188.h"
 #include "UnityEngine_UnityEngine_GUI_ScrollViewState2687015188MethodDeclarations.h"
-#include "UnityEngine_UnityEngine_GUIContent2094828418.h"
-#include "UnityEngine_UnityEngine_GUIContent2094828418MethodDeclarations.h"
 #include "UnityEngine_UnityEngine_Texture2526458961.h"
 #include "UnityEngine_UnityEngine_GUIElement3775428101.h"
 #include "UnityEngine_UnityEngine_GUIElement3775428101MethodDeclarations.h"
@@ -784,6 +786,15 @@ IL_001b:
 
 IL_0030:
 	{
+		return;
+	}
+}
+// System.Void UnityEngine.Application::LoadLevel(System.String)
+extern "C"  void Application_LoadLevel_m2722573885 (Il2CppObject * __this /* static, unused */, String_t* ___name0, const MethodInfo* method)
+{
+	{
+		String_t* L_0 = ___name0;
+		SceneManager_LoadScene_m3907168970(NULL /*static, unused*/, L_0, 0, /*hidden argument*/NULL);
 		return;
 	}
 }
@@ -6125,6 +6136,82 @@ IL_0012:
 		return;
 	}
 }
+// System.Void UnityEngine.GUI::Label(UnityEngine.Rect,System.String,UnityEngine.GUIStyle)
+extern Il2CppClass* GUIContent_t2094828418_il2cpp_TypeInfo_var;
+extern Il2CppClass* GUI_t3134605553_il2cpp_TypeInfo_var;
+extern const uint32_t GUI_Label_m4283747336_MetadataUsageId;
+extern "C"  void GUI_Label_m4283747336 (Il2CppObject * __this /* static, unused */, Rect_t4241904616  ___position0, String_t* ___text1, GUIStyle_t2990928826 * ___style2, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (GUI_Label_m4283747336_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	{
+		Rect_t4241904616  L_0 = ___position0;
+		String_t* L_1 = ___text1;
+		IL2CPP_RUNTIME_CLASS_INIT(GUIContent_t2094828418_il2cpp_TypeInfo_var);
+		GUIContent_t2094828418 * L_2 = GUIContent_Temp_m2857440895(NULL /*static, unused*/, L_1, /*hidden argument*/NULL);
+		GUIStyle_t2990928826 * L_3 = ___style2;
+		IL2CPP_RUNTIME_CLASS_INIT(GUI_t3134605553_il2cpp_TypeInfo_var);
+		GUI_Label_m2293702269(NULL /*static, unused*/, L_0, L_2, L_3, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void UnityEngine.GUI::Label(UnityEngine.Rect,UnityEngine.GUIContent,UnityEngine.GUIStyle)
+extern Il2CppClass* GUIUtility_t1028319349_il2cpp_TypeInfo_var;
+extern Il2CppClass* GUI_t3134605553_il2cpp_TypeInfo_var;
+extern const uint32_t GUI_Label_m2293702269_MetadataUsageId;
+extern "C"  void GUI_Label_m2293702269 (Il2CppObject * __this /* static, unused */, Rect_t4241904616  ___position0, GUIContent_t2094828418 * ___content1, GUIStyle_t2990928826 * ___style2, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (GUI_Label_m2293702269_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	{
+		IL2CPP_RUNTIME_CLASS_INIT(GUIUtility_t1028319349_il2cpp_TypeInfo_var);
+		GUIUtility_CheckOnGUI_m640002012(NULL /*static, unused*/, /*hidden argument*/NULL);
+		Rect_t4241904616  L_0 = ___position0;
+		GUIContent_t2094828418 * L_1 = ___content1;
+		GUIStyle_t2990928826 * L_2 = ___style2;
+		NullCheck(L_2);
+		IntPtr_t L_3 = L_2->get_m_Ptr_0();
+		IL2CPP_RUNTIME_CLASS_INIT(GUI_t3134605553_il2cpp_TypeInfo_var);
+		GUI_DoLabel_m2990009013(NULL /*static, unused*/, L_0, L_1, L_3, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Boolean UnityEngine.GUI::Button(UnityEngine.Rect,System.String,UnityEngine.GUIStyle)
+extern Il2CppClass* GUIUtility_t1028319349_il2cpp_TypeInfo_var;
+extern Il2CppClass* GUIContent_t2094828418_il2cpp_TypeInfo_var;
+extern Il2CppClass* GUI_t3134605553_il2cpp_TypeInfo_var;
+extern const uint32_t GUI_Button_m3388191238_MetadataUsageId;
+extern "C"  bool GUI_Button_m3388191238 (Il2CppObject * __this /* static, unused */, Rect_t4241904616  ___position0, String_t* ___text1, GUIStyle_t2990928826 * ___style2, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (GUI_Button_m3388191238_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	{
+		IL2CPP_RUNTIME_CLASS_INIT(GUIUtility_t1028319349_il2cpp_TypeInfo_var);
+		GUIUtility_CheckOnGUI_m640002012(NULL /*static, unused*/, /*hidden argument*/NULL);
+		Rect_t4241904616  L_0 = ___position0;
+		String_t* L_1 = ___text1;
+		IL2CPP_RUNTIME_CLASS_INIT(GUIContent_t2094828418_il2cpp_TypeInfo_var);
+		GUIContent_t2094828418 * L_2 = GUIContent_Temp_m2857440895(NULL /*static, unused*/, L_1, /*hidden argument*/NULL);
+		GUIStyle_t2990928826 * L_3 = ___style2;
+		NullCheck(L_3);
+		IntPtr_t L_4 = L_3->get_m_Ptr_0();
+		IL2CPP_RUNTIME_CLASS_INIT(GUI_t3134605553_il2cpp_TypeInfo_var);
+		bool L_5 = GUI_DoButton_m2194494269(NULL /*static, unused*/, L_0, L_2, L_4, /*hidden argument*/NULL);
+		return L_5;
+	}
+}
 // System.Void UnityEngine.GUI::CallWindowDelegate(UnityEngine.GUI/WindowFunction,System.Int32,UnityEngine.GUISkin,System.Int32,System.Single,System.Single,UnityEngine.GUIStyle)
 extern Il2CppClass* GUILayoutUtility_t87000299_il2cpp_TypeInfo_var;
 extern Il2CppClass* GUI_t3134605553_il2cpp_TypeInfo_var;
@@ -6232,6 +6319,62 @@ extern "C"  void GUI_set_changed_m727947722 (Il2CppObject * __this /* static, un
 	if (!_il2cpp_icall_func)
 	_il2cpp_icall_func = (GUI_set_changed_m727947722_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.GUI::set_changed(System.Boolean)");
 	_il2cpp_icall_func(___value0);
+}
+// System.Void UnityEngine.GUI::DoLabel(UnityEngine.Rect,UnityEngine.GUIContent,System.IntPtr)
+extern Il2CppClass* GUI_t3134605553_il2cpp_TypeInfo_var;
+extern const uint32_t GUI_DoLabel_m2990009013_MetadataUsageId;
+extern "C"  void GUI_DoLabel_m2990009013 (Il2CppObject * __this /* static, unused */, Rect_t4241904616  ___position0, GUIContent_t2094828418 * ___content1, IntPtr_t ___style2, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (GUI_DoLabel_m2990009013_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	{
+		GUIContent_t2094828418 * L_0 = ___content1;
+		IntPtr_t L_1 = ___style2;
+		IL2CPP_RUNTIME_CLASS_INIT(GUI_t3134605553_il2cpp_TypeInfo_var);
+		GUI_INTERNAL_CALL_DoLabel_m2707679966(NULL /*static, unused*/, (&___position0), L_0, L_1, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void UnityEngine.GUI::INTERNAL_CALL_DoLabel(UnityEngine.Rect&,UnityEngine.GUIContent,System.IntPtr)
+extern "C"  void GUI_INTERNAL_CALL_DoLabel_m2707679966 (Il2CppObject * __this /* static, unused */, Rect_t4241904616 * ___position0, GUIContent_t2094828418 * ___content1, IntPtr_t ___style2, const MethodInfo* method)
+{
+	typedef void (*GUI_INTERNAL_CALL_DoLabel_m2707679966_ftn) (Rect_t4241904616 *, GUIContent_t2094828418 *, IntPtr_t);
+	static GUI_INTERNAL_CALL_DoLabel_m2707679966_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (GUI_INTERNAL_CALL_DoLabel_m2707679966_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.GUI::INTERNAL_CALL_DoLabel(UnityEngine.Rect&,UnityEngine.GUIContent,System.IntPtr)");
+	_il2cpp_icall_func(___position0, ___content1, ___style2);
+}
+// System.Boolean UnityEngine.GUI::DoButton(UnityEngine.Rect,UnityEngine.GUIContent,System.IntPtr)
+extern Il2CppClass* GUI_t3134605553_il2cpp_TypeInfo_var;
+extern const uint32_t GUI_DoButton_m2194494269_MetadataUsageId;
+extern "C"  bool GUI_DoButton_m2194494269 (Il2CppObject * __this /* static, unused */, Rect_t4241904616  ___position0, GUIContent_t2094828418 * ___content1, IntPtr_t ___style2, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (GUI_DoButton_m2194494269_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	{
+		GUIContent_t2094828418 * L_0 = ___content1;
+		IntPtr_t L_1 = ___style2;
+		IL2CPP_RUNTIME_CLASS_INIT(GUI_t3134605553_il2cpp_TypeInfo_var);
+		bool L_2 = GUI_INTERNAL_CALL_DoButton_m1954108340(NULL /*static, unused*/, (&___position0), L_0, L_1, /*hidden argument*/NULL);
+		return L_2;
+	}
+}
+// System.Boolean UnityEngine.GUI::INTERNAL_CALL_DoButton(UnityEngine.Rect&,UnityEngine.GUIContent,System.IntPtr)
+extern "C"  bool GUI_INTERNAL_CALL_DoButton_m1954108340 (Il2CppObject * __this /* static, unused */, Rect_t4241904616 * ___position0, GUIContent_t2094828418 * ___content1, IntPtr_t ___style2, const MethodInfo* method)
+{
+	typedef bool (*GUI_INTERNAL_CALL_DoButton_m1954108340_ftn) (Rect_t4241904616 *, GUIContent_t2094828418 *, IntPtr_t);
+	static GUI_INTERNAL_CALL_DoButton_m1954108340_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (GUI_INTERNAL_CALL_DoButton_m1954108340_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.GUI::INTERNAL_CALL_DoButton(UnityEngine.Rect&,UnityEngine.GUIContent,System.IntPtr)");
+	return _il2cpp_icall_func(___position0, ___content1, ___style2);
 }
 // System.Void UnityEngine.GUI/ScrollViewState::.ctor()
 extern "C"  void ScrollViewState__ctor_m739544590 (ScrollViewState_t2687015188 * __this, const MethodInfo* method)
