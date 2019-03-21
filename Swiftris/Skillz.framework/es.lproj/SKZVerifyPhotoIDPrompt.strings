@@ -1,0 +1,18 @@
+/* Class = "UIButton"; normalTitle = "ADD PHOTO"; ObjectID = "1Z2-ED-GH0"; */
+"1Z2-ED-GH0.normalTitle" = "AÑADIR FOTO";
+
+/* Class = "UILabel"; text = "Photo of ID (Front)"; ObjectID = "6Bk-6z-trh"; */
+"6Bk-6z-trh.text" = "Foto de Identificación (frontal)";
+
+/* Class = "UIButton"; normalTitle = "ADD PHOTO"; ObjectID = "17O-HX-WUi"; */
+"17O-HX-WUi.normalTitle" = "AÑADIR FOTO";
+
+/* Class = "UILabel"; text = "Photo of ID (Back)"; ObjectID = "A4n-44-Cjg"; */
+"A4n-44-Cjg.text" = "Foto de Identificación (Volver)";
+
+/* Class = "UIButton"; normalTitle = "SUBMIT"; ObjectID = "Gt5-Nw-ysJ"; */
+"Gt5-Nw-ysJ.normalTitle" = "PRESENTAR";
+
+/* Class = "UILabel"; text = "Please take a clear, well-lit photo."; ObjectID = "aoc-B7-MuG"; */
+"aoc-B7-MuG.text" = "Por favor tome un claro foto, bien iluminado";
+

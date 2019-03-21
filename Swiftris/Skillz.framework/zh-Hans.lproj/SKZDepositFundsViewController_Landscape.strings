@@ -1,0 +1,30 @@
+/* Class = "UILabel"; text = "Deposit Information"; ObjectID = "1fu-Ba-owU"; */
+"1fu-Ba-owU.text" = "充值信息";
+
+/* Class = "UILabel"; text = "TOTAL ENTRIES:"; ObjectID = "4Gb-1b-e8G"; */
+"4Gb-1b-e8G.text" = "入场券总数：";
+
+/* Class = "UILabel"; text = "DEPOSIT AMOUNT:"; ObjectID = "7wG-Xp-9yD"; */
+"7wG-Xp-9yD.text" = "存款金额：";
+
+/* Class = "UIButton"; normalTitle = "PayPal"; ObjectID = "A6M-NO-Qzo"; */
+"A6M-NO-Qzo.normalTitle" = "PayPal";
+
+/* Class = "UILabel"; text = "ENTRIES TO PURCHASE:"; ObjectID = "B5l-Ak-hAc"; */
+"B5l-Ak-hAc.text" = "需要购买的入场券：";
+
+/* Class = "UIButton"; normalTitle = "SUBMIT"; ObjectID = "CcU-t7-zBl"; */
+"CcU-t7-zBl.normalTitle" = "提交支付";
+
+/* Class = "UILabel"; text = "PURCHASE AMOUNT:"; ObjectID = "WLk-G3-Ox5"; */
+"WLk-G3-Ox5.text" = "购买金额：";
+
+/* Class = "UIButton"; normalTitle = "Credit Card"; ObjectID = "aMp-aK-dgm"; */
+"aMp-aK-dgm.normalTitle" = "信用卡";
+
+/* Class = "UILabel"; text = "NEW BALANCE:"; ObjectID = "ocw-zL-Laf"; */
+"ocw-zL-Laf.text" = "新余额：";
+
+/* Class = "UILabel"; text = "BONUS CASH:"; ObjectID = "zIL-Zk-oSW"; */
+"zIL-Zk-oSW.text" = "额外奖励现金：";
+

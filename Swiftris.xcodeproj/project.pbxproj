@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7C78B41922431D4A0044ACA1 /* Skillz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C78B41722431D4A0044ACA1 /* Skillz.framework */; };
+		7C78B41B22431D510044ACA1 /* Skillz.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7C78B41722431D4A0044ACA1 /* Skillz.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E644DE221974A2EE0018B14C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E644DE211974A2EE0018B14C /* AppDelegate.swift */; };
 		E644DE261974A2EE0018B14C /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E644DE251974A2EE0018B14C /* GameScene.swift */; };
 		E644DE281974A2EE0018B14C /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E644DE271974A2EE0018B14C /* GameViewController.swift */; };
@@ -48,7 +50,23 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		7C78B41C22431D510044ACA1 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				7C78B41B22431D510044ACA1 /* Skillz.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		7C78B41722431D4A0044ACA1 /* Skillz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Skillz.framework; sourceTree = "<group>"; };
+		7C78B41822431D4A0044ACA1 /* SkillzBridgingHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkillzBridgingHeader.h; sourceTree = "<group>"; };
 		E644DE1C1974A2ED0018B14C /* Swiftris.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swiftris.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E644DE201974A2EE0018B14C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E644DE211974A2EE0018B14C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +107,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C78B41922431D4A0044ACA1 /* Skillz.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,6 +142,8 @@
 		E644DE1E1974A2ED0018B14C /* Swiftris */ = {
 			isa = PBXGroup;
 			children = (
+				7C78B41722431D4A0044ACA1 /* Skillz.framework */,
+				7C78B41822431D4A0044ACA1 /* SkillzBridgingHeader.h */,
 				E644DE211974A2EE0018B14C /* AppDelegate.swift */,
 				E644DE251974A2EE0018B14C /* GameScene.swift */,
 				E644DE271974A2EE0018B14C /* GameViewController.swift */,
@@ -199,6 +220,8 @@
 				E644DE181974A2ED0018B14C /* Sources */,
 				E644DE191974A2ED0018B14C /* Frameworks */,
 				E644DE1A1974A2ED0018B14C /* Resources */,
+				7C78B41C22431D510044ACA1 /* Embed Frameworks */,
+				7C78B41D22431D570044ACA1 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -299,6 +322,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7C78B41D22431D570044ACA1 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ -e \"${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/Skillz.framework/postprocess.sh\" ]; then\n/bin/sh \"${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/Skillz.framework/postprocess.sh\"\nfi\n\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E644DE181974A2ED0018B14C /* Sources */ = {
@@ -444,7 +487,12 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = DF8VM75V3Q;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Swiftris",
+				);
 				INFOPLIST_FILE = Swiftris/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.swiftris;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -459,7 +507,12 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = DF8VM75V3Q;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Swiftris",
+				);
 				INFOPLIST_FILE = Swiftris/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.swiftris;
 				PRODUCT_NAME = "$(TARGET_NAME)";

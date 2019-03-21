@@ -1,0 +1,21 @@
+/* Class = "UILabel"; text = "Bal"; ObjectID = "A7c-Nv-LiJ"; */
+"A7c-Nv-LiJ.text" = "余额";
+
+/* Class = "UIButton"; normalTitle = "All Transactions"; ObjectID = "LGv-P4-sZ0"; */
+"LGv-P4-sZ0.normalTitle" = "所有交易";
+
+/* Class = "UILabel"; text = "Event"; ObjectID = "XBT-hA-ktO"; */
+"XBT-hA-ktO.text" = "活动";
+
+/* Class = "UILabel"; text = "+/-"; ObjectID = "Yyc-0I-k7a"; */
+"Yyc-0I-k7a.text" = "+/-";
+
+/* Class = "UILabel"; text = "Date&Time"; ObjectID = "ciP-ve-TpJ"; */
+"ciP-ve-TpJ.text" = "日期和时间";
+
+/* Class = "UILabel"; text = "Game"; ObjectID = "ddv-su-SjO"; */
+"ddv-su-SjO.text" = "游戏";
+
+/* Class = "UIButton"; normalTitle = "Done"; ObjectID = "dxF-Ge-ZDM"; */
+"dxF-Ge-ZDM.normalTitle" = "完成";
+

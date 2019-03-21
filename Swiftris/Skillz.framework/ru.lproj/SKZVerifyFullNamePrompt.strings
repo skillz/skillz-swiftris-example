@@ -1,0 +1,6 @@
+/* Class = "UITextField"; placeholder = "Full Legal Name"; ObjectID = "Gpz-Lh-ADw"; */
+"Gpz-Lh-ADw.placeholder" = "Юридическое название";
+
+/* Class = "UIButton"; normalTitle = "SUBMIT"; ObjectID = "lg8-3X-aeV"; */
+"lg8-3X-aeV.normalTitle" = "ОТПРАВИТЬ";
+

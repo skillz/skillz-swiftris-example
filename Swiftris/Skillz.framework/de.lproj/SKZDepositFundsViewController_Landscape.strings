@@ -1,0 +1,30 @@
+/* Class = "UILabel"; text = "Deposit Information"; ObjectID = "1fu-Ba-owU"; */
+"1fu-Ba-owU.text" = "Infos zur Einzahlung";
+
+/* Class = "UILabel"; text = "TOTAL ENTRIES:"; ObjectID = "4Gb-1b-e8G"; */
+"4Gb-1b-e8G.text" = "GESAMTZAHL TICKETS:";
+
+/* Class = "UILabel"; text = "DEPOSIT AMOUNT:"; ObjectID = "7wG-Xp-9yD"; */
+"7wG-Xp-9yD.text" = "EINZAHLUNGSSUMME:";
+
+/* Class = "UIButton"; normalTitle = "PayPal"; ObjectID = "A6M-NO-Qzo"; */
+"A6M-NO-Qzo.normalTitle" = "PayPal";
+
+/* Class = "UILabel"; text = "ENTRIES TO PURCHASE:"; ObjectID = "B5l-Ak-hAc"; */
+"B5l-Ak-hAc.text" = "ZU ERWERBENDE TICKETS:";
+
+/* Class = "UIButton"; normalTitle = "SUBMIT"; ObjectID = "CcU-t7-zBl"; */
+"CcU-t7-zBl.normalTitle" = "ZAHLUNG SENDEN";
+
+/* Class = "UILabel"; text = "PURCHASE AMOUNT:"; ObjectID = "WLk-G3-Ox5"; */
+"WLk-G3-Ox5.text" = "EINKAUFSBETRAG:";
+
+/* Class = "UIButton"; normalTitle = "Credit Card"; ObjectID = "aMp-aK-dgm"; */
+"aMp-aK-dgm.normalTitle" = "Kreditkarte";
+
+/* Class = "UILabel"; text = "NEW BALANCE:"; ObjectID = "ocw-zL-Laf"; */
+"ocw-zL-Laf.text" = "NEUER KONTOSTAND:";
+
+/* Class = "UILabel"; text = "BONUS CASH:"; ObjectID = "zIL-Zk-oSW"; */
+"zIL-Zk-oSW.text" = "BONUS-CASH:";
+

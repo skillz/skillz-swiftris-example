@@ -1,0 +1,24 @@
+/* Class = "UILabel"; text = "Your Username"; ObjectID = "DcV-MS-FcQ"; */
+"DcV-MS-FcQ.text" = "Il tuo nome utente";
+
+/* Class = "UIButton"; normalTitle = "SUBMIT"; ObjectID = "G6U-H0-ngQ"; */
+"G6U-H0-ngQ.normalTitle" = "INVIA";
+
+/* Class = "UILabel"; text = "(You can always change it later)"; ObjectID = "yQV-33-YaI"; */
+"yQV-33-YaI.text" = "(Potrai sempre cambiarlo in seguito)";
+
+/* Class = "UILabel"; text = "Your Avatar"; ObjectID = "Uq3-ZE-NZb"; */
+"Uq3-ZE-NZb.text" = "Il tuo avatar";
+
+/* Class = "UILabel"; text = "(You may only change it once)"; ObjectID = "hSX-WV-Syb"; */
+"hSX-WV-Syb.text" = "(Puoi fare uno solo cambio)";
+
+/* Class = "UILabel"; text = "Pick A Name & An Avatar"; ObjectID = "bTl-Zp-LPh"; */
+"bTl-Zp-LPh.text" = "Scegli un nome e un avatar";
+
+/* Class = "UIButton"; normalTitle = "SELECT FROM LIBRARY"; ObjectID = "tgY-15-Oqb"; */
+"tgY-15-Oqb.normalTitle" = "SELEZIONA DALL'ELENCO";
+
+/* Class = "UIButton"; normalTitle = "NEXT"; ObjectID = "bpc-Lc-lLM"; */
+"bpc-Lc-lLM.normalTitle" = "SUCC.";
+

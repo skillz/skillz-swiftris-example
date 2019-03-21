@@ -1,0 +1,9 @@
+/* Class = "UIButton"; normalTitle = "SUBMIT"; ObjectID = "2lq-pg-QaO"; */
+"2lq-pg-QaO.normalTitle" = "送信";
+
+/* Class = "UITextField"; placeholder = "# Phone Number"; ObjectID = "BKs-oX-vkV"; */
+"BKs-oX-vkV.placeholder" = "# 電話番号";
+
+/* Class = "UILabel"; text = "(You will receive a verification code via SMS message.)"; ObjectID = "YaJ-Zh-C7b"; */
+"YaJ-Zh-C7b.text" = "（あなたは、SMSメッセージを経由して確認コードを受信します。）";
+

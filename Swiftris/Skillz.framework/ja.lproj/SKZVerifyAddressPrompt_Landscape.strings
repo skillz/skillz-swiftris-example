@@ -1,0 +1,21 @@
+/* Class = "UIButton"; normalTitle = "Country"; ObjectID = "3Hj-Nx-m5k"; */
+"3Hj-Nx-m5k.normalTitle" = "カントリー";
+
+/* Class = "UIButton"; normalTitle = "Done"; ObjectID = "9Wf-tR-W2v"; */
+"9Wf-tR-W2v.normalTitle" = "完了";
+
+/* Class = "UITextField"; placeholder = "Street"; ObjectID = "Gpz-Lh-ADw"; */
+"Gpz-Lh-ADw.placeholder" = "住所";
+
+/* Class = "UITextField"; placeholder = "City"; ObjectID = "jb0-dj-AY3"; */
+"jb0-dj-AY3.placeholder" = "都市";
+
+/* Class = "UITextField"; placeholder = "State"; ObjectID = "kdu-oW-bxN"; */
+"kdu-oW-bxN.placeholder" = "状態";
+
+/* Class = "UIButton"; normalTitle = "SUBMIT"; ObjectID = "lg8-3X-aeV"; */
+"lg8-3X-aeV.normalTitle" = "送信";
+
+/* Class = "UITextField"; placeholder = "Postal"; ObjectID = "q5U-Qk-kK9"; */
+"q5U-Qk-kK9.placeholder" = "郵便番号フィールド";
+
