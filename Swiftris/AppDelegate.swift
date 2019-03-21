@@ -7,15 +7,43 @@
 //
 
 import UIKit
+import Skillz
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, SkillzDelegate {
                             
     var window: UIWindow?
+    
+    // Modified UIApplication Functions
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        print("Initialize Skillz")
+        Skillz.skillzInstance().initWithGameId("5411", for:self, with:SkillzEnvironment.sandbox, allowExit:true);
         return true
+    }
+    
+    func application(_ application: UIApplication, supportedInterfaceOrientationsFor window: UIWindow?) -> UIInterfaceOrientationMask {
+        return UIInterfaceOrientationMask.portrait
+    }
+    
+    // SkillzDelegate functions
+    
+    func tournamentWillBegin(_ gameParameters: [AnyHashable : Any]!, with matchInfo: SKZMatchInfo!) {
+        print("Starting Skillz Tournament")
+        let mainStoryboardIpad : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let initialViewControlleripad : UIViewController = mainStoryboardIpad.instantiateViewController(withIdentifier: "GameView") as UIViewController
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        self.window?.rootViewController = initialViewControlleripad
+        self.window?.makeKeyAndVisible()
+    }
+    
+    func preferredSkillzInterfaceOrientation() -> SkillzOrientation {
+        return SkillzOrientation.portrait
+    }
+    
+    func skillzWillExit() {
+        print("Skillz exiting")
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

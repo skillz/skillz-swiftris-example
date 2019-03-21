@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7C3A10F322432029008E5841 /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C3A10F122432029008E5841 /* MainMenuViewController.swift */; };
+		7C3A10F422432029008E5841 /* drawing-godzilla-cute-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C3A10F222432029008E5841 /* drawing-godzilla-cute-2.png */; };
 		7C78B41922431D4A0044ACA1 /* Skillz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C78B41722431D4A0044ACA1 /* Skillz.framework */; };
 		7C78B41B22431D510044ACA1 /* Skillz.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7C78B41722431D4A0044ACA1 /* Skillz.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E644DE221974A2EE0018B14C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E644DE211974A2EE0018B14C /* AppDelegate.swift */; };
@@ -65,6 +67,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7C3A10F122432029008E5841 /* MainMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
+		7C3A10F222432029008E5841 /* drawing-godzilla-cute-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "drawing-godzilla-cute-2.png"; sourceTree = "<group>"; };
 		7C78B41722431D4A0044ACA1 /* Skillz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Skillz.framework; sourceTree = "<group>"; };
 		7C78B41822431D4A0044ACA1 /* SkillzBridgingHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkillzBridgingHeader.h; sourceTree = "<group>"; };
 		E644DE1C1974A2ED0018B14C /* Swiftris.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swiftris.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -142,6 +146,8 @@
 		E644DE1E1974A2ED0018B14C /* Swiftris */ = {
 			isa = PBXGroup;
 			children = (
+				7C3A10F222432029008E5841 /* drawing-godzilla-cute-2.png */,
+				7C3A10F122432029008E5841 /* MainMenuViewController.swift */,
 				7C78B41722431D4A0044ACA1 /* Skillz.framework */,
 				7C78B41822431D4A0044ACA1 /* SkillzBridgingHeader.h */,
 				E644DE211974A2EE0018B14C /* AppDelegate.swift */,
@@ -297,6 +303,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C3A10F422432029008E5841 /* drawing-godzilla-cute-2.png in Resources */,
 				E644DE2D1974A2EE0018B14C /* Images.xcassets in Resources */,
 				F65F84E1197829F60050EF35 /* gameover.mp3 in Resources */,
 				F65F84F019782EB80050EF35 /* whitebg.png in Resources */,
@@ -354,6 +361,7 @@
 				F61F20E7197C8ECB00A9986C /* Shape.swift in Sources */,
 				F6037D1F197DC5DE005331B5 /* Swiftris.swift in Sources */,
 				F61F20F3197C9EB300A9986C /* TShape.swift in Sources */,
+				7C3A10F322432029008E5841 /* MainMenuViewController.swift in Sources */,
 				F61F20F0197C9EB300A9986C /* LineShape.swift in Sources */,
 				F6037D1B197DBFC6005331B5 /* LShape.swift in Sources */,
 				F6037D1C197DBFC6005331B5 /* SShape.swift in Sources */,

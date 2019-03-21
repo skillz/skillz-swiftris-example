@@ -8,6 +8,7 @@
 
 import UIKit
 import SpriteKit
+import Skillz
 
 class GameViewController: UIViewController, SwiftrisDelegate, UIGestureRecognizerDelegate {
 
@@ -18,8 +19,13 @@ class GameViewController: UIViewController, SwiftrisDelegate, UIGestureRecognize
     @IBOutlet var scoreLabel: UILabel!
     @IBOutlet var levelLabel: UILabel!
     
+    var skillz: Skillz!
+    var finalscore: NSNumber!
+    @IBOutlet weak var SkillzButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        finalscore = 0
         
         // Configure the view.
         let skView = view as! SKView
@@ -33,6 +39,7 @@ class GameViewController: UIViewController, SwiftrisDelegate, UIGestureRecognize
         swiftris = Swiftris()
         swiftris.delegate = self
         swiftris.beginGame()
+        skillz = Skillz.skillzInstance()
         
         // Present the scene.
         skView.presentScene(scene)
@@ -119,9 +126,12 @@ class GameViewController: UIViewController, SwiftrisDelegate, UIGestureRecognize
         view.isUserInteractionEnabled = false
         scene.stopTicking()
         scene.playSound("gameover.mp3")
-        scene.animateCollapsingLines(swiftris.removeAllBlocks(), fallenBlocks: swiftris.removeAllBlocks()) {
+        /* scene.animateCollapsingLines(swiftris.removeAllBlocks(), fallenBlocks: swiftris.removeAllBlocks()) {
             swiftris.beginGame()
-        }
+        } */
+        print("Updating final score")
+        print(finalscore)
+        skillz.displayTournamentResults(withScore:finalscore, withCompletion: { () in print("Finished Display") })
     }
     
     func gameDidLevelUp(_ swiftris: Swiftris) {
@@ -151,7 +161,15 @@ class GameViewController: UIViewController, SwiftrisDelegate, UIGestureRecognize
             scene.animateCollapsingLines(removedLines.linesRemoved, fallenBlocks:removedLines.fallenBlocks) {
                 self.gameShapeDidLand(swiftris)
             }
-            scene.playSound("bomb.mp3")
+            if swiftris.score > 0 {
+                print("Updating score")
+                print(swiftris.score)
+                let x = NSNumber(value:swiftris.score)
+                print(x)
+                finalscore = x
+                skillz.updatePlayersCurrentScore(x)
+            }
+            //scene.playSound(sound: "Sounds/bomb.mp3")
         } else {
             nextShape()
         }

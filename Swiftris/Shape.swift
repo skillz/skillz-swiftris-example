@@ -1,4 +1,5 @@
 import SpriteKit
+import Skillz
 
 let NumOrientations: UInt32 = 4
 
@@ -156,7 +157,8 @@ class Shape: Hashable, CustomStringConvertible {
     }
     
     final class func random(_ startingColumn:Int, startingRow:Int) -> Shape {
-        switch Int(arc4random_uniform(NumShapeTypes)) {
+        
+        switch Int(Skillz.getRandomNumber(withMin: 0, andMax: UInt(NumShapeTypes))) {
         case 0:
             return SquareShape(column:startingColumn, row:startingRow)
         case 1:
